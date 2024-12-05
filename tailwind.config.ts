@@ -8,9 +8,13 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        mainbg: "#1A1A1D",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        c_darkpurple: "#3B1C32",
+        c_purple: "#6A1E55",
+        c_lightpurple: "#A64D79",
       },
     },
   },

@@ -21,3 +21,7 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# Design
+
+[Colour Pallete](https://colorhunt.co/palette/1a1a1d3b1c326a1e55a64d79)
