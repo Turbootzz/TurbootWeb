@@ -47,7 +47,7 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 md:c_purple c_purple"
+                  className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 md:hover:text-c_lightpurple hover:text-c_lightpurple"
                   aria-current="page"
                 >
                   Home
@@ -57,7 +57,7 @@ export default function Header() {
                 <button
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="dropdownNavbar"
-                  className="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:c_purple md:p-0 md:w-auto dark:text-white md:c_purple dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  className="flex items-center text-white justify-between w-full py-2 px-3 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-c_lightpurple hover:text-c_lightpurple md:p-0 md:w-auto"
                 >
                   Dropdown{" "}
                   <svg
@@ -183,7 +183,7 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-c_lightpurple md:p-0 dark:text-white md:dark:hover:text-c_lightpurple  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Services
                 </a>
@@ -191,7 +191,7 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-c_lightpurple md:hover:text-c_lightpurple md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 >
                   Pricing
                 </a>
@@ -199,7 +199,7 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-c_lightpurple md:p-0"
                 >
                   Contact
                 </a>
