@@ -10,7 +10,13 @@ export default function Header() {
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            {/* <Image src="" className="h-8" alt="Placeholder Logo" /> */}
+            <Image
+              src="/images/something.png"
+              className="h-8"
+              alt="Placeholder Logo"
+              width={35}
+              height={35}
+            />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Turboot
             </span>
