@@ -34,6 +34,9 @@ const Navbar = () => {
             <a href="/contact" className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md">
               Contact
             </a>
+            <a href="/signin" className="border-solid border-2 border-c_lightpurple text-white hover:bg-c_lightpurple px-3 py-2 rounded-md">
+              Sign in
+            </a>
           </div>
           <div className="md:hidden">
             <button
@@ -69,7 +72,7 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden text-center">
           <a
             href="/"
             className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
@@ -93,6 +96,12 @@ const Navbar = () => {
             className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
           >
             Contact
+          </a>
+          <a
+            href="/contact"
+            className="block border-solid border-2 border-c_lightpurple text-white hover:bg-c_lightpurple px-3 py-2 rounded-md"
+          >
+            Sign in
           </a>
         </div>
       )}
