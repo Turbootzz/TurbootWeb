@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,8 +9,8 @@ const Navbar = () => {
     <nav>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-        <div className="flex items-center space-x-2">
-          <Image
+          <div className="flex items-center space-x-2">
+            <Image
               src="/images/something.png"
               alt="Logo"
               width={32}
@@ -17,26 +18,41 @@ const Navbar = () => {
               priority
               className="h-8 w-8"
             />
-            <a href="/" className="text-white text-lg font-bold">
+            <Link href="/" className="text-white text-lg font-bold">
               Turboot
-            </a>
+            </Link>
           </div>
           <div className="hidden md:flex space-x-4">
-            <a href="/" className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md">
+            <Link
+              href="/"
+              className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
+            >
               Home
-            </a>
-            <a href="/about" className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md">
+            </Link>
+            <Link
+              href="/about"
+              className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
+            >
               About
-            </a>
-            <a href="/services" className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md">
+            </Link>
+            <Link
+              href="/projects"
+              className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
+            >
               Projects
-            </a>
-            <a href="/contact" className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md">
+            </Link>
+            <Link
+              href="/contact"
+              className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
+            >
               Contact
-            </a>
-            <a href="/signin" className="border-solid border-2 border-c_lightpurple text-white hover:bg-c_lightpurple px-3 py-2 rounded-md">
+            </Link>
+            <Link
+              href="/signin"
+              className="border-solid border-2 border-c_lightpurple text-white hover:bg-c_lightpurple px-3 py-2 rounded-md"
+            >
               Sign in
-            </a>
+            </Link>
           </div>
           <div className="md:hidden">
             <button
@@ -73,36 +89,36 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div className="md:hidden text-center">
-          <a
+          <Link
             href="/"
             className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/services"
             className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
           >
             Projects
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
           >
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="block border-solid border-2 border-c_lightpurple text-white hover:bg-c_lightpurple px-3 py-2 rounded-md"
           >
             Sign in
-          </a>
+          </Link>
         </div>
       )}
     </nav>
