@@ -8,7 +8,20 @@ export default function Home() {
       <main className="mx-4">
         <article>
           <div className="mt-14">
-            <h1 className="text-white text-5xl font-bold">Turboot</h1>
+            <h1 className="text-c_white text-center text-5xl font-semibold">
+              Turboot
+            </h1>
+            <div className="my-3">
+              <p className="text-c_gray text-center">
+                Junior Software developer
+              </p>
+              <p className="text-c_gray text-center">
+                Custom PC and server builds
+              </p>
+              <p className="text-c_gray text-center">
+                Server hosting solutions
+              </p>
+            </div>
           </div>
         </article>
         <article></article>

@@ -15,6 +15,8 @@ export default {
         c_darkpurple: "#3B1C32",
         c_purple: "#6A1E55",
         c_lightpurple: "#A64D79",
+        c_white: "#E1E1E1",
+        c_gray: "#A1A1A1",
       },
     },
   },

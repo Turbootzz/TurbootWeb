@@ -11,45 +11,45 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
             <Image
-              src="/images/something.png"
+              src="/images/star-big.png"
               alt="Logo"
-              width={32}
-              height={32}
+              width={64}
+              height={64}
               priority
-              className="h-8 w-8"
+              className="h-8 w-8 image-rendering-pixelated"
             />
-            <Link href="/" className="text-white text-lg font-bold">
+            <Link href="/" className="text-c_white text-lg font-semibold">
               Turboot
             </Link>
           </div>
           <div className="hidden md:flex space-x-4">
             <Link
               href="/"
-              className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              className="text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              className="text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
             >
               About
             </Link>
             <Link
               href="/projects"
-              className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              className="text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
             >
               Projects
             </Link>
             <Link
               href="/contact"
-              className="text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              className="text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
             >
               Contact
             </Link>
             <Link
               href="/signin"
-              className="border-solid border-2 border-c_lightpurple text-white hover:bg-c_lightpurple px-3 py-2 rounded-md"
+              className="border-solid border-2 border-c_lightpurple text-c_white hover:bg-c_lightpurple px-3 py-2 rounded-md"
             >
               Sign in
             </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="text-white hover:text-gray-300 focus:outline-none"
+              className="text-c_white hover:text-gray-300 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -87,40 +87,42 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div className="md:hidden text-center">
-          <Link
-            href="/"
-            className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
-          >
-            About
-          </Link>
-          <Link
-            href="/services"
-            className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/contact"
-            className="block text-white hover:text-c_lightpurple px-3 py-2 rounded-md"
-          >
-            Contact
-          </Link>
-          <Link
-            href="/contact"
-            className="block border-solid border-2 border-c_lightpurple text-white hover:bg-c_lightpurple px-3 py-2 rounded-md"
-          >
-            Sign in
-          </Link>
-        </div>
-      )}
+      <div
+        className={`md:hidden text-center transition-all duration-300 ease-in-out overflow-hidden ${
+          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <Link
+          href="/"
+          className="block text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+        >
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className="block text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+        >
+          About
+        </Link>
+        <Link
+          href="/services"
+          className="block text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+        >
+          Projects
+        </Link>
+        <Link
+          href="/contact"
+          className="block text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+        >
+          Contact
+        </Link>
+        <Link
+          href="/contact"
+          className="block border-solid border-2 border-c_lightpurple text-c_white hover:bg-c_lightpurple px-3 py-2 rounded-md"
+        >
+          Sign in
+        </Link>
+      </div>
     </nav>
   );
 };
