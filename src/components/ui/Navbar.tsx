@@ -18,32 +18,32 @@ const Navbar = () => {
               priority
               className="h-8 w-8 image-rendering-pixelated"
             />
-            <Link href="/" className="text-c_white text-lg font-semibold">
+            <Link href="/" className="dark:text-c_white text-lg font-semibold">
               Turboot
             </Link>
           </div>
           <div className="hidden md:flex space-x-4">
             <Link
               href="/"
-              className="text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              className="dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              className="dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
             >
               About
             </Link>
             <Link
               href="/projects"
-              className="text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              className="dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
             >
               Projects
             </Link>
             <Link
               href="/contact"
-              className="text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              className="dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
             >
               Contact
             </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="text-c_white hover:text-gray-300 focus:outline-none"
+              className="dark:text-c_white hover:text-gray-300 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -94,31 +94,31 @@ const Navbar = () => {
       >
         <Link
           href="/"
-          className="block text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+          className="block dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
         >
           Home
         </Link>
         <Link
           href="/about"
-          className="block text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+          className="block dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
         >
           About
         </Link>
         <Link
           href="/services"
-          className="block text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+          className="block dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
         >
           Projects
         </Link>
         <Link
           href="/contact"
-          className="block text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+          className="block dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
         >
           Contact
         </Link>
         <Link
           href="/contact"
-          className="block border-solid border-2 border-c_lightpurple text-c_white hover:bg-c_lightpurple px-3 py-2 rounded-md"
+          className="block border-solid border-2 dark:text-c_white border-c_lightpurple hover:bg-c_lightpurple px-3 py-2 rounded-md"
         >
           Sign in
         </Link>
