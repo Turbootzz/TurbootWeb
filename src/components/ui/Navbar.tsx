@@ -18,38 +18,41 @@ const Navbar = () => {
               priority
               className='image-rendering-pixelated h-8 w-8'
             />
-            <Link href='/' className='text-lg font-semibold dark:text-c_white'>
+            <Link
+              href='/'
+              className='text-lg font-semibold text-c_black dark:text-c_white'
+            >
               Turboot
             </Link>
           </div>
           <div className='hidden space-x-4 md:flex'>
             <Link
               href='/'
-              className='rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
+              className='rounded-md px-3 py-2 text-c_black hover:text-c_lightpurple dark:text-c_white'
             >
               Home
             </Link>
             <Link
               href='/about'
-              className='rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
+              className='rounded-md px-3 py-2 text-c_black hover:text-c_lightpurple dark:text-c_white'
             >
               About
             </Link>
             <Link
               href='/projects'
-              className='rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
+              className='rounded-md px-3 py-2 text-c_black hover:text-c_lightpurple dark:text-c_white'
             >
               Projects
             </Link>
             <Link
               href='/contact'
-              className='rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
+              className='rounded-md px-3 py-2 text-c_black hover:text-c_lightpurple dark:text-c_white'
             >
               Contact
             </Link>
             <Link
               href='/signin'
-              className='rounded-md border-2 border-solid border-c_lightpurple px-3 py-2 text-c_white hover:bg-c_lightpurple'
+              className='rounded-md border-2 border-solid border-c_lightpurple px-3 py-2 text-c_black text-c_white hover:bg-c_lightpurple'
             >
               Sign in
             </Link>
@@ -58,7 +61,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type='button'
-              className='hover:text-gray-300 focus:outline-none dark:text-c_white'
+              className='text-c_black hover:text-gray-300 focus:outline-none dark:text-c_white'
             >
               <svg
                 className='h-6 w-6'
@@ -94,31 +97,31 @@ const Navbar = () => {
       >
         <Link
           href='/'
-          className='block rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
+          className='block rounded-md px-3 py-2 text-c_black hover:text-c_lightpurple dark:text-c_white'
         >
           Home
         </Link>
         <Link
           href='/about'
-          className='block rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
+          className='block rounded-md px-3 py-2 text-c_black hover:text-c_lightpurple dark:text-c_white'
         >
           About
         </Link>
         <Link
           href='/services'
-          className='block rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
+          className='block rounded-md px-3 py-2 text-c_black hover:text-c_lightpurple dark:text-c_white'
         >
           Projects
         </Link>
         <Link
           href='/contact'
-          className='block rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
+          className='block rounded-md px-3 py-2 text-c_black hover:text-c_lightpurple dark:text-c_white'
         >
           Contact
         </Link>
         <Link
           href='/contact'
-          className='block rounded-md border-2 border-solid border-c_lightpurple px-3 py-2 hover:bg-c_lightpurple dark:text-c_white'
+          className='block rounded-md border-2 border-solid border-c_lightpurple px-3 py-2 text-c_black hover:bg-c_lightpurple dark:text-c_white'
         >
           Sign in
         </Link>

@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        mainbg: '#EDEDED',
+        mainbg: '#F0EEED',
         mainbg_dark: '#1A1A1D',
       },
       colors: {
@@ -19,6 +19,9 @@ export default {
         c_lightpurple: '#A64D79',
         c_white: '#E1E1E1',
         c_gray: '#A1A1A1',
+        c_teal: '#609EA2',
+        c_maroon: '#C92C6D',
+        c_black: '#332C39',
       },
     },
   },
