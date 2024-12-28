@@ -1,85 +1,85 @@
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='flex h-16 items-center justify-between'>
+          <div className='flex items-center space-x-2'>
             <Image
-              src="/images/star-big.png"
-              alt="Logo"
+              src='/images/star-big.png'
+              alt='Logo'
               width={64}
               height={64}
               priority
-              className="h-8 w-8 image-rendering-pixelated"
+              className='image-rendering-pixelated h-8 w-8'
             />
-            <Link href="/" className="dark:text-c_white text-lg font-semibold">
+            <Link href='/' className='text-lg font-semibold dark:text-c_white'>
               Turboot
             </Link>
           </div>
-          <div className="hidden md:flex space-x-4">
+          <div className='hidden space-x-4 md:flex'>
             <Link
-              href="/"
-              className="dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              href='/'
+              className='rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
             >
               Home
             </Link>
             <Link
-              href="/about"
-              className="dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              href='/about'
+              className='rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
             >
               About
             </Link>
             <Link
-              href="/projects"
-              className="dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              href='/projects'
+              className='rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
             >
               Projects
             </Link>
             <Link
-              href="/contact"
-              className="dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+              href='/contact'
+              className='rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
             >
               Contact
             </Link>
             <Link
-              href="/signin"
-              className="border-solid border-2 border-c_lightpurple text-c_white hover:bg-c_lightpurple px-3 py-2 rounded-md"
+              href='/signin'
+              className='rounded-md border-2 border-solid border-c_lightpurple px-3 py-2 text-c_white hover:bg-c_lightpurple'
             >
               Sign in
             </Link>
           </div>
-          <div className="md:hidden">
+          <div className='md:hidden'>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              type="button"
-              className="dark:text-c_white hover:text-gray-300 focus:outline-none"
+              type='button'
+              className='hover:text-gray-300 focus:outline-none dark:text-c_white'
             >
               <svg
-                className="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                className='h-6 w-6'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
               >
                 {isOpen ? (
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M6 18L18 6M6 6l12 12'
                   />
                 ) : (
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M4 6h16M4 12h16m-7 6h7'
                   />
                 )}
               </svg>
@@ -88,37 +88,37 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`md:hidden text-center transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden text-center transition-all duration-300 ease-in-out md:hidden ${
+          isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <Link
-          href="/"
-          className="block dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+          href='/'
+          className='block rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
         >
           Home
         </Link>
         <Link
-          href="/about"
-          className="block dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+          href='/about'
+          className='block rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
         >
           About
         </Link>
         <Link
-          href="/services"
-          className="block dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+          href='/services'
+          className='block rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
         >
           Projects
         </Link>
         <Link
-          href="/contact"
-          className="block dark:text-c_white hover:text-c_lightpurple px-3 py-2 rounded-md"
+          href='/contact'
+          className='block rounded-md px-3 py-2 hover:text-c_lightpurple dark:text-c_white'
         >
           Contact
         </Link>
         <Link
-          href="/contact"
-          className="block border-solid border-2 dark:text-c_white border-c_lightpurple hover:bg-c_lightpurple px-3 py-2 rounded-md"
+          href='/contact'
+          className='block rounded-md border-2 border-solid border-c_lightpurple px-3 py-2 hover:bg-c_lightpurple dark:text-c_white'
         >
           Sign in
         </Link>
