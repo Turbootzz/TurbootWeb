@@ -24,5 +24,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 # Design
 
-[Colour Pallete Light](https://colorhunt.co/palette/1a1a1d3b1c326a1e55a64d79)
+[Colour Pallete Light](https://colorhunt.co/palette/1a1a1d3b1c326a1e55a64d79)\
 [Colour Pallete Dark](https://colorhunt.co/palette/f0eeed609ea2c92c6d332c39)
