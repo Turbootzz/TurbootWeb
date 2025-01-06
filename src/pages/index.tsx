@@ -55,18 +55,50 @@ export default function Home() {
           <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
             <div className='flex flex-col items-center text-center text-c_black dark:text-c_white'>
               <Image
-                src='/images/broly.jpg'
+                src='/images/pc-builds/pc-12.jpeg'
                 alt='Placeholder'
-                width={256}
+                width={356}
+                height={256}
+              />
+              <b>Specifications:</b>
+              <ul>
+                <li>
+                  <b>CPU</b>: AMD Ryzen 9 5900X
+                </li>
+                <li>
+                  <b>Motherboard:</b>: Asus TUF Gaming B550-PLUS WIFI II
+                </li>
+                <li>
+                  <b>RAM:</b>: G.Skill Trident Z 4x8GB 3600MHZ
+                </li>
+                <li>
+                  <b>GPU</b>: Nvidia Geforce RTX 3080 TI
+                </li>
+              </ul>
+            </div>
+            <div className='flex flex-col items-center text-center text-c_black dark:text-c_white'>
+              <Image
+                src='/images/pc-builds/pc-1.jpg'
+                alt='Placeholder'
+                width={356}
                 height={256}
               />
               <p>Lorem ipsum</p>
             </div>
-            <div className='flex flex-col items-center text-center'>
+            <div className='flex flex-col items-center text-center text-c_black dark:text-c_white'>
               <Image
-                src='/images/broly.jpg'
+                src='/images/pc-builds/pc-9.jpg'
                 alt='Placeholder'
-                width={256}
+                width={356}
+                height={256}
+              />
+              <p>Lorem ipsum</p>
+            </div>
+            <div className='flex flex-col items-center text-center text-c_black dark:text-c_white'>
+              <Image
+                src='/images/pc-builds/pc-10.jpg'
+                alt='Placeholder'
+                width={356}
                 height={256}
               />
               <p>Lorem ipsum</p>
