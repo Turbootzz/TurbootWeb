@@ -25,19 +25,41 @@ export default function Home() {
               <Image
                 src='/images/broly.jpg'
                 alt='Placeholder'
-                width={256}
+                width={356}
                 height={256}
               />
-              <p>Lorem ipsum</p>
+              <b>CV Generator</b>
+              <ul>
+                <li>
+                  Github:{' '}
+                  <a
+                    className='text-c_teal underline'
+                    href='https://github.com/Turbootzz/CV-Generator'
+                  >
+                    visit page
+                  </a>
+                </li>
+              </ul>
             </div>
             <div className='flex flex-col items-center text-center'>
               <Image
-                src='/images/broly.jpg'
+                src='/images/projects/momd.png'
                 alt='Placeholder'
-                width={256}
+                width={356}
                 height={256}
               />
-              <p>Lorem ipsum</p>
+              <b>Social media platform</b>
+              <ul>
+                <li>
+                  Github:{' '}
+                  <a
+                    className='text-c_teal underline'
+                    href='https://github.com/Turbootzz/Rampup'
+                  >
+                    visit page
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </article>
@@ -69,7 +91,7 @@ export default function Home() {
                   <b>Motherboard:</b>: Asus TUF Gaming B550-PLUS WIFI II
                 </li>
                 <li>
-                  <b>RAM:</b>: G.Skill Trident Z 4x8GB 3600MHZ
+                  <b>RAM:</b>: G.Skill Trident Z DDR4 4x8GB 3600MHZ
                 </li>
                 <li>
                   <b>GPU</b>: Nvidia Geforce RTX 3080 TI
@@ -83,7 +105,21 @@ export default function Home() {
                 width={356}
                 height={256}
               />
-              <p>Lorem ipsum</p>
+              <b>Specifications:</b>
+              <ul>
+                <li>
+                  <b>CPU</b>: AMD Ryzen 5 7600X
+                </li>
+                <li>
+                  <b>Motherboard:</b>: ------
+                </li>
+                <li>
+                  <b>RAM:</b>: Corsair Vangeance RGB DDR5 2x16GB 6000MHZ
+                </li>
+                <li>
+                  <b>GPU</b>: AMD Radeon 6800 XT
+                </li>
+              </ul>
             </div>
             <div className='flex flex-col items-center text-center text-c_black dark:text-c_white'>
               <Image
