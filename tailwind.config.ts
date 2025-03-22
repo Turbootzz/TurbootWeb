@@ -1,6 +1,8 @@
+// OLD: to be removed
+
 import type { Config } from 'tailwindcss'
 
-export default {
+const config: Config = {
   darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',

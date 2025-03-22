@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type ThemeContextType = {
@@ -13,16 +15,37 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   const [theme, setTheme] = useState<string>('light');
 
   useEffect(() => {
+    // Check if theme is stored in localStorage
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    
+    // Apply the theme to the document
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
+    console.log('Initial theme:', savedTheme);
+    console.log('Dark class present:', document.documentElement.classList.contains('dark'));
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    
+    // Apply the theme to the document
+    if (newTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
+    // Save the theme to localStorage
     localStorage.setItem('theme', newTheme);
+    
+    console.log('Theme toggled to:', newTheme);
+    console.log('Dark class present after toggle:', document.documentElement.classList.contains('dark'));
   };
 
   return (

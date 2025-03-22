@@ -1,3 +1,5 @@
+"use client";
+
 import ThemeToggle from '../buttons/ThemeToggle';
 
 export default function Footer() {
