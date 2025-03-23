@@ -7,18 +7,19 @@ export default function Home() {
     <>
       <Header />
       <main className='mx-6'>
-        <article className='mt-24'>
-          <h1 className='text-5xl text-c_black dark:text-c_white'>
+        <section className='mt-24'>
+          <h3 className='text-gray-700'>WEBSITE IN DEVELOPMENT</h3>
+          <h1 className='text-5xl text-black dark:text-c_white'>
             Thijs Herman
           </h1>
-          <p className='my-3 text-c_black dark:text-c_gray'>
+          <p className='my-3 text-black dark:text-c_gray'>
             My name is Thijs Herman. I am a Junior Software developer and in my
-            free time I like to build custom PC&apos;s and servers. I also
+            free time I like to build custom PC&apos;s, websites and servers. I also
             provide server hosting solutions.
           </p>
-        </article>
-        <hr className='border-1 mt-8 border-spacing-24 border-c_teal dark:border-c_purple' />
-        <article>
+        </section>
+        <hr className='border-1 mt-8 border-spacing-24 border-white dark:border-black' />
+        <section>
           <h3 className='my-4 text-xl'>MY PROJECTS</h3>
           <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
             <div className='flex flex-col items-center text-center text-c_black dark:text-c_white'>
@@ -62,9 +63,9 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </article>
+        </section>
         <hr className='border-1 mt-8 border-spacing-24 border-c_teal dark:border-c_purple' />
-        <article className='mt-14'>
+        <section className='mt-14'>
           <h1 className='text-4xl text-c_black dark:text-c_white'>
             PC Building
           </h1>
@@ -140,7 +141,7 @@ export default function Home() {
               <p>Lorem ipsum</p>
             </div>
           </div>
-        </article>
+        </section>
         <hr className='border-1 mt-8 border-spacing-24 border-c_teal dark:border-c_purple' />
       </main>
       <Footer />
