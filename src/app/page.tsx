@@ -1,65 +1,129 @@
-import Image from "next/image";
+import { Hero } from "@/components/sections/Hero"
+import { CTASection } from "@/components/sections/CTASection"
+import { Container } from "@/components/layout/Container"
+import { SERVICES } from "@/lib/constants"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Globe, Code, Cpu, CheckCircle } from "lucide-react"
+import Link from "next/link"
+
+const iconMap = {
+  Globe,
+  Code,
+  Cpu,
+}
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <>
+      <Hero />
+
+      {/* Services Section */}
+      <section className="py-16 md:py-24">
+        <Container>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Onze Diensten
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Van webontwikkeling tot hardware oplossingen, wij hebben de expertise
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {SERVICES.map((service) => {
+              const Icon = iconMap[service.icon as keyof typeof iconMap]
+              return (
+                <Card key={service.id} className="hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600 mb-4">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <CardTitle>{service.title}</CardTitle>
+                    <CardDescription>{service.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {service.features.slice(0, 3).map((feature, index) => (
+                        <li key={index} className="flex items-start space-x-2">
+                          <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-gray-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={`/diensten#${service.id}`}
+                      className="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-700"
+                    >
+                      Meer informatie →
+                    </Link>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+        </Container>
+      </section>
+
+      {/* Why Choose Turboot Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Waarom Kiezen voor Turboot?
+              </h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Als eenmanszaak bied ik persoonlijke aandacht, flexibiliteit en
+                directe communicatie voor elk project.
+              </p>
+              <div className="mt-8 space-y-4">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Persoonlijke Aanpak</h3>
+                    <p className="text-sm text-gray-600">
+                      Direct contact, geen tussenpersonen. Uw project krijgt mijn volledige aandacht.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Flexibele Oplossingen</h3>
+                    <p className="text-sm text-gray-600">
+                      Maatwerk zonder de overhead van grote bureaus. Snel schakelen bij veranderingen.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Transparante Prijzen</h3>
+                    <p className="text-sm text-gray-600">
+                      Eerlijke tarieven zonder verborgen kosten. U weet precies waar u aan toe bent.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="aspect-video rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-2xl">
+                <div className="flex h-full items-center justify-center text-white">
+                  <div className="text-center">
+                    <Code className="mx-auto h-16 w-16 mb-4" />
+                    <p className="text-xl font-semibold">10+ Jaar Ervaring</p>
+                    <p className="mt-2 text-sm">in Software Ontwikkeling</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 h-full w-full rounded-xl bg-blue-100 -z-10" />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <CTASection />
+    </>
+  )
 }

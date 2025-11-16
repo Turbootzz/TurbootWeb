@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Turboot Website
+
+Professional website for Turboot - Web Development, Software Development & PC Builds
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Database:** PostgreSQL with Prisma ORM
+- **Forms:** React Hook Form + Zod validation
+- **Icons:** Lucide React
+- **UI Components:** Custom components with Radix UI primitives
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ and npm
+- PostgreSQL database (local or cloud)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd turboot-web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.local.example .env.local
+```
+Then edit `.env.local` with your database credentials.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Set up the database:
+```bash
+# Push the schema to your database
+npm run db:push
 
-## Learn More
+# Run migrations (for production)
+npm run db:migrate
 
-To learn more about Next.js, take a look at the following resources:
+# Seed the database with example data
+npm run db:seed
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Run the development server:
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-## Deploy on Vercel
+## Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run db:migrate` - Run database migrations
+- `npm run db:push` - Push schema to database (development)
+- `npm run db:seed` - Seed database with example data
+- `npm run db:studio` - Open Prisma Studio (database GUI)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+```
+turboot-web/
+├── src/
+│   ├── app/              # Next.js pages and API routes
+│   ├── components/       # React components
+│   │   ├── ui/          # Base UI components
+│   │   ├── layout/      # Layout components
+│   │   └── sections/    # Page sections
+│   ├── lib/             # Utilities and constants
+│   └── types/           # TypeScript types
+├── prisma/              # Database schema and migrations
+├── public/              # Static assets
+└── Documentation/       # Additional documentation
+```
+
+## Database Setup
+
+### Using PostgreSQL locally:
+
+1. Install PostgreSQL
+2. Create a database: `createdb turboot_db`
+3. Update `.env.local` with your connection string
+
+### Using cloud PostgreSQL:
+
+Options include:
+- Vercel Postgres
+- Supabase
+- Neon
+- Railway
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Add environment variables
+4. Deploy
+
+### Other Platforms
+
+The app can be deployed to any platform that supports Next.js:
+- Netlify
+- Railway
+- DigitalOcean App Platform
+- AWS Amplify
+
+## Features
+
+- ✅ Responsive design
+- ✅ Modern UI with Tailwind CSS v4
+- ✅ Contact form with validation
+- ✅ Portfolio showcase
+- ✅ Service pages
+- ✅ SEO optimized
+- ✅ TypeScript for type safety
+- ✅ Database ready with Prisma
+
+## Future Enhancements
+
+- [ ] Blog/News section
+- [ ] Homelab services dashboard
+- [ ] Admin panel for content management
+- [ ] Multi-language support (EN/NL)
+- [ ] Dark mode toggle
+- [ ] Client testimonials
+- [ ] Email integration for contact form
+- [ ] Analytics integration
+
+## License
+
+© 2024 Turboot. All rights reserved.
+
+## Contact
+
+For questions or support, contact: info@turboot.nl
