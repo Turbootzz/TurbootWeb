@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { Container } from "@/components/layout/Container"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -77,102 +76,108 @@ export default function ContactPage() {
       />
 
       {/* Contact Section */}
-      <section className="py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24 dark:bg-gray-950">
         <Container>
           <div className="grid gap-12 lg:grid-cols-3">
             {/* Contact Information */}
             <div className="lg:col-span-1">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="mb-6 text-2xl font-bold text-gray-950 dark:text-white">
                 Neem Contact Op
               </h2>
-              <p className="text-gray-600 mb-8">
-                Ik reageer meestal binnen 24 uur op berichten.
-                Voor dringende zaken kunt u mij telefonisch bereiken.
+              <p className="mb-8 leading-relaxed text-gray-700 dark:text-gray-300">
+                Ik reageer meestal binnen 24 uur op berichten. Voor dringende zaken kunt u mij
+                telefonisch bereiken.
               </p>
 
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <Mail className="h-5 w-5 text-blue-600 mt-0.5" />
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4 rounded-xl border border-blue-100 bg-blue-50 p-4 dark:border-blue-900 dark:bg-blue-950/30">
+                  <Mail className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" />
                   <div>
-                    <p className="font-semibold">E-mail</p>
+                    <p className="font-semibold text-gray-950 dark:text-white">E-mail</p>
                     <a
                       href={`mailto:${COMPANY_INFO.email}`}
-                      className="text-gray-600 hover:text-blue-600 transition-colors"
+                      className="text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
                     >
                       {COMPANY_INFO.email}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3">
-                  <Phone className="h-5 w-5 text-blue-600 mt-0.5" />
+                <div className="flex items-start space-x-4 rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
+                  <Phone className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" />
                   <div>
-                    <p className="font-semibold">Telefoon</p>
+                    <p className="font-semibold text-gray-950 dark:text-white">Telefoon</p>
                     <a
                       href={`tel:${COMPANY_INFO.phone}`}
-                      className="text-gray-600 hover:text-blue-600 transition-colors"
+                      className="text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
                     >
                       {COMPANY_INFO.phone}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-blue-600 mt-0.5" />
+                <div className="flex items-start space-x-4 rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" />
                   <div>
-                    <p className="font-semibold">Locatie</p>
-                    <p className="text-gray-600">{COMPANY_INFO.address}</p>
+                    <p className="font-semibold text-gray-950 dark:text-white">Locatie</p>
+                    <p className="text-gray-700 dark:text-gray-300">{COMPANY_INFO.address}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-3">
-                  <Clock className="h-5 w-5 text-blue-600 mt-0.5" />
+                <div className="flex items-start space-x-4 rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
+                  <Clock className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" />
                   <div>
-                    <p className="font-semibold">Bereikbaar</p>
-                    <p className="text-gray-600">Ma-Vr: 9:00 - 18:00</p>
-                    <p className="text-gray-600">Weekend: Op afspraak</p>
+                    <p className="font-semibold text-gray-950 dark:text-white">Bereikbaar</p>
+                    <p className="text-gray-700 dark:text-gray-300">Ma-Vr: 9:00 - 18:00</p>
+                    <p className="text-gray-700 dark:text-gray-300">Weekend: Op afspraak</p>
                   </div>
                 </div>
               </div>
 
               {/* Business Info */}
-              <Card className="mt-8">
-                <CardHeader>
-                  <CardTitle className="text-lg">Bedrijfsgegevens</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <dl className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <dt className="text-gray-600">Bedrijfsnaam:</dt>
-                      <dd className="font-medium">{COMPANY_INFO.name}</dd>
-                    </div>
-                    <div className="flex justify-between">
-                      <dt className="text-gray-600">KvK:</dt>
-                      <dd className="font-medium">{COMPANY_INFO.kvk}</dd>
-                    </div>
-                    <div className="flex justify-between">
-                      <dt className="text-gray-600">BTW:</dt>
-                      <dd className="font-medium">{COMPANY_INFO.btw}</dd>
-                    </div>
-                  </dl>
-                </CardContent>
-              </Card>
+              <div className="mt-8 rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-blue-50 p-6 dark:border-gray-800 dark:from-gray-900 dark:to-blue-950/30">
+                <h3 className="mb-4 text-lg font-semibold text-gray-950 dark:text-white">
+                  Bedrijfsgegevens
+                </h3>
+                <dl className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <dt className="text-gray-700 dark:text-gray-400">Bedrijfsnaam:</dt>
+                    <dd className="font-semibold text-gray-950 dark:text-white">
+                      {COMPANY_INFO.name}
+                    </dd>
+                  </div>
+                  <div className="flex justify-between">
+                    <dt className="text-gray-700 dark:text-gray-400">KvK:</dt>
+                    <dd className="font-semibold text-gray-950 dark:text-white">
+                      {COMPANY_INFO.kvk}
+                    </dd>
+                  </div>
+                  <div className="flex justify-between">
+                    <dt className="text-gray-700 dark:text-gray-400">BTW:</dt>
+                    <dd className="font-semibold text-gray-950 dark:text-white">
+                      {COMPANY_INFO.btw}
+                    </dd>
+                  </div>
+                </dl>
+              </div>
             </div>
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Stuur een Bericht</CardTitle>
-                  <CardDescription>
+              <div className="rounded-2xl border border-gray-200 bg-white shadow-xl dark:border-gray-800 dark:bg-gray-900">
+                <div className="border-b border-gray-200 p-6 dark:border-gray-800">
+                  <h3 className="text-2xl font-bold text-gray-950 dark:text-white">
+                    Stuur een Bericht
+                  </h3>
+                  <p className="mt-2 text-gray-700 dark:text-gray-300">
                     Vul het formulier in en ik neem zo snel mogelijk contact met u op.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
+                  </p>
+                </div>
+                <div className="p-6">
                   {isSubmitted && (
-                    <div className="mb-6 rounded-lg bg-green-50 p-4 flex items-center space-x-2">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      <p className="text-green-800">
+                    <div className="mb-6 flex items-center space-x-3 rounded-xl border border-green-200 bg-green-50 p-4 dark:border-green-900 dark:bg-green-950/30">
+                      <CheckCircle className="h-5 w-5 shrink-0 text-green-600 dark:text-green-500" />
+                      <p className="font-medium text-green-800 dark:text-green-300">
                         Bedankt voor uw bericht! Ik neem zo snel mogelijk contact met u op.
                       </p>
                     </div>
@@ -254,38 +259,47 @@ export default function ContactPage() {
                       )}
                     </Button>
                   </form>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
               {/* FAQ Section */}
-              <Card className="mt-8">
-                <CardHeader>
-                  <CardTitle>Veelgestelde Vragen</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+              <div className="mt-8 rounded-2xl border border-gray-200 bg-white shadow-xl dark:border-gray-800 dark:bg-gray-900">
+                <div className="border-b border-gray-200 p-6 dark:border-gray-800">
+                  <h3 className="text-2xl font-bold text-gray-950 dark:text-white">
+                    Veelgestelde Vragen
+                  </h3>
+                </div>
+                <div className="space-y-6 p-6">
                   <div>
-                    <h4 className="font-semibold mb-2">Wat zijn uw tarieven?</h4>
-                    <p className="text-sm text-gray-600">
-                      Mijn tarieven zijn afhankelijk van het type en de complexiteit van het project.
-                      Na ons eerste gesprek ontvangt u een transparante offerte zonder verborgen kosten.
+                    <h4 className="mb-2 font-semibold text-gray-950 dark:text-white">
+                      Wat zijn uw tarieven?
+                    </h4>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      Mijn tarieven zijn afhankelijk van het type en de complexiteit van het
+                      project. Na ons eerste gesprek ontvangt u een transparante offerte zonder
+                      verborgen kosten.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Hoe lang duurt een gemiddeld project?</h4>
-                    <p className="text-sm text-gray-600">
+                    <h4 className="mb-2 font-semibold text-gray-950 dark:text-white">
+                      Hoe lang duurt een gemiddeld project?
+                    </h4>
+                    <p className="text-gray-700 dark:text-gray-300">
                       Dit varieert sterk per project. Een eenvoudige website kan binnen 2-3 weken
                       klaar zijn, terwijl complexe software projecten meerdere maanden kunnen duren.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Biedt u ook onderhoud en support?</h4>
-                    <p className="text-sm text-gray-600">
-                      Ja, ik bied onderhoudscontracten aan voor alle projecten die ik ontwikkel.
-                      Dit zorgt ervoor dat uw software up-to-date en veilig blijft.
+                    <h4 className="mb-2 font-semibold text-gray-950 dark:text-white">
+                      Biedt u ook onderhoud en support?
+                    </h4>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      Ja, ik bied onderhoudscontracten aan voor alle projecten die ik ontwikkel. Dit
+                      zorgt ervoor dat uw software up-to-date en veilig blijft.
                     </p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </div>
         </Container>

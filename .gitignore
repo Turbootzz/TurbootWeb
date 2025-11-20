@@ -40,6 +40,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# husky
+.husky
+
 # docs
 /Documentation
 CLAUDE.md
+GEMINI.md
+GEMINI
+.claude

@@ -24,11 +24,13 @@ export function FeatureGrid({ features, columns = 4 }: FeatureGridProps) {
         const Icon = feature.icon
         return (
           <div key={feature.title} className="text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
               <Icon className="h-8 w-8" />
             </div>
-            <h3 className="font-semibold text-lg text-gray-900">{feature.title}</h3>
-            <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              {feature.title}
+            </h3>
+            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
           </div>
         )
       })}
