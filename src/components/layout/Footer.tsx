@@ -1,150 +1,50 @@
 import Link from "next/link"
-import { Container } from "./Container"
-import { NAV_ITEMS, COMPANY_INFO, SOCIAL_LINKS } from "@/lib/constants"
-import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react"
+import { COMPANY_INFO, SERVICES } from "@/lib/constants"
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
-    <footer className="mt-auto bg-gray-900 text-gray-300">
-      <Container>
-        <div className="py-12 md:py-16">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-            {/* Company Info */}
-            <div>
-              <h3 className="mb-4 text-lg font-bold text-white">Turboot</h3>
-              <p className="mb-4 text-sm">
-                Uw partner voor webontwikkeling, software ontwikkeling en custom PC builds.
-              </p>
-              <div className="flex space-x-4">
-                {SOCIAL_LINKS.github && (
-                  <a
-                    href={SOCIAL_LINKS.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
-                    aria-label="GitHub"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
-                )}
-                {SOCIAL_LINKS.linkedin && (
-                  <a
-                    href={SOCIAL_LINKS.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                )}
-                {SOCIAL_LINKS.twitter && (
-                  <a
-                    href={SOCIAL_LINKS.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
-                    aria-label="Twitter"
-                  >
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                )}
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="mb-4 text-lg font-bold text-white">Links</h3>
-              <ul className="space-y-2">
-                {NAV_ITEMS.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="text-sm hover:text-white transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Services */}
-            <div>
-              <h3 className="mb-4 text-lg font-bold text-white">Diensten</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/diensten#webontwikkeling"
-                    className="text-sm hover:text-white transition-colors"
-                  >
-                    Webontwikkeling
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/diensten#software-ontwikkeling"
-                    className="text-sm hover:text-white transition-colors"
-                  >
-                    Software Ontwikkeling
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/diensten#pc-builds"
-                    className="text-sm hover:text-white transition-colors"
-                  >
-                    PC Builds
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h3 className="mb-4 text-lg font-bold text-white">Contact</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4" />
-                  <a
-                    href={`mailto:${COMPANY_INFO.email}`}
-                    className="text-sm hover:text-white transition-colors"
-                  >
-                    {COMPANY_INFO.email}
-                  </a>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4" />
-                  <a
-                    href={`tel:${COMPANY_INFO.phone}`}
-                    className="text-sm hover:text-white transition-colors"
-                  >
-                    {COMPANY_INFO.phone}
-                  </a>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <MapPin className="h-4 w-4 mt-0.5" />
-                  <span className="text-sm">{COMPANY_INFO.address}</span>
-                </li>
-              </ul>
-            </div>
+    <footer className="border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <div className="md:col-span-2">
+            <Link href="/" className="text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+              Turboot<span className="text-blue-600 dark:text-blue-500">.</span>
+            </Link>
+            <p className="mt-4 max-w-xs text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+              Professionele webontwikkeling, software op maat en high-end PC builds.
+              Eenmanszaak gedreven door passie en precisie.
+            </p>
           </div>
 
-          {/* Bottom Bar */}
-          <div className="mt-8 border-t border-gray-800 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-sm">
-                © {currentYear} {COMPANY_INFO.name}. Alle rechten voorbehouden.
-              </p>
-              <p className="text-xs text-gray-400 mt-2 md:mt-0">
-                KvK: {COMPANY_INFO.kvk} | BTW: {COMPANY_INFO.btw}
-              </p>
-            </div>
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Diensten</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-500 dark:text-gray-400">
+              {SERVICES.map((service) => (
+                <li key={service.id}>
+                  <Link href={`/diensten#${service.id}`} className="hover:text-black dark:hover:text-white transition-colors">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Links</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-500 dark:text-gray-400">
+              <li><Link href="/portfolio" className="hover:text-black dark:hover:text-white transition-colors">Portfolio</Link></li>
+              <li><Link href="/homelab" className="hover:text-black dark:hover:text-white transition-colors">Homelab Hub</Link></li>
+              <li><Link href="/over" className="hover:text-black dark:hover:text-white transition-colors">Over</Link></li>
+              <li><Link href="/contact" className="hover:text-black dark:hover:text-white transition-colors">Contact</Link></li>
+            </ul>
           </div>
         </div>
-      </Container>
+        <div className="mt-12 border-t border-gray-100 dark:border-gray-800 pt-8 text-center md:text-left">
+          <p className="text-xs text-gray-400 dark:text-gray-500">
+            &copy; {new Date().getFullYear()} {COMPANY_INFO.name}. Alle rechten voorbehouden.
+          </p>
+        </div>
+      </div>
     </footer>
   )
 }

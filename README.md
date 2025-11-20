@@ -142,8 +142,8 @@ The app can be deployed to any platform that supports Next.js:
 
 ## License
 
-© 2024 Turboot. All rights reserved.
+© 2025 Turboot. All rights reserved.
 
 ## Contact
 
-For questions or support, contact: info@turboot.nl
+For questions or support, contact: thijs@turboot.com
