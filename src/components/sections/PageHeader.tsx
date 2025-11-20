@@ -10,10 +10,12 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, children, className = "" }: PageHeaderProps) {
   return (
-    <section className={`bg-linear-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-950 py-16 md:py-24 ${className}`}>
+    <section
+      className={`bg-linear-to-br from-blue-50 to-white py-16 md:py-24 dark:from-gray-900 dark:to-gray-950 ${className}`}
+    >
       <Container>
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100">
             {title}
           </h1>
           {description && (

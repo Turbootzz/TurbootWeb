@@ -27,24 +27,14 @@ export const SERVICES = [
     title: "Software Ontwikkeling",
     description: "Op maat gemaakte software oplossingen voor uw bedrijf",
     icon: "Code",
-    features: [
-      "Desktop applicaties",
-      "API ontwikkeling",
-      "Database ontwerp",
-      "Automatisering",
-    ],
+    features: ["Desktop applicaties", "API ontwikkeling", "Database ontwerp", "Automatisering"],
   },
   {
     id: "pc-builds",
     title: "PC Builds",
     description: "Custom gaming en werkstations gebouwd volgens uw wensen",
     icon: "Cpu",
-    features: [
-      "Gaming PCs",
-      "Werkstations",
-      "Hardware advies",
-      "Assemblage & installatie",
-    ],
+    features: ["Gaming PCs", "Werkstations", "Hardware advies", "Assemblage & installatie"],
   },
 ] as const
 
