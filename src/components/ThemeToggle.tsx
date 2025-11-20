@@ -2,17 +2,26 @@
 
 import { useTheme } from "./ThemeProvider"
 import { Moon, Sun, Monitor } from "lucide-react"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useSyncExternalStore } from "react"
+
+// Subscribe to a dummy store that just tracks if we're on the client
+function subscribe() {
+  return () => {}
+}
+
+function useHydrated() {
+  return useSyncExternalStore(
+    subscribe,
+    () => true, // Client
+    () => false // Server
+  )
+}
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  const hydrated = useHydrated()
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -31,15 +40,16 @@ export function ThemeToggle() {
     { value: "system" as const, label: "Systeem", icon: Monitor },
   ]
 
-  const currentTheme = themes.find(t => t.value === theme) || themes[2]
-  const CurrentIcon = currentTheme.icon
-
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
+  // Server and first client render must match
+  // Only show interactive button after hydrated
+  if (!hydrated) {
     return (
       <div className="h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800" />
     )
   }
+
+  const currentTheme = themes.find(t => t.value === theme) || themes[2]
+  const CurrentIcon = currentTheme.icon
 
   return (
     <div className="relative" ref={dropdownRef}>

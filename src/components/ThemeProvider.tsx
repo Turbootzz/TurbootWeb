@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useState, useMemo } from "react"
 
 type Theme = "light" | "dark" | "system"
 
@@ -12,73 +12,53 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "system"
-
-  const savedTheme = localStorage.getItem("theme") as Theme | null
-  return savedTheme || "system"
+function getSystemTheme(): "light" | "dark" {
+  if (typeof window === "undefined") return "light"
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
 }
 
-function getResolvedTheme(theme: Theme): "light" | "dark" {
-  if (theme === "system") {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-  }
-  return theme
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") return "system"
+  return (localStorage.getItem("theme") as Theme) || "system"
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("system")
-  const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("light")
-  const [mounted, setMounted] = useState(false)
+  const [theme, setThemeState] = useState<Theme>(getInitialTheme)
+  const [systemTheme, setSystemTheme] = useState<"light" | "dark">(getSystemTheme)
 
-  // Initialize theme from localStorage on mount
-  useEffect(() => {
-    setMounted(true)
-    const savedTheme = (localStorage.getItem("theme") as Theme) || "system"
-    setThemeState(savedTheme)
-  }, [])
+  // Compute resolved theme as derived value
+  const resolvedTheme = useMemo(() => {
+    if (theme === "system") {
+      return systemTheme
+    }
+    return theme
+  }, [theme, systemTheme])
 
   // Apply theme changes to DOM
   useEffect(() => {
-    if (!mounted) return
-
     const root = document.documentElement
-    const resolved = getResolvedTheme(theme)
 
     // Force remove both classes
     root.classList.remove("light", "dark")
 
     // Add the resolved theme class with a small delay to ensure removal completes
     requestAnimationFrame(() => {
-      root.classList.add(resolved)
+      root.classList.add(resolvedTheme)
     })
+  }, [resolvedTheme])
 
-    setResolvedTheme(resolved)
-
-    console.log("Theme applied:", theme, "Resolved to:", resolved, "Classes:", root.classList.toString())
-  }, [theme, mounted])
-
-  // Listen for system theme changes when in system mode
+  // Listen for system theme changes
   useEffect(() => {
-    if (!mounted || theme !== "system") return
-
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
     const handleChange = () => {
-      const systemTheme = mediaQuery.matches ? "dark" : "light"
-      const root = document.documentElement
-      root.classList.remove("light", "dark")
-      requestAnimationFrame(() => {
-        root.classList.add(systemTheme)
-      })
-      setResolvedTheme(systemTheme)
+      setSystemTheme(mediaQuery.matches ? "dark" : "light")
     }
 
     mediaQuery.addEventListener("change", handleChange)
     return () => mediaQuery.removeEventListener("change", handleChange)
-  }, [theme, mounted])
+  }, [])
 
   const setTheme = (newTheme: Theme) => {
-    console.log("Setting theme to:", newTheme)
     localStorage.setItem("theme", newTheme)
     setThemeState(newTheme)
   }

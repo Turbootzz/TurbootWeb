@@ -2,8 +2,6 @@
 
 import { useState } from "react"
 import { Container } from "@/components/layout/Container"
-import { ExternalLink, Github } from "lucide-react"
-import Link from "next/link"
 
 // Mock data until DB is connected
 const portfolioItems = [
@@ -106,7 +104,7 @@ export default function PortfolioPage() {
         <div className="grid gap-y-16 gap-x-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item) => (
             <div key={item.id} className="group cursor-pointer">
-              <div className="aspect-[4/3] bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 rounded-2xl overflow-hidden mb-6 relative border border-gray-200 dark:border-gray-800 shadow-lg">
+              <div className="aspect-4/3 bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 rounded-2xl overflow-hidden mb-6 relative border border-gray-200 dark:border-gray-800 shadow-lg">
                 {/* Placeholder for actual image - using a colored div if image fails to load usually, but here just gray bg */}
                 <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 flex items-center justify-center text-gray-600 dark:text-gray-400 font-mono text-sm">
