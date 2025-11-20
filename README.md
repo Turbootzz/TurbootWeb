@@ -160,4 +160,4 @@ The app can be deployed to any platform that supports Next.js:
 
 ## Contact
 
-For questions or support, contact: thijs@turboot.com
+For questions or support, contact: [thijs@turboot.com](mailto:thijs@turboot.com)
