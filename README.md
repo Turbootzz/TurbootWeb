@@ -101,33 +101,6 @@ turboot-web/
 2. Create a database: `createdb turboot_db`
 3. Update `.env.local` with your connection string
 
-### Using cloud PostgreSQL:
-
-Options include:
-
-- Vercel Postgres
-- Supabase
-- Neon
-- Railway
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Add environment variables
-4. Deploy
-
-### Other Platforms
-
-The app can be deployed to any platform that supports Next.js:
-
-- Netlify
-- Railway
-- DigitalOcean App Platform
-- AWS Amplify
-
 ## Features
 
 - ✅ Responsive design
