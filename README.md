@@ -22,23 +22,28 @@ Professional website for Turboot - Web Development, Software Development & PC Bu
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd turboot-web
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Set up environment variables:
+
 ```bash
 cp .env.local.example .env.local
 ```
+
 Then edit `.env.local` with your database credentials.
 
 4. Set up the database:
+
 ```bash
 # Push the schema to your database
 npm run db:push
@@ -51,6 +56,7 @@ npm run db:seed
 ```
 
 5. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -63,6 +69,8 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 - `npm run build` - Build for production
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm run format` - Format all files with Prettier
+- `npm run format:check` - Check formatting without modifying files
 - `npm run db:migrate` - Run database migrations
 - `npm run db:push` - Push schema to database (development)
 - `npm run db:seed` - Seed database with example data
@@ -96,6 +104,7 @@ turboot-web/
 ### Using cloud PostgreSQL:
 
 Options include:
+
 - Vercel Postgres
 - Supabase
 - Neon
@@ -113,6 +122,7 @@ Options include:
 ### Other Platforms
 
 The app can be deployed to any platform that supports Next.js:
+
 - Netlify
 - Railway
 - DigitalOcean App Platform
@@ -121,6 +131,7 @@ The app can be deployed to any platform that supports Next.js:
 ## Features
 
 - ✅ Responsive design
+- ✅ Dark mode toggle (Light/Dark/System)
 - ✅ Modern UI with Tailwind CSS v4
 - ✅ Contact form with validation
 - ✅ Portfolio showcase
@@ -128,6 +139,9 @@ The app can be deployed to any platform that supports Next.js:
 - ✅ SEO optimized
 - ✅ TypeScript for type safety
 - ✅ Database ready with Prisma
+- ✅ Code formatting with Prettier
+- ✅ Auto-format on commit (Husky + lint-staged)
+- ✅ CI/CD pipeline with GitHub Actions
 
 ## Future Enhancements
 
@@ -135,10 +149,10 @@ The app can be deployed to any platform that supports Next.js:
 - [ ] Homelab services dashboard
 - [ ] Admin panel for content management
 - [ ] Multi-language support (EN/NL)
-- [ ] Dark mode toggle
 - [ ] Client testimonials
 - [ ] Email integration for contact form
 - [ ] Analytics integration
+- [ ] Unit and integration tests
 
 ## License
 
