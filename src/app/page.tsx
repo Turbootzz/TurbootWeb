@@ -27,15 +27,15 @@ export default function Home() {
             className="text-muted-foreground animate-reveal mb-10 max-w-2xl text-xl leading-relaxed md:text-2xl"
             style={{ animationDelay: "0.2s" }}
           >
-            Turboot bouwt moderne webapplicaties, robuuste software en custom high-end computers.
-            Alles onder één dak, met persoonlijke aandacht.
+            Turboot bouwt moderne websites, software en apps voor klanten. Daarnaast beschikbaar
+            voor custom PC-bouw en technisch advies.
           </p>
           <div className="animate-reveal flex flex-wrap gap-4" style={{ animationDelay: "0.3s" }}>
             <Link
               href="/contact"
               className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-full px-8 py-4 text-base font-medium shadow-lg shadow-blue-600/30 transition"
             >
-              Start een project
+              Neem Contact op
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
