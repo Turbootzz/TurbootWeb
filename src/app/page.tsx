@@ -19,7 +19,7 @@ export default function Home() {
             style={{ animationDelay: "0.1s" }}
           >
             Digital crafts & <br />
-            <span className="animate-shimmer bg-linear-to-r from-blue-600 via-indigo-500 to-blue-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-blue-500 dark:via-indigo-400 dark:to-blue-500">
+            <span className="animate-shimmer bg-linear-to-r from-blue-600 via-purple-500 to-blue-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-blue-400 dark:via-purple-400 dark:to-blue-400">
               Custom silicon.
             </span>
           </h1>
@@ -72,10 +72,9 @@ export default function Home() {
                 </Link>
               </div>
               {/* Abstract Decoration */}
-              <div className="absolute -top-20 -right-20 h-64 w-64 rounded-full bg-blue-300/40 blur-3xl transition-colors group-hover:bg-blue-400/40 dark:bg-blue-800/30 dark:group-hover:bg-blue-700/40" />
+              <div className="animate-float absolute -top-20 -right-20 h-64 w-64 rounded-full bg-blue-300/40 blur-3xl transition-colors group-hover:bg-blue-400/40 dark:bg-blue-800/30 dark:group-hover:bg-blue-700/40" />
             </div>
-
-            {/* Software - Tall Card */}
+            {/* Software - Tall Card */}{" "}
             <div className="group relative overflow-hidden rounded-3xl border border-gray-800 bg-[#1e1e1e] p-8 text-white transition-all hover:shadow-xl md:row-span-2 dark:border-gray-800 dark:bg-gray-900">
               <div className="absolute top-8 right-8 rounded-2xl bg-gray-800 p-3 shadow-lg ring-1 ring-white/10">
                 <Code className="h-6 w-6 text-blue-400" />
@@ -115,7 +114,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             {/* PC Builds - Standard Card */}
             <div className="group relative overflow-hidden rounded-3xl border border-purple-300 bg-linear-to-br from-purple-200 to-pink-200 p-8 transition-all hover:shadow-xl dark:border-purple-900 dark:from-purple-950/50 dark:to-pink-950/50">
               <div className="bg-background ring-border absolute top-8 right-8 rounded-2xl p-3 shadow-lg ring-1">
@@ -129,10 +127,9 @@ export default function Home() {
                   High-end gaming rigs en workstations.
                 </p>
               </div>
-              <div className="absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-purple-300/40 blur-2xl transition-colors group-hover:bg-purple-400/40 dark:bg-purple-800/30" />
+              <div className="animate-float absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-purple-300/40 blur-2xl transition-colors group-hover:bg-purple-400/40 dark:bg-purple-800/30" />
             </div>
-
-            {/* Homelab - Standard Card */}
+            {/* Homelab - Standard Card */}{" "}
             <div className="group relative overflow-hidden rounded-3xl border border-emerald-300 bg-linear-to-br from-emerald-200 to-cyan-200 p-8 transition-all hover:shadow-xl dark:border-emerald-900 dark:from-emerald-950/50 dark:to-cyan-950/50">
               <div className="bg-background ring-border absolute top-8 right-8 rounded-2xl p-3 shadow-lg ring-1">
                 <Server className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
@@ -151,10 +148,10 @@ export default function Home() {
                   Open Hub <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
-              <div className="absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-emerald-300/40 blur-2xl transition-colors group-hover:bg-emerald-400/40 dark:bg-emerald-800/30" />
+              <div className="animate-float absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-emerald-300/40 blur-2xl transition-colors group-hover:bg-emerald-400/40 dark:bg-emerald-800/30" />
             </div>
           </div>
-        </ScrollReveal>
+        </ScrollReveal>{" "}
       </section>
 
       {/* Value Prop / Text Section */}
