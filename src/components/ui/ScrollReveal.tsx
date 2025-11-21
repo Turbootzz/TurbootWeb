@@ -7,7 +7,7 @@ interface ScrollRevealProps {
   children: React.ReactNode
   className?: string
   delay?: number
-  animation?: "reveal" | "slide-in-right" | "scale-up"
+  animation?: "reveal" | "slide-in-right" | "slide-in-left" | "scale-up"
 }
 
 export function ScrollReveal({
@@ -45,6 +45,7 @@ export function ScrollReveal({
   const animationClass = {
     reveal: "animate-reveal",
     "slide-in-right": "animate-slide-in-right",
+    "slide-in-left": "animate-slide-in-left",
     "scale-up": "animate-scale-up",
   }[animation]
 

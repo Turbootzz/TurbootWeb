@@ -19,7 +19,7 @@ export default function Home() {
             style={{ animationDelay: "0.1s" }}
           >
             Digital crafts & <br />
-            <span className="animate-shimmer bg-linear-to-r from-blue-600 via-purple-500 to-blue-600 bg-[length:200%_auto] bg-clip-text text-transparent dark:from-blue-400 dark:via-purple-400 dark:to-blue-400">
+            <span className="animate-shimmer bg-linear-to-r from-blue-600 via-purple-500 to-blue-600 bg-size-[200%_auto] bg-clip-text text-transparent dark:from-blue-400 dark:via-purple-400 dark:to-blue-400">
               Custom silicon.
             </span>
           </h1>
@@ -155,7 +155,7 @@ export default function Home() {
       {/* Value Prop / Text Section */}
       <section className="mx-auto w-full max-w-7xl px-6 py-24 lg:px-8">
         <div className="grid items-center gap-16 md:grid-cols-2">
-          <ScrollReveal animation="reveal">
+          <ScrollReveal animation="slide-in-left">
             <div>
               <h2 className="text-foreground mb-6 text-3xl font-bold tracking-tight md:text-4xl">
                 Geen onzin. <br />
@@ -171,7 +171,7 @@ export default function Home() {
               </p>
             </div>
           </ScrollReveal>
-          <ScrollReveal animation="scale-up" delay={200}>
+          <ScrollReveal animation="slide-in-right" delay={200}>
             <div className="border-border bg-card rounded-3xl border p-8 shadow-lg md:p-12">
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
