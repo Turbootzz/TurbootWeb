@@ -47,7 +47,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Services Grid (Bento Style) */}
       <section className="mx-auto w-full max-w-7xl px-6 py-12 lg:px-8">
         <ScrollReveal>
@@ -153,11 +152,10 @@ export default function Home() {
           </div>
         </ScrollReveal>{" "}
       </section>
-
       {/* Value Prop / Text Section */}
       <section className="mx-auto w-full max-w-7xl px-6 py-24 lg:px-8">
-        <ScrollReveal>
-          <div className="grid items-center gap-16 md:grid-cols-2">
+        <div className="grid items-center gap-16 md:grid-cols-2">
+          <ScrollReveal animation="reveal">
             <div>
               <h2 className="text-foreground mb-6 text-3xl font-bold tracking-tight md:text-4xl">
                 Geen onzin. <br />
@@ -172,6 +170,8 @@ export default function Home() {
                 dagelijks op werkt: kwaliteit staat voorop.
               </p>
             </div>
+          </ScrollReveal>
+          <ScrollReveal animation="scale-up" delay={200}>
             <div className="border-border bg-card rounded-3xl border p-8 shadow-lg md:p-12">
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
@@ -239,9 +239,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-          </div>
-        </ScrollReveal>
-      </section>
+          </ScrollReveal>
+        </div>
+      </section>{" "}
     </main>
   )
 }
