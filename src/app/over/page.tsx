@@ -97,17 +97,22 @@ export default function OverPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 shadow-2xl dark:bg-gray-800">
-                <Image
-                  src="/images/thijs.png"
-                  alt="Thijs Herman - Eigenaar Turboot"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+            <div className="flex justify-center">
+              <div className="relative h-64 w-64 md:h-80 md:w-80">
+                <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white shadow-2xl ring-1 ring-gray-200 dark:border-gray-800 dark:ring-gray-700">
+                  <Image
+                    src="/images/thijs.png"
+                    alt="Thijs Herman - Eigenaar Turboot"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -top-6 -right-6 -z-10 h-32 w-32 rounded-full bg-blue-100 blur-2xl dark:bg-blue-900/30" />
+                <div className="absolute -bottom-6 -left-6 -z-10 h-32 w-32 rounded-full bg-indigo-100 blur-2xl dark:bg-indigo-900/30" />
+                <div className="absolute -inset-4 -z-20 rounded-full border border-dashed border-gray-300 dark:border-gray-700" />
               </div>
-              <div className="absolute -right-4 -bottom-4 -z-10 h-full w-full rounded-2xl bg-blue-100 dark:bg-blue-950/50" />
             </div>
           </div>
         </Container>
