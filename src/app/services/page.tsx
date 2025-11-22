@@ -9,11 +9,11 @@ const iconMap = {
 }
 
 export const metadata = {
-  title: "Diensten - Turboot",
-  description: "Overzicht van diensten: Web, Software, Hardware.",
+  title: "Services - Turboot",
+  description: "Overview of services: Web, Software, Hardware.",
 }
 
-export default function DienstenPage() {
+export default function ServicesPage() {
   return (
     <main className="bg-white pt-24 pb-20 dark:bg-gray-950">
       <Container>

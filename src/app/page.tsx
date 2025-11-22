@@ -64,7 +64,7 @@ export default function Home() {
                   Moderne websites en applicaties met Next.js. Snel, veilig en schaalbaar.
                 </p>
                 <Link
-                  href="/diensten"
+                  href="/services"
                   className="mt-4 flex items-center text-sm font-semibold text-blue-700 transition-colors hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                 >
                   Meer info <ArrowRight className="ml-1 h-4 w-4" />

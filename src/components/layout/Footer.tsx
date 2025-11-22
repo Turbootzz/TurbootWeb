@@ -20,12 +20,12 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Diensten</h3>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Services</h3>
             <ul className="mt-4 space-y-3 text-sm text-gray-500 dark:text-gray-400">
               {SERVICES.map((service) => (
                 <li key={service.id}>
                   <Link
-                    href={`/diensten#${service.id}`}
+                    href={`/services#${service.id}`}
                     className="transition-colors hover:text-black dark:hover:text-white"
                   >
                     {service.title}
@@ -65,10 +65,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/over"
+                  href="/about"
                   className="transition-colors hover:text-black dark:hover:text-white"
                 >
-                  Over
+                  About
                 </Link>
               </li>
               <li>

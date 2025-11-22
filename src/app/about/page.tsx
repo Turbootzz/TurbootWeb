@@ -19,9 +19,9 @@ import type { Metadata } from "next"
 import { SOCIAL_LINKS } from "@/lib/constants"
 
 export const metadata: Metadata = {
-  title: "Over Turboot - Thijs Herman",
+  title: "About Turboot - Thijs Herman",
   description:
-    "Leer meer over Turboot, een eenmanszaak gerund door Thijs Herman. Gespecialiseerd in webontwikkeling, software ontwikkeling en custom PC builds.",
+    "Learn more about Turboot, a one-person business run by Thijs Herman. Specialized in web development, software development, and custom PC builds.",
 }
 
 const skills = [
@@ -60,7 +60,7 @@ const values = [
   },
 ]
 
-export default function OverPage() {
+export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
