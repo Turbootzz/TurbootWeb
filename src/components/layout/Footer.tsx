@@ -1,11 +1,11 @@
 import Link from "next/link"
-import { COMPANY_INFO, SERVICES } from "@/lib/constants"
+import { COMPANY_INFO, SERVICES, HOSTED_APPS } from "@/lib/constants"
 
 export function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-white py-12 md:py-16 dark:border-gray-800 dark:bg-gray-950">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           <div className="md:col-span-2">
             <Link
               href="/"
@@ -36,6 +36,23 @@ export function Footer() {
           </div>
 
           <div>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Services</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-500 dark:text-gray-400">
+              {HOSTED_APPS.map((app) => (
+                <li key={app.name}>
+                  <Link
+                    href={app.url}
+                    target="_blank"
+                    className="transition-colors hover:text-black dark:hover:text-white"
+                  >
+                    {app.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
             <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Links</h3>
             <ul className="mt-4 space-y-3 text-sm text-gray-500 dark:text-gray-400">
               <li>
@@ -44,14 +61,6 @@ export function Footer() {
                   className="transition-colors hover:text-black dark:hover:text-white"
                 >
                   Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/homelab"
-                  className="transition-colors hover:text-black dark:hover:text-white"
-                >
-                  Homelab Hub
                 </Link>
               </li>
               <li>
