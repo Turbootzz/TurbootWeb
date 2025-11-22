@@ -101,7 +101,7 @@ export function Header() {
             // Handle Dropdown Items
             if ("items" in link) {
               return (
-                <div key={link.label} className="group relative">
+                <div key={link.label} className="group relative flex items-center">
                   <button className="flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white">
                     {link.label}
                     <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
