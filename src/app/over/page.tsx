@@ -14,6 +14,7 @@ import {
   Activity,
 } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import type { Metadata } from "next"
 import { SOCIAL_LINKS } from "@/lib/constants"
 
@@ -97,14 +98,14 @@ export default function OverPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-linear-to-br from-blue-600 to-indigo-600 shadow-2xl dark:from-blue-500 dark:to-indigo-500">
-                <div className="flex h-full items-center justify-center">
-                  <div className="text-center text-white">
-                    <Code className="mx-auto mb-4 h-24 w-24" />
-                    <p className="text-2xl font-bold">Turboot</p>
-                    <p className="mt-2 text-blue-100">Digital Solutions</p>
-                  </div>
-                </div>
+              <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 shadow-2xl dark:bg-gray-800">
+                <Image
+                  src="/images/thijs.png"
+                  alt="Thijs Herman - Eigenaar Turboot"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
               <div className="absolute -right-4 -bottom-4 -z-10 h-full w-full rounded-2xl bg-blue-100 dark:bg-blue-950/50" />
             </div>
