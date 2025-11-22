@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect, useRef } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ThemeToggle } from "@/components/ThemeToggle"
 
@@ -56,7 +56,7 @@ export function Header() {
     }
   }, [open])
 
-  // Focus trap
+  // Focus trap (simplified for dynamic structure)
   useEffect(() => {
     if (!open || !menuRef.current) return
 
@@ -97,20 +97,51 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-6 md:flex">
-          {LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
-                pathname === link.href
-                  ? "text-black dark:text-white"
-                  : "text-gray-500 dark:text-gray-400"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {LINKS.map((link) => {
+            // Handle Dropdown Items
+            if ("items" in link) {
+              return (
+                <div key={link.label} className="group relative">
+                  <button className="flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white">
+                    {link.label}
+                    <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                  </button>
+
+                  {/* Dropdown Content */}
+                  <div className="invisible absolute top-full left-1/2 mt-2 w-48 -translate-x-1/2 pt-2 opacity-0 transition-all duration-200 ease-in-out group-hover:visible group-hover:opacity-100">
+                    <div className="rounded-xl border border-gray-200 bg-white p-2 shadow-lg dark:border-gray-800 dark:bg-gray-950">
+                      {link.items.map((subItem) => (
+                        <Link
+                          key={subItem.label}
+                          href={subItem.href}
+                          target={subItem.external ? "_blank" : undefined}
+                          className="block rounded-lg px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-black dark:text-gray-400 dark:hover:bg-gray-900 dark:hover:text-white"
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )
+            }
+
+            // Handle Regular Links
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
+                  pathname === link.href
+                    ? "text-black dark:text-white"
+                    : "text-gray-500 dark:text-gray-400"
+                )}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
           <ThemeToggle />
           <Link
             href="/contact"
@@ -142,19 +173,45 @@ export function Header() {
           className="absolute top-16 left-0 w-full border-b border-gray-200 bg-white p-6 shadow-lg md:hidden dark:border-gray-800 dark:bg-gray-950"
         >
           <nav className="flex flex-col gap-4">
-            {LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => {
-                  setOpen(false)
-                  toggleRef.current?.focus()
-                }}
-                className="text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {LINKS.map((link) => {
+              if ("items" in link) {
+                return (
+                  <div key={link.label} className="flex flex-col gap-2">
+                    <span className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+                      {link.label}
+                    </span>
+                    {link.items.map((subItem) => (
+                      <Link
+                        key={subItem.label}
+                        href={subItem.href}
+                        target={subItem.external ? "_blank" : undefined}
+                        onClick={() => {
+                          setOpen(false)
+                          toggleRef.current?.focus()
+                        }}
+                        className="pl-4 text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                )
+              }
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => {
+                    setOpen(false)
+                    toggleRef.current?.focus()
+                  }}
+                  className="text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </nav>
         </div>
       )}
