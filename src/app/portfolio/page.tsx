@@ -104,8 +104,20 @@ export default async function PortfolioPage() {
               return (
                 <ScrollReveal key={repo.id} delay={index * 100} animation="scale-up">
                   <Link href={repo.html_url} target="_blank" className="group block h-full">
-                    <div className="group border-border bg-card relative h-full overflow-hidden rounded-2xl border p-6 transition-all duration-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10">
-                      <div className="mb-6 flex items-start justify-between">
+                    <div className="group border-border bg-card relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 transition-all duration-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10">
+                      {/* Project Screenshot Placeholder */}
+                      <div className="border-border bg-muted relative -mx-6 -mt-6 mb-6 aspect-video overflow-hidden border-b">
+                        {/* 
+                           In a real scenario, you would map repo names to image paths or fetch OG images.
+                           For now, we use a gradient placeholder or you can add actual images to public/images/projects/
+                         */}
+                        <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 transition-transform duration-500 group-hover:scale-105 dark:from-blue-950/30 dark:to-indigo-950/30" />
+                        <div className="text-muted-foreground/20 absolute inset-0 flex items-center justify-center">
+                          <Icon className="h-16 w-16 opacity-20" />
+                        </div>
+                      </div>
+
+                      <div className="mb-4 flex items-start justify-between">
                         <div className="rounded-xl bg-blue-50 p-3 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white dark:bg-blue-950/50 dark:text-blue-400 dark:group-hover:text-white">
                           <Icon className="h-6 w-6" />
                         </div>
