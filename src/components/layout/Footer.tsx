@@ -36,7 +36,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Services</h3>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Applications</h3>
             <ul className="mt-4 space-y-3 text-sm text-gray-500 dark:text-gray-400">
               {HOSTED_APPS.map((app) => (
                 <li key={app.name}>
