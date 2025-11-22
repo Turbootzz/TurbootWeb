@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { PageHeader } from "@/components/sections/PageHeader"
 import { COMPANY_INFO } from "@/lib/constants"
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react"
+import { Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
+                {/* <div className="flex items-start space-x-4 rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
                   <Phone className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" />
                   <div>
                     <p className="font-semibold text-gray-950 dark:text-white">Telefoon</p>
@@ -114,7 +114,7 @@ export default function ContactPage() {
                       {COMPANY_INFO.phone}
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start space-x-4 rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" />
