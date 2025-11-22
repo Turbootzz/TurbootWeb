@@ -2,15 +2,13 @@ export const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/diensten", label: "Diensten" },
   { href: "/portfolio", label: "Portfolio" },
-  {
-    label: "Services",
-    items: [
-      { label: "Nimbus", href: "https://nimbus.turboot.com", external: true },
-      { label: "PokePortal", href: "https://pokeportal.app", external: true },
-    ],
-  },
   { href: "/over", label: "Over" },
   { href: "/contact", label: "Contact" },
+] as const
+
+export const HOSTED_APPS = [
+  { name: "Nimbus", url: "https://nimbus.turboot.com" },
+  { name: "PokePortal", url: "https://pokeportal.app" },
 ] as const
 
 export const SERVICES = [
