@@ -1,18 +1,8 @@
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { Container } from "@/components/layout/Container"
 import Link from "next/link"
-import {
-  ArrowRight,
-  Github,
-  Star,
-  GitFork,
-  Shield,
-  Cpu,
-  Gamepad,
-  Globe,
-  Zap,
-  Box,
-} from "lucide-react"
+import { ArrowRight, Github, Star, GitFork, Shield, Gamepad, Globe, Zap, Box } from "lucide-react"
+import Image from "next/image"
 
 // Define the type for a GitHub repository
 interface GithubRepo {
@@ -28,7 +18,16 @@ interface GithubRepo {
   fork: boolean
 }
 
-const ALLOWED_KEYWORDS = ["nimbus", "salvus", "guess", "turboot", "primal"]
+const ALLOWED_KEYWORDS = [
+  "nimbus",
+  "salvussecurity",
+  "guessthecry",
+  "turbootweb",
+  "primal",
+  "vaultwarden-api",
+  "pokeportal",
+  "rampup",
+]
 
 async function getGithubRepos(): Promise<GithubRepo[]> {
   try {
@@ -107,14 +106,25 @@ export default async function PortfolioPage() {
                     <div className="group border-border bg-card relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 transition-all duration-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10">
                       {/* Project Screenshot Placeholder */}
                       <div className="border-border bg-muted relative -mx-6 -mt-6 mb-6 aspect-video overflow-hidden border-b">
-                        {/* 
+                        {repo.name.toLowerCase().includes("guessthecry") ? (
+                          <Image
+                            src="/images/projects/guessthecry.jpg"
+                            alt={repo.name}
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        ) : (
+                          <>
+                            {/* 
                            In a real scenario, you would map repo names to image paths or fetch OG images.
                            For now, we use a gradient placeholder or you can add actual images to public/images/projects/
                          */}
-                        <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 transition-transform duration-500 group-hover:scale-105 dark:from-blue-950/30 dark:to-indigo-950/30" />
-                        <div className="text-muted-foreground/20 absolute inset-0 flex items-center justify-center">
-                          <Icon className="h-16 w-16 opacity-20" />
-                        </div>
+                            <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 transition-transform duration-500 group-hover:scale-105 dark:from-blue-950/30 dark:to-indigo-950/30" />
+                            <div className="text-muted-foreground/20 absolute inset-0 flex items-center justify-center">
+                              <Icon className="h-16 w-16 opacity-20" />
+                            </div>
+                          </>
+                        )}
                       </div>
 
                       <div className="mb-4 flex items-start justify-between">
