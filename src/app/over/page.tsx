@@ -11,7 +11,7 @@ import {
   Target,
   Heart,
   Server,
-  Coffee,
+  Activity,
 } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
@@ -209,7 +209,7 @@ export default function OverPage() {
           { icon: Code, label: "Projecten Afgerond", value: "15+" },
           { icon: Server, label: "Active Containers", value: "25+" },
           { icon: Award, label: "Tech Stack", value: "Modern" },
-          { icon: Coffee, label: "Koffie", value: "∞" },
+          { icon: Activity, label: "Uptime", value: "99.9%" },
         ]}
         variant="dark"
       />
