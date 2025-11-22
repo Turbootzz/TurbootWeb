@@ -2,9 +2,20 @@ import { Container } from "@/components/layout/Container"
 import { CTASection } from "@/components/sections/CTASection"
 import { StatsSection } from "@/components/sections/StatsSection"
 import { FeatureGrid } from "@/components/sections/FeatureGrid"
-import { CheckCircle, Award, Users, Clock, Code, Lightbulb, Target, Heart } from "lucide-react"
+import {
+  CheckCircle,
+  Award,
+  Users,
+  Code,
+  Lightbulb,
+  Target,
+  Heart,
+  Server,
+  Coffee,
+} from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { SOCIAL_LINKS } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "Over Turboot - Thijs Herman",
@@ -13,12 +24,12 @@ export const metadata: Metadata = {
 }
 
 const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"] },
-  { category: "Backend", items: ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"] },
-  { category: "Tools", items: ["Git", "Docker", "AWS", "Vercel", "CI/CD"] },
+  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "CSS"] },
+  { category: "Backend", items: ["Node.js", "Java", "PostgreSQL", "Go", "REST APIs"] },
+  { category: "Tools", items: ["Git", "Docker", "CI/CD"] },
   {
     category: "Hardware",
-    items: ["PC Assembly", "Troubleshooting", "Overclocking", "Water Cooling"],
+    items: ["PC Assembly", "Troubleshooting", "Overclocking"],
   },
 ]
 
@@ -66,9 +77,9 @@ export default function OverPage() {
                 realiseren van hun digitale ambities.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                Met meer dan 10 jaar ervaring in software ontwikkeling en een passie voor
-                technologie, bied ik persoonlijke service en maatwerk oplossingen die perfect
-                aansluiten bij uw behoeften.
+                Met ervaring in software ontwikkeling en een passie voor technologie, bied ik
+                persoonlijke service en maatwerk oplossingen die perfect aansluiten bij uw
+                behoeften.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
@@ -110,20 +121,31 @@ export default function OverPage() {
             </h2>
             <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               <p>
-                Al van jongs af aan ben ik gefascineerd door technologie en computers. Wat begon als
-                een hobby - het bouwen van mijn eerste PC op 12-jarige leeftijd - groeide uit tot
-                een carrière in software ontwikkeling.
+                Op vroege leeftijd was ik al zeer geïnteresseerd in computers. Het begon met gamen,
+                wat al snel uitgroeide tot een passie voor techniek: van het zelf bouwen van
+                PC&apos;s tot het opzetten en beheren van mijn eigen servers. Hier leerde ik werken
+                met virtuele machines (VM&apos;s) en containers, wat de basis legde voor mijn
+                technische kennis.
               </p>
               <p>
-                Na jaren ervaring op te doen bij verschillende bedrijven, besloot ik in 2023 Turboot
-                op te richten. Als eenmanszaak kan ik de flexibiliteit en persoonlijke aanpak bieden
-                die grote bureaus vaak missen.
+                Vanuit die infrastructuur-achtergrond verbreedde mijn interesse zich naar
+                programmeren. Ik begon met het bouwen van mijn eigen applicaties en ontdekte de
+                kracht van software ontwikkeling. Deze combinatie van systeemkennis en
+                programmeervaardigheden stelt mij in staat om complete, robuuste oplossingen te
+                bouwen.
               </p>
               <p>
-                Naast mijn werk aan klantprojecten, run ik ook een homelab waar ik experimenteer met
-                nieuwe technologieën en mijn eigen services host. Deze hands-on ervaring met
-                infrastructuur en DevOps komt van pas bij het opzetten van robuuste en schaalbare
-                oplossingen voor klanten.
+                Inmiddels zet ik deze ervaring in om klanten te helpen met websites, software en
+                technische vraagstukken. Voor een volledig overzicht van mijn professionele ervaring
+                en vaardigheden kunt u ook terecht op mijn{" "}
+                <Link
+                  href={SOCIAL_LINKS.linkedin}
+                  target="_blank"
+                  className="text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                >
+                  LinkedIn-profiel
+                </Link>
+                .
               </p>
             </div>
           </div>
@@ -184,10 +206,10 @@ export default function OverPage() {
       {/* Stats Section */}
       <StatsSection
         stats={[
-          { icon: Award, label: "Jaar Ervaring", value: "10+" },
-          { icon: Users, label: "Tevreden Klanten", value: "30+" },
-          { icon: Code, label: "Regels Code", value: "500K+" },
-          { icon: Clock, label: "Uren Geïnvesteerd", value: "15K+" },
+          { icon: Code, label: "Projecten Afgerond", value: "15+" },
+          { icon: Server, label: "Active Containers", value: "25+" },
+          { icon: Award, label: "Tech Stack", value: "Modern" },
+          { icon: Coffee, label: "Koffie", value: "∞" },
         ]}
         variant="dark"
       />
