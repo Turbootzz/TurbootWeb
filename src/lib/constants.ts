@@ -1,14 +1,16 @@
-// Navigation items
 export const NAV_ITEMS = [
   { href: "/", label: "Home" },
-  { href: "/diensten", label: "Diensten" },
+  { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
-  { href: "/homelab", label: "Homelab" },
-  { href: "/over", label: "Over" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] as const
 
-// Services
+export const HOSTED_APPS = [
+  { name: "Nimbus", url: "https://nimbus.turboot.com" },
+  { name: "PokePortal", url: "https://pokeportal.app" },
+] as const
+
 export const SERVICES = [
   {
     id: "web-development",
@@ -19,7 +21,7 @@ export const SERVICES = [
       "Responsive design",
       "SEO geoptimaliseerd",
       "Snelle laadtijden",
-      "Content Management Systeem",
+      "Maatwerk functionaliteit",
     ],
   },
   {
@@ -27,7 +29,12 @@ export const SERVICES = [
     title: "Software Ontwikkeling",
     description: "Op maat gemaakte software oplossingen voor uw bedrijf",
     icon: "Code",
-    features: ["Desktop applicaties", "API ontwikkeling", "Database ontwerp", "Automatisering"],
+    features: [
+      "Desktop/Mobile applicaties",
+      "API ontwikkeling",
+      "Database ontwerp",
+      "Automatisering",
+    ],
   },
   {
     id: "pc-builds",
@@ -38,20 +45,16 @@ export const SERVICES = [
   },
 ] as const
 
-// Company info
 export const COMPANY_INFO = {
   name: "Turboot",
   owner: "Thijs Herman",
-  email: "info@turboot.nl", // Update with real email
-  phone: "+31 6 12345678", // Update with real phone
-  address: "Nederland", // Update with real address
-  kvk: "12345678", // Update with real KvK number
-  btw: "NL123456789B01", // Update with real BTW number
+  email: "info@turboot.com",
+  address: "Nederland",
+  kvk: "12345678",
+  btw: "NL123456789B01",
 } as const
 
-// Social media links (update with real URLs)
 export const SOCIAL_LINKS = {
-  github: "https://github.com/turboot",
-  linkedin: "https://linkedin.com/company/turboot",
-  twitter: "https://twitter.com/turboot",
+  github: "https://github.com/turbootzz",
+  linkedin: "https://linkedin.com/in/thijsherman",
 } as const

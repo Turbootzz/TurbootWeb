@@ -9,7 +9,7 @@ import { ThemeToggle } from "@/components/ThemeToggle"
 
 import { NAV_ITEMS } from "@/lib/constants"
 
-const LINKS = NAV_ITEMS.filter((item) => item.href !== "/")
+const LINKS = NAV_ITEMS
 
 export function Header() {
   const pathname = usePathname()
@@ -116,7 +116,7 @@ export function Header() {
             href="/contact"
             className="rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95 dark:bg-white dark:text-black"
           >
-            Start Project
+            Neem Contact op
           </Link>
         </nav>
 

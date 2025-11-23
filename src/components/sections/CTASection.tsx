@@ -20,7 +20,7 @@ export function CTASection({
 }: CTASectionProps) {
   const bgClass =
     variant === "primary"
-      ? "bg-linear-to-r from-blue-600 to-blue-700"
+      ? "bg-linear-to-r from-primary to-purple-600"
       : "bg-linear-to-r from-gray-800 to-gray-900"
 
   return (

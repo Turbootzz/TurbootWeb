@@ -14,7 +14,7 @@ interface StatsSectionProps {
 }
 
 export function StatsSection({ stats, className = "", variant = "dark" }: StatsSectionProps) {
-  const bgClass = variant === "dark" ? "bg-linear-to-r from-blue-600 to-blue-700" : "bg-gray-50"
+  const bgClass = variant === "dark" ? "bg-linear-to-r from-purple-700 to-purple-800" : "bg-gray-50"
 
   const textColorClass = variant === "dark" ? "text-white" : "text-gray-900"
 
