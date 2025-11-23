@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { Container } from "@/components/layout/Container"
 import Link from "next/link"
 import { ArrowRight, Github, Star, GitFork, Shield, Gamepad, Globe, Zap, Box } from "lucide-react"
-import Image from "next/image"
+import { ProjectImage } from "@/components/ui/ProjectImage"
 
 // Define the type for a GitHub repository
 interface GithubRepo {
@@ -104,28 +104,8 @@ export default async function PortfolioPage() {
                 <ScrollReveal key={repo.id} delay={index * 100} animation="scale-up">
                   <Link href={repo.html_url} target="_blank" className="group block h-full">
                     <div className="group border-border bg-card/50 hover:border-primary/50 hover:shadow-primary/5 relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-xl">
-                      {/* Project Screenshot Placeholder */}
-                      <div className="border-border bg-muted relative -mx-6 -mt-6 mb-6 aspect-video overflow-hidden border-b">
-                        {repo.name.toLowerCase().includes("guessthecry") ? (
-                          <Image
-                            src="/images/projects/guessthecry.jpg"
-                            alt={repo.name}
-                            fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                        ) : (
-                          <>
-                            {/* 
-                           In a real scenario, you would map repo names to image paths or fetch OG images.
-                           For now, we use a gradient placeholder or you can add actual images to public/images/projects/
-                         */}
-                            <div className="from-primary/5 absolute inset-0 bg-linear-to-br to-transparent transition-transform duration-500 group-hover:scale-105" />
-                            <div className="text-muted-foreground/20 absolute inset-0 flex items-center justify-center">
-                              <Icon className="h-16 w-16 opacity-20" />
-                            </div>
-                          </>
-                        )}
-                      </div>
+                      {/* Project Screenshot - tries local image first, falls back to GitHub OpenGraph */}
+                      <ProjectImage repoName={repo.name} />
 
                       <div className="mb-4 flex items-start justify-between">
                         <div className="bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground rounded-xl p-3 transition-colors">
