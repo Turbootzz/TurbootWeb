@@ -1,7 +1,6 @@
 import { Container } from "@/components/layout/Container"
 import { CTASection } from "@/components/sections/CTASection"
 import { StatsSection } from "@/components/sections/StatsSection"
-import { FeatureGrid } from "@/components/sections/FeatureGrid"
 import {
   CheckCircle,
   Award,
@@ -17,11 +16,12 @@ import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
 import { SOCIAL_LINKS } from "@/lib/constants"
+import { ScrollReveal } from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = {
-  title: "About Turboot - Thijs Herman",
+  title: "Over Turboot - Thijs Herman",
   description:
-    "Learn more about Turboot, a one-person business run by Thijs Herman. Specialized in web development, software development, and custom PC builds.",
+    "Leer meer over Turboot, een eenmanszaak gerund door Thijs Herman. Gespecialiseerd in webontwikkeling, software ontwikkeling en custom PC builds.",
 }
 
 const skills = [
@@ -62,150 +62,169 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <>
+    <main className="bg-background min-h-screen pt-24 pb-20">
       {/* Hero Section */}
-      <section className="bg-linear-to-br from-blue-50 to-white py-16 md:py-24 dark:from-gray-950 dark:to-gray-900">
+      <section className="border-border border-b py-16 md:py-24">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <div>
-              <h1 className="text-4xl font-bold tracking-tight text-gray-950 sm:text-5xl dark:text-white">
-                Over Turboot
-              </h1>
-              <p className="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                Hallo, ik ben{" "}
-                <strong className="text-gray-950 dark:text-white">Thijs Herman</strong>, de persoon
-                achter Turboot. Als ervaren developer en tech enthusiast help ik bedrijven met het
-                realiseren van hun digitale ambities.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                Met ervaring in software ontwikkeling en een passie voor technologie, bied ik
-                persoonlijke service en maatwerk oplossingen die perfect aansluiten bij uw
-                behoeften.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center rounded-full bg-blue-600 px-8 py-4 text-base font-medium text-white shadow-lg shadow-blue-600/30 transition hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500"
-                >
-                  Laten We Kennismaken
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="inline-flex items-center rounded-full border-2 border-gray-300 bg-transparent px-8 py-4 text-base font-medium text-gray-900 transition hover:border-blue-600 hover:bg-blue-50 dark:border-gray-700 dark:text-gray-100 dark:hover:border-blue-500 dark:hover:bg-blue-950/30"
-                >
-                  Bekijk Mijn Werk
-                </Link>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative h-64 w-64 md:h-80 md:w-80">
-                <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white shadow-2xl ring-1 ring-gray-200 dark:border-gray-800 dark:ring-gray-700">
-                  <Image
-                    src="/images/thijs.png"
-                    alt="Thijs Herman - Eigenaar Turboot"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
+            <ScrollReveal animation="slide-in-left">
+              <div>
+                <h1 className="text-foreground text-4xl font-bold tracking-tight sm:text-5xl">
+                  Over Turboot
+                </h1>
+                <p className="text-muted-foreground mt-6 text-lg leading-relaxed">
+                  Hallo, ik ben <strong className="text-foreground">Thijs Herman</strong>, de
+                  persoon achter Turboot. Als ervaren developer en tech enthusiast help ik bedrijven
+                  met het realiseren van hun digitale ambities.
+                </p>
+                <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
+                  Met ervaring in software ontwikkeling en een passie voor technologie, bied ik
+                  persoonlijke service en maatwerk oplossingen die perfect aansluiten bij uw
+                  behoeften.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <Link
+                    href="/contact"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-full px-8 py-4 text-base font-medium shadow-lg shadow-blue-600/30 transition hover:-translate-y-0.5"
+                  >
+                    Laten We Kennismaken
+                  </Link>
+                  <Link
+                    href="/portfolio"
+                    className="border-border text-foreground hover:bg-accent/50 inline-flex items-center rounded-full border-2 bg-transparent px-8 py-4 text-base font-medium transition hover:-translate-y-0.5"
+                  >
+                    Bekijk Mijn Werk
+                  </Link>
                 </div>
-                {/* Decorative elements */}
-                <div className="absolute -top-6 -right-6 -z-10 h-32 w-32 rounded-full bg-blue-100 blur-2xl dark:bg-blue-900/30" />
-                <div className="absolute -bottom-6 -left-6 -z-10 h-32 w-32 rounded-full bg-indigo-100 blur-2xl dark:bg-indigo-900/30" />
-                <div className="absolute -inset-4 -z-20 rounded-full border border-dashed border-gray-300 dark:border-gray-700" />
               </div>
-            </div>
+            </ScrollReveal>
+            <ScrollReveal animation="scale-up" delay={200}>
+              <div className="flex justify-center">
+                <div className="relative h-64 w-64 md:h-80 md:w-80">
+                  <div className="border-background ring-border relative h-full w-full overflow-hidden rounded-full border-4 shadow-2xl ring-1">
+                    <Image
+                      src="/images/thijs.png"
+                      alt="Thijs Herman - Eigenaar Turboot"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  {/* Decorative elements */}
+                  <div className="bg-primary/20 absolute -top-6 -right-6 -z-10 h-32 w-32 rounded-full blur-3xl" />
+                  <div className="absolute -bottom-6 -left-6 -z-10 h-32 w-32 rounded-full bg-purple-500/20 blur-3xl" />
+                  <div className="border-primary/20 absolute -inset-4 -z-20 rounded-full border border-dashed" />
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </Container>
       </section>
 
       {/* Story Section */}
-      <section className="bg-white py-16 md:py-24 dark:bg-gray-950">
+      <section className="bg-card/30 py-16 md:py-24">
         <Container>
-          <div className="mx-auto max-w-3xl">
-            <h2 className="mb-8 text-3xl font-bold tracking-tight text-gray-950 dark:text-white">
-              Mijn Verhaal
-            </h2>
-            <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              <p>
-                Op vroege leeftijd was ik al zeer geïnteresseerd in computers. Het begon met gamen,
-                wat al snel uitgroeide tot een passie voor techniek: van het zelf bouwen van
-                PC&apos;s tot het opzetten en beheren van mijn eigen servers. Hier leerde ik werken
-                met virtuele machines (VM&apos;s) en containers, wat de basis legde voor mijn
-                technische kennis.
-              </p>
-              <p>
-                Vanuit die infrastructuur-achtergrond verbreedde mijn interesse zich naar
-                programmeren. Ik begon met het bouwen van mijn eigen applicaties en ontdekte de
-                kracht van software ontwikkeling. Deze combinatie van systeemkennis en
-                programmeervaardigheden stelt mij in staat om complete, robuuste oplossingen te
-                bouwen.
-              </p>
-              <p>
-                Inmiddels zet ik deze ervaring in om klanten te helpen met websites, software en
-                technische vraagstukken. Voor een volledig overzicht van mijn professionele ervaring
-                en vaardigheden kunt u ook terecht op mijn{" "}
-                <Link
-                  href={SOCIAL_LINKS.linkedin}
-                  target="_blank"
-                  className="text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-                >
-                  LinkedIn-profiel
-                </Link>
-                .
-              </p>
+          <ScrollReveal>
+            <div className="mx-auto max-w-3xl">
+              <h2 className="text-foreground mb-8 text-3xl font-bold tracking-tight">
+                Mijn Verhaal
+              </h2>
+              <div className="text-muted-foreground space-y-6 text-lg leading-relaxed">
+                <p>
+                  Op vroege leeftijd was ik al zeer geïnteresseerd in computers. Het begon met
+                  gamen, wat al snel uitgroeide tot een passie voor techniek: van het zelf bouwen
+                  van PC&apos;s tot het opzetten en beheren van mijn eigen servers. Hier leerde ik
+                  werken met virtuele machines (VM&apos;s) en containers, wat de basis legde voor
+                  mijn technische kennis.
+                </p>
+                <p>
+                  Vanuit die infrastructuur-achtergrond verbreedde mijn interesse zich naar
+                  programmeren. Ik begon met het bouwen van mijn eigen applicaties en ontdekte de
+                  kracht van software ontwikkeling. Deze combinatie van systeemkennis en
+                  programmeervaardigheden stelt mij in staat om complete, robuuste oplossingen te
+                  bouwen.
+                </p>
+                <p>
+                  Inmiddels zet ik deze ervaring in om klanten te helpen met websites, software en
+                  technische vraagstukken. Voor een volledig overzicht van mijn professionele
+                  ervaring en vaardigheden kunt u ook terecht op mijn{" "}
+                  <Link
+                    href={SOCIAL_LINKS.linkedin}
+                    target="_blank"
+                    className="text-primary hover:underline"
+                  >
+                    LinkedIn-profiel
+                  </Link>
+                  .
+                </p>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </Container>
       </section>
 
       {/* Skills Section */}
-      <section className="bg-gray-50 py-16 md:py-24 dark:bg-gray-900">
+      <section className="py-16 md:py-24">
         <Container>
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-950 dark:text-white">
-              Expertise & Vaardigheden
-            </h2>
-            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-              Een breed scala aan technologieën om uw project te realiseren
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="mb-12 text-center">
+              <h2 className="text-foreground text-3xl font-bold tracking-tight">
+                Expertise & Vaardigheden
+              </h2>
+              <p className="text-muted-foreground mt-4 text-lg">
+                Een breed scala aan technologieën om uw project te realiseren
+              </p>
+            </div>
+          </ScrollReveal>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {skills.map((skillGroup) => (
-              <div
-                key={skillGroup.category}
-                className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg dark:border-gray-800 dark:bg-gray-950"
-              >
-                <h3 className="mb-4 text-lg font-semibold text-blue-600 dark:text-blue-400">
-                  {skillGroup.category}
-                </h3>
-                <ul className="space-y-3">
-                  {skillGroup.items.map((skill) => (
-                    <li key={skill} className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 shrink-0 text-green-600 dark:text-green-500" />
-                      <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                        {skill}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {skills.map((skillGroup, idx) => (
+              <ScrollReveal key={skillGroup.category} delay={idx * 100} animation="scale-up">
+                <div className="hover:border-primary/50 hover:shadow-primary/5 border-border bg-card/50 rounded-2xl border p-6 shadow-sm backdrop-blur-sm transition-all hover:shadow-xl">
+                  <h3 className="text-primary mb-4 text-lg font-semibold">{skillGroup.category}</h3>
+                  <ul className="space-y-3">
+                    {skillGroup.items.map((skill) => (
+                      <li key={skill} className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 shrink-0 text-green-500" />
+                        <span className="text-foreground text-sm font-medium">{skill}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </Container>
       </section>
 
       {/* Values Section */}
-      <section className="bg-white py-16 md:py-24 dark:bg-gray-950">
+      <section className="bg-card/30 py-16 md:py-24">
         <Container>
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-950 dark:text-white">
-              Mijn Waarden
-            </h2>
-            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-              De principes die mij drijven in elk project
-            </p>
+          <ScrollReveal>
+            <div className="mb-12 text-center">
+              <h2 className="text-foreground text-3xl font-bold tracking-tight">Mijn Waarden</h2>
+              <p className="text-muted-foreground mt-4 text-lg">
+                De principes die mij drijven in elk project
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {values.map((value, idx) => {
+              const Icon = value.icon
+              return (
+                <ScrollReveal key={value.title} delay={idx * 100} animation="reveal">
+                  <div className="hover:border-primary/50 hover:bg-card rounded-2xl border border-transparent p-6 transition-colors">
+                    <div className="bg-primary/10 text-primary mb-4 w-fit rounded-xl p-3">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-foreground mb-2 text-lg font-bold">{value.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              )
+            })}
           </div>
-          <FeatureGrid features={values} columns={4} />
         </Container>
       </section>
 
@@ -225,6 +244,6 @@ export default function AboutPage() {
         description="Bent u op zoek naar een betrouwbare partner voor uw digitale project? Ik help u graag verder."
         variant="secondary"
       />
-    </>
+    </main>
   )
 }

@@ -103,7 +103,7 @@ export default async function PortfolioPage() {
               return (
                 <ScrollReveal key={repo.id} delay={index * 100} animation="scale-up">
                   <Link href={repo.html_url} target="_blank" className="group block h-full">
-                    <div className="group border-border bg-card relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 transition-all duration-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10">
+                    <div className="group border-border bg-card/50 hover:border-primary/50 hover:shadow-primary/5 relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-xl">
                       {/* Project Screenshot Placeholder */}
                       <div className="border-border bg-muted relative -mx-6 -mt-6 mb-6 aspect-video overflow-hidden border-b">
                         {repo.name.toLowerCase().includes("guessthecry") ? (
@@ -119,7 +119,7 @@ export default async function PortfolioPage() {
                            In a real scenario, you would map repo names to image paths or fetch OG images.
                            For now, we use a gradient placeholder or you can add actual images to public/images/projects/
                          */}
-                            <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 transition-transform duration-500 group-hover:scale-105 dark:from-blue-950/30 dark:to-indigo-950/30" />
+                            <div className="from-primary/5 absolute inset-0 bg-linear-to-br to-transparent transition-transform duration-500 group-hover:scale-105" />
                             <div className="text-muted-foreground/20 absolute inset-0 flex items-center justify-center">
                               <Icon className="h-16 w-16 opacity-20" />
                             </div>
@@ -128,7 +128,7 @@ export default async function PortfolioPage() {
                       </div>
 
                       <div className="mb-4 flex items-start justify-between">
-                        <div className="rounded-xl bg-blue-50 p-3 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white dark:bg-blue-950/50 dark:text-blue-400 dark:group-hover:text-white">
+                        <div className="bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground rounded-xl p-3 transition-colors">
                           <Icon className="h-6 w-6" />
                         </div>
                         <div className="text-muted-foreground flex items-center gap-3 text-sm">
@@ -145,7 +145,7 @@ export default async function PortfolioPage() {
                         </div>
                       </div>
 
-                      <h3 className="text-foreground mb-2 text-xl font-bold transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      <h3 className="text-foreground group-hover:text-primary mb-2 text-xl font-bold transition-colors">
                         {repo.name}
                       </h3>
 
@@ -157,7 +157,7 @@ export default async function PortfolioPage() {
                         <span className="text-muted-foreground text-xs font-medium">
                           {repo.language}
                         </span>
-                        <span className="flex items-center text-sm font-medium text-blue-600 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100 dark:text-blue-400">
+                        <span className="text-primary flex items-center text-sm font-medium opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100">
                           Bekijk Code <ArrowRight className="ml-1 h-4 w-4" />
                         </span>
                       </div>
@@ -169,7 +169,7 @@ export default async function PortfolioPage() {
           </div>
         ) : (
           <ScrollReveal>
-            <div className="border-border bg-card/50 flex flex-col items-center justify-center rounded-2xl border border-dashed p-12 text-center">
+            <div className="border-border bg-card/50 flex flex-col items-center justify-center rounded-2xl border border-dashed p-12 text-center backdrop-blur-sm">
               <Github className="text-muted-foreground/50 mb-4 h-12 w-12" />
               <h3 className="text-foreground mb-2 text-xl font-bold">Geen projecten gevonden</h3>
               <p className="text-muted-foreground">
