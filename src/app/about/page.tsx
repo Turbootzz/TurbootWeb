@@ -85,7 +85,7 @@ export default function AboutPage() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link
                     href="/contact"
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-full px-8 py-4 text-base font-medium shadow-lg shadow-blue-600/30 transition hover:-translate-y-0.5"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-full px-8 py-4 text-base font-medium shadow-lg shadow-purple-600/30 transition hover:-translate-y-0.5"
                   >
                     Laten We Kennismaken
                   </Link>

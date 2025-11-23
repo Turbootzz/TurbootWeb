@@ -21,7 +21,7 @@ export function CTASection({
   const bgClass =
     variant === "primary"
       ? "bg-linear-to-r from-primary to-purple-600"
-      : "bg-card border-t border-border"
+      : "bg-linear-to-r from-gray-800 to-gray-900"
 
   return (
     <section className={`${bgClass} py-16 md:py-20`}>
