@@ -116,7 +116,7 @@ export default function ContactPage() {
                     <div>
                       <p className="text-foreground font-semibold">Bereikbaar</p>
                       <p className="text-muted-foreground">Ma-Vr: 9:00 - 18:00</p>
-                      <p className="text-muted-foreground">Weekend: Op afspraak</p>
+                      <p className="text-muted-foreground">Weekend: 9:00 - 20:00</p>
                     </div>
                   </div>
                 </div>

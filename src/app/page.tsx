@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Code, Cpu, Globe, Terminal, Zap } from "lucide-react"
+import { ArrowRight, Cpu, Globe, Terminal, Zap } from "lucide-react"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 
 export default function Home() {
@@ -192,7 +192,7 @@ export default function Home() {
                         <span className="text-foreground font-mono">100/100</span>
                       </div>
                       <div className="bg-muted h-2 w-full overflow-hidden rounded-full">
-                        <div className="bg-primary h-full w-[100%] rounded-full" />
+                        <div className="bg-primary h-full w-full rounded-full" />
                       </div>
                     </div>
                   </div>
