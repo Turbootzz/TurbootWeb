@@ -31,9 +31,20 @@ const ALLOWED_KEYWORDS = [
 
 async function getGithubRepos(): Promise<GithubRepo[]> {
   try {
+    // Build headers with optional GitHub token for higher rate limits
+    const headers: HeadersInit = {
+      Accept: "application/vnd.github.v3+json",
+    }
+
+    // Add authentication if token is available (5000 req/hour vs 60 req/hour)
+    if (process.env.GITHUB_TOKEN) {
+      headers.Authorization = `token ${process.env.GITHUB_TOKEN}`
+    }
+
     const res = await fetch(
       "https://api.github.com/users/Turbootzz/repos?sort=updated&per_page=100",
       {
+        headers,
         next: { revalidate: 3600 },
       }
     )
