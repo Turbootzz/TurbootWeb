@@ -88,6 +88,7 @@ export default async function PortfolioPage() {
             <Link
               href="https://github.com/Turbootzz"
               target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5"
             >
               <Github className="h-5 w-5" />
@@ -102,7 +103,12 @@ export default async function PortfolioPage() {
               const Icon = getProjectIcon(repo.name)
               return (
                 <ScrollReveal key={repo.id} delay={index * 100} animation="scale-up">
-                  <Link href={repo.html_url} target="_blank" className="group block h-full">
+                  <Link
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block h-full"
+                  >
                     <div className="group border-border bg-card/50 hover:border-primary/50 hover:shadow-primary/5 relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-xl">
                       {/* Project Screenshot - tries local image first, falls back to GitHub OpenGraph */}
                       <ProjectImage repoName={repo.name} />
