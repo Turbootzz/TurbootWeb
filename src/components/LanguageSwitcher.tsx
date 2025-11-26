@@ -3,7 +3,7 @@
 import { useLocale } from "next-intl"
 import { usePathname, useRouter } from "@/i18n/routing"
 import { useTransition, useState, useRef, useEffect } from "react"
-import { ChevronDown, Check, Globe } from "lucide-react"
+import { ChevronDown, Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const languages = [

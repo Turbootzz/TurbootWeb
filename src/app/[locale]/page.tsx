@@ -26,7 +26,14 @@ export default function Home() {
             className="text-foreground animate-reveal mb-8 text-6xl font-bold tracking-tight md:text-8xl"
             style={{ animationDelay: "0.1s" }}
           >
-            <span dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} />
+            {t.rich("hero.title", {
+              gradient: (chunks) => (
+                <span className="from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent">
+                  {chunks}
+                </span>
+              ),
+              br: () => <br />,
+            })}
           </h1>
 
           <p

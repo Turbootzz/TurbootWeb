@@ -7,7 +7,7 @@
   "Home": {
     "hero": {
       "status": "可承接新项目",
-      "title": "构建 <br /> <span class=\"from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent\">现代网络。</span>",
+      "title": "构建 <br></br> <gradient>现代网络。</gradient>",
       "description": "我创建快速的网站、定制软件和可扩展的基础设施。数字时代的精密工程。",
       "cta_primary": "让我们谈谈",
       "cta_secondary": "查看作品"
@@ -84,7 +84,7 @@
     },
     "hero": {
       "title": "关于 Turboot",
-      "intro": "你好，我是 <strong class=\"text-foreground\">Thijs Herman</strong>，Turboot 背后的人。作为一名经验丰富的开发人员和技术爱好者，我帮助企业实现其数字雄心。",
+      "intro": "你好，我是 <strong>Thijs Herman</strong>，Turboot 背后的人。作为一名经验丰富的开发人员和技术爱好者，我帮助企业实现其数字雄心。",
       "description": "凭借在软件开发方面的经验和对技术的热情，我提供个性化的服务和完全符合您需求的定制解决方案。",
       "cta_primary": "让我们见面",
       "cta_secondary": "查看我的作品"

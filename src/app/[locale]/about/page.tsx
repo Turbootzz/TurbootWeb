@@ -72,10 +72,11 @@ export default function AboutPage() {
                 <h1 className="text-foreground text-4xl font-bold tracking-tight sm:text-5xl">
                   {t("hero.title")}
                 </h1>
-                <p
-                  className="text-muted-foreground mt-6 text-lg leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: t.raw("hero.intro") }}
-                />
+                <p className="text-muted-foreground mt-6 text-lg leading-relaxed">
+                  {t.rich("hero.intro", {
+                    strong: (chunks) => <strong className="text-foreground">{chunks}</strong>,
+                  })}
+                </p>
                 <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
                   {t("hero.description")}
                 </p>

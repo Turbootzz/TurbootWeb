@@ -7,7 +7,7 @@
   "Home": {
     "hero": {
       "status": "Verfügbar für neue Projekte",
-      "title": "Wir bauen das <br /> <span class=\"from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent\">Moderne Web.</span>",
+      "title": "Wir bauen das <br></br> <gradient>Moderne Web.</gradient>",
       "description": "Ich erstelle schnelle Websites, maßgeschneiderte Software und skalierbare Infrastruktur. Präzisionsarbeit für das digitale Zeitalter.",
       "cta_primary": "Lass uns reden",
       "cta_secondary": "Arbeit ansehen"
@@ -84,7 +84,7 @@
     },
     "hero": {
       "title": "Über Turboot",
-      "intro": "Hallo, ich bin <strong class=\"text-foreground\">Thijs Herman</strong>, die Person hinter Turboot. Als erfahrener Entwickler und Tech-Enthusiast helfe ich Unternehmen, ihre digitalen Ambitionen zu verwirklichen.",
+      "intro": "Hallo, ich bin <strong>Thijs Herman</strong>, die Person hinter Turboot. Als erfahrener Entwickler und Tech-Enthusiast helfe ich Unternehmen, ihre digitalen Ambitionen zu verwirklichen.",
       "description": "Mit Erfahrung in der Softwareentwicklung und einer Leidenschaft für Technologie biete ich persönlichen Service und maßgeschneiderte Lösungen, die perfekt auf Ihre Bedürfnisse abgestimmt sind.",
       "cta_primary": "Lass uns kennenlernen",
       "cta_secondary": "Meine Arbeit ansehen"
