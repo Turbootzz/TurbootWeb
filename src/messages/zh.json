@@ -1,4 +1,9 @@
 {
+  "Metadata": {
+    "title": "Turboot - 网站开发、软件与 PC 构建",
+    "description": "Turboot 提供专业的网站开发、软件开发和定制 PC 构建服务。您的数字解决方案合作伙伴。",
+    "keywords": "网站开发, 软件开发, pc 构建, 荷兰, turboot"
+  },
   "Home": {
     "hero": {
       "status": "可承接新项目",
@@ -69,6 +74,179 @@
         "portfolio": "作品集",
         "about": "关于",
         "contact": "联系"
+      }
+    }
+  },
+  "About": {
+    "metadata": {
+      "title": "关于 Turboot - Thijs Herman",
+      "description": "了解更多关于 Turboot 的信息，这是一家由 Thijs Herman 经营的独资企业。专注于网站开发、软件开发和定制 PC 构建。"
+    },
+    "hero": {
+      "title": "关于 Turboot",
+      "intro": "你好，我是 <strong class=\"text-foreground\">Thijs Herman</strong>，Turboot 背后的人。作为一名经验丰富的开发人员和技术爱好者，我帮助企业实现其数字雄心。",
+      "description": "凭借在软件开发方面的经验和对技术的热情，我提供个性化的服务和完全符合您需求的定制解决方案。",
+      "cta_primary": "让我们见面",
+      "cta_secondary": "查看我的作品"
+    },
+    "story": {
+      "title": "我的故事",
+      "p1": "我很早就对计算机非常感兴趣。它始于游戏，很快发展成为对技术的热情：从自己构建 PC 到设置和管理我自己的服务器。在这里，我学会了使用虚拟机 (VM) 和容器，这为我的技术知识奠定了基础。",
+      "p2": "从那个基础设施背景出发，我的兴趣扩展到了编程。我开始构建自己的应用程序，并发现了软件开发的力量。这种系统知识和编程技能的结合使我能够构建完整、强大的解决方案。",
+      "p3": "现在，我利用这些经验帮助客户解决网站、软件和技术问题。有关我的专业经验和技能的完整概述，您也可以访问我的",
+      "linkedin": "LinkedIn 个人资料"
+    },
+    "skills": {
+      "title": "专业知识与技能",
+      "subtitle": "广泛的技术来实现您的项目"
+    },
+    "values": {
+      "title": "我的价值观",
+      "subtitle": "在每个项目中驱动我的原则",
+      "items": {
+        "result": {
+          "title": "结果导向",
+          "description": "我专注于提供能够为您的业务增加真正价值的有效解决方案。"
+        },
+        "innovative": {
+          "title": "创新",
+          "description": "始终寻找最好和最新的技术来实现您的项目。"
+        },
+        "customer": {
+          "title": "客户导向",
+          "description": "您的成功就是我的成功。我会一起思考并在必要时提供建议。"
+        },
+        "passion": {
+          "title": "激情",
+          "description": "编程不仅仅是我的工作，它是我的激情。您可以在每个项目中看到这一点。"
+        }
+      }
+    },
+    "stats": {
+      "projects": "已完成项目",
+      "containers": "活跃容器",
+      "stack": "技术栈",
+      "uptime": "正常运行时间"
+    },
+    "cta": {
+      "title": "让我们一起构建美好的事物",
+      "description": "您是否正在为您的数字项目寻找可靠的合作伙伴？我很乐意为您提供帮助。"
+    }
+  },
+  "Contact": {
+    "metadata": {
+      "title": "联系",
+      "description": "您有项目构想吗？让我们讨论一下！我很乐意帮助您实现数字雄心。"
+    },
+    "hero": {
+      "title": "联系",
+      "description": "您有项目构想吗？让我们讨论一下！我很乐意帮助您实现数字雄心。"
+    },
+    "info": {
+      "title": "取得联系",
+      "description": "我通常在 24 小时内回复消息。对于紧急事项，您可以通过电话联系我。",
+      "email": "电子邮件",
+      "location": "位置",
+      "availability": "可用性",
+      "weekdays": "周一至周五：9:00 - 18:00",
+      "weekend": "周末：9:00 - 20:00",
+      "business": {
+        "title": "业务详情",
+        "name": "公司名称：",
+        "kvk": "商会：",
+        "btw": "增值税："
+      }
+    },
+    "form": {
+      "title": "发送消息",
+      "description": "填写表格，我会尽快与您联系。",
+      "success": "感谢您的留言！我会尽快与您联系。",
+      "name": "姓名 *",
+      "name_placeholder": "张三",
+      "email": "电子邮件 *",
+      "email_placeholder": "zhangsan@example.com",
+      "subject": "主题 *",
+      "subject_placeholder": "我公司的新网站",
+      "message": "消息 *",
+      "message_placeholder": "告诉我更多关于您的项目...",
+      "submit": "发送消息",
+      "submitting": "发送中...",
+      "errors": {
+        "name": "姓名必须至少 2 个字符",
+        "email": "无效的电子邮件地址",
+        "subject": "主题必须至少 5 个字符",
+        "message": "消息必须至少 20 个字符"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": {
+        "question": "您的费率是多少？",
+        "answer": "我的费率取决于项目的类型和复杂性。在我们初次交谈后，您将收到一份透明的报价，没有隐藏费用。"
+      },
+      "q2": {
+        "question": "平均项目需要多长时间？",
+        "answer": "这因项目而异。一个简单的网站可以在 2-3 周内完成，而复杂的软件项目可能需要几个月。"
+      },
+      "q3": {
+        "question": "您也提供维护和支持吗？",
+        "answer": "是的，我为我开发的所有项目提供维护合同。这确保您的软件保持最新和安全。"
+      }
+    }
+  },
+  "Portfolio": {
+    "hero": {
+      "title": "项目。",
+      "description": "我的一些开源工作和个人项目的精选。",
+      "github_note": "（来自 GitHub 的实时数据：Turbootzz）",
+      "github_profile": "GitHub 个人资料"
+    },
+    "no_projects": {
+      "title": "未找到项目",
+      "description": "检查存储库名称是否与过滤器匹配。"
+    },
+    "view_code": "查看代码",
+    "no_description": "没有可用描述。"
+  },
+  "Services": {
+    "metadata": {
+      "title": "服务 - Turboot",
+      "description": "服务概览：网络、软件、硬件。"
+    },
+    "hero": {
+      "title": "专业知识。",
+      "description": "我帮助公司和个人解决技术问题。我的方法是务实的：您真正需要什么？"
+    },
+    "items": {
+      "web-development": {
+        "title": "网站开发",
+        "description": "在所有设备上完美运行的现代、快速网站",
+        "features": {
+          "0": "响应式设计",
+          "1": "SEO 优化",
+          "2": "快速加载时间",
+          "3": "定制功能"
+        }
+      },
+      "software-development": {
+        "title": "软件开发",
+        "description": "为您企业量身定制的软件解决方案",
+        "features": {
+          "0": "桌面/移动应用程序",
+          "1": "API 开发",
+          "2": "数据库设计",
+          "3": "自动化"
+        }
+      },
+      "pc-builds": {
+        "title": "PC 构建",
+        "description": "根据您的意愿构建的定制游戏和工作站",
+        "features": {
+          "0": "游戏 PC",
+          "1": "工作站",
+          "2": "硬件建议",
+          "3": "组装与安装"
+        }
       }
     }
   }

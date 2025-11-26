@@ -13,20 +13,25 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
+import { useTranslations } from "next-intl"
 
-// Form validation schema
-const contactSchema = z.object({
-  name: z.string().min(2, "Naam moet minimaal 2 karakters zijn"),
-  email: z.string().email("Ongeldig e-mailadres"),
-  subject: z.string().min(5, "Onderwerp moet minimaal 5 karakters zijn"),
-  message: z.string().min(20, "Bericht moet minimaal 20 karakters zijn"),
-})
+// Form validation schema creator
+const createContactSchema = (t: (key: string) => string) =>
+  z.object({
+    name: z.string().min(2, t("form.errors.name")),
+    email: z.string().email(t("form.errors.email")),
+    subject: z.string().min(5, t("form.errors.subject")),
+    message: z.string().min(20, t("form.errors.message")),
+  })
 
-type ContactFormData = z.infer<typeof contactSchema>
+type ContactFormData = z.infer<ReturnType<typeof createContactSchema>>
 
 export default function ContactPage() {
+  const t = useTranslations("Contact")
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const contactSchema = createContactSchema(t)
 
   const {
     register,
@@ -71,10 +76,7 @@ export default function ContactPage() {
   return (
     <main className="bg-background min-h-screen">
       {/* Hero Section */}
-      <PageHeader
-        title="Contact"
-        description="Heeft u een project in gedachten? Laten we het bespreken! Ik help u graag met het realiseren van uw digitale ambities."
-      />
+      <PageHeader title={t("hero.title")} description={t("hero.description")} />
 
       {/* Contact Section */}
       <section className="py-16 md:py-24">
@@ -83,17 +85,16 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="lg:col-span-1">
               <ScrollReveal animation="slide-in-left">
-                <h2 className="text-foreground mb-6 text-2xl font-bold">Neem Contact Op</h2>
+                <h2 className="text-foreground mb-6 text-2xl font-bold">{t("info.title")}</h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Ik reageer meestal binnen 24 uur op berichten. Voor dringende zaken kunt u mij
-                  telefonisch bereiken.
+                  {t("info.description")}
                 </p>
 
                 <div className="space-y-6">
                   <div className="bg-card/50 border-border flex items-start space-x-4 rounded-xl border p-4">
                     <Mail className="text-primary mt-0.5 h-5 w-5 shrink-0" />
                     <div>
-                      <p className="text-foreground font-semibold">E-mail</p>
+                      <p className="text-foreground font-semibold">{t("info.email")}</p>
                       <a
                         href={`mailto:${COMPANY_INFO.email}`}
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -106,7 +107,7 @@ export default function ContactPage() {
                   <div className="bg-card/50 border-border flex items-start space-x-4 rounded-xl border p-4">
                     <MapPin className="text-primary mt-0.5 h-5 w-5 shrink-0" />
                     <div>
-                      <p className="text-foreground font-semibold">Locatie</p>
+                      <p className="text-foreground font-semibold">{t("info.location")}</p>
                       <p className="text-muted-foreground">{COMPANY_INFO.address}</p>
                     </div>
                   </div>
@@ -114,27 +115,29 @@ export default function ContactPage() {
                   <div className="bg-card/50 border-border flex items-start space-x-4 rounded-xl border p-4">
                     <Clock className="text-primary mt-0.5 h-5 w-5 shrink-0" />
                     <div>
-                      <p className="text-foreground font-semibold">Bereikbaar</p>
-                      <p className="text-muted-foreground">Ma-Vr: 9:00 - 18:00</p>
-                      <p className="text-muted-foreground">Weekend: 9:00 - 20:00</p>
+                      <p className="text-foreground font-semibold">{t("info.availability")}</p>
+                      <p className="text-muted-foreground">{t("info.weekdays")}</p>
+                      <p className="text-muted-foreground">{t("info.weekend")}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Business Info */}
                 <div className="border-border bg-card/30 mt-8 rounded-2xl border p-6 backdrop-blur-sm">
-                  <h3 className="text-foreground mb-4 text-lg font-semibold">Bedrijfsgegevens</h3>
+                  <h3 className="text-foreground mb-4 text-lg font-semibold">
+                    {t("info.business.title")}
+                  </h3>
                   <dl className="space-y-3 text-sm">
                     <div className="flex justify-between">
-                      <dt className="text-muted-foreground">Bedrijfsnaam:</dt>
+                      <dt className="text-muted-foreground">{t("info.business.name")}</dt>
                       <dd className="text-foreground font-semibold">{COMPANY_INFO.name}</dd>
                     </div>
                     <div className="flex justify-between">
-                      <dt className="text-muted-foreground">KvK:</dt>
+                      <dt className="text-muted-foreground">{t("info.business.kvk")}</dt>
                       <dd className="text-foreground font-semibold">{COMPANY_INFO.kvk}</dd>
                     </div>
                     <div className="flex justify-between">
-                      <dt className="text-muted-foreground">BTW:</dt>
+                      <dt className="text-muted-foreground">{t("info.business.btw")}</dt>
                       <dd className="text-foreground font-semibold">{COMPANY_INFO.btw}</dd>
                     </div>
                   </dl>
@@ -147,18 +150,14 @@ export default function ContactPage() {
               <ScrollReveal animation="slide-in-right" delay={200}>
                 <div className="border-border bg-card/50 rounded-2xl border shadow-xl backdrop-blur-sm">
                   <div className="border-border border-b p-6">
-                    <h3 className="text-foreground text-2xl font-bold">Stuur een Bericht</h3>
-                    <p className="text-muted-foreground mt-2">
-                      Vul het formulier in en ik neem zo snel mogelijk contact met u op.
-                    </p>
+                    <h3 className="text-foreground text-2xl font-bold">{t("form.title")}</h3>
+                    <p className="text-muted-foreground mt-2">{t("form.description")}</p>
                   </div>
                   <div className="p-6">
                     {isSubmitted && (
                       <div className="mb-6 flex items-center space-x-3 rounded-xl border border-green-500/20 bg-green-500/10 p-4 text-green-600 dark:text-green-400">
                         <CheckCircle className="h-5 w-5 shrink-0" />
-                        <p className="font-medium">
-                          Bedankt voor uw bericht! Ik neem zo snel mogelijk contact met u op.
-                        </p>
+                        <p className="font-medium">{t("form.success")}</p>
                       </div>
                     )}
 
@@ -166,11 +165,11 @@ export default function ContactPage() {
                       <div className="grid gap-6 md:grid-cols-2">
                         <div className="space-y-2">
                           <Label htmlFor="name" className="text-foreground">
-                            Naam *
+                            {t("form.name")}
                           </Label>
                           <Input
                             id="name"
-                            placeholder="Jan Jansen"
+                            placeholder={t("form.name_placeholder")}
                             {...register("name")}
                             className={`bg-background/50 ${errors.name ? "border-red-500" : "border-border"}`}
                           />
@@ -181,12 +180,12 @@ export default function ContactPage() {
 
                         <div className="space-y-2">
                           <Label htmlFor="email" className="text-foreground">
-                            E-mail *
+                            {t("form.email")}
                           </Label>
                           <Input
                             id="email"
                             type="email"
-                            placeholder="jan@example.com"
+                            placeholder={t("form.email_placeholder")}
                             {...register("email")}
                             className={`bg-background/50 ${errors.email ? "border-red-500" : "border-border"}`}
                           />
@@ -198,11 +197,11 @@ export default function ContactPage() {
 
                       <div className="space-y-2">
                         <Label htmlFor="subject" className="text-foreground">
-                          Onderwerp *
+                          {t("form.subject")}
                         </Label>
                         <Input
                           id="subject"
-                          placeholder="Nieuwe website voor mijn bedrijf"
+                          placeholder={t("form.subject_placeholder")}
                           {...register("subject")}
                           className={`bg-background/50 ${errors.subject ? "border-red-500" : "border-border"}`}
                         />
@@ -213,11 +212,11 @@ export default function ContactPage() {
 
                       <div className="space-y-2">
                         <Label htmlFor="message" className="text-foreground">
-                          Bericht *
+                          {t("form.message")}
                         </Label>
                         <Textarea
                           id="message"
-                          placeholder="Vertel me meer over uw project..."
+                          placeholder={t("form.message_placeholder")}
                           rows={6}
                           {...register("message")}
                           className={`bg-background/50 ${errors.message ? "border-red-500" : "border-border"}`}
@@ -236,12 +235,12 @@ export default function ContactPage() {
                         {isSubmitting ? (
                           <>
                             <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                            Verzenden...
+                            {t("form.submitting")}
                           </>
                         ) : (
                           <>
                             <Send className="mr-2 h-4 w-4" />
-                            Verstuur Bericht
+                            {t("form.submit")}
                           </>
                         )}
                       </Button>
@@ -252,35 +251,20 @@ export default function ContactPage() {
                 {/* FAQ Section */}
                 <div className="border-border bg-card/50 mt-8 rounded-2xl border shadow-lg backdrop-blur-sm">
                   <div className="border-border border-b p-6">
-                    <h3 className="text-foreground text-2xl font-bold">Veelgestelde Vragen</h3>
+                    <h3 className="text-foreground text-2xl font-bold">{t("faq.title")}</h3>
                   </div>
                   <div className="space-y-6 p-6">
                     <div>
-                      <h4 className="text-foreground mb-2 font-semibold">Wat zijn uw tarieven?</h4>
-                      <p className="text-muted-foreground">
-                        Mijn tarieven zijn afhankelijk van het type en de complexiteit van het
-                        project. Na ons eerste gesprek ontvangt u een transparante offerte zonder
-                        verborgen kosten.
-                      </p>
+                      <h4 className="text-foreground mb-2 font-semibold">{t("faq.q1.question")}</h4>
+                      <p className="text-muted-foreground">{t("faq.q1.answer")}</p>
                     </div>
                     <div>
-                      <h4 className="text-foreground mb-2 font-semibold">
-                        Hoe lang duurt een gemiddeld project?
-                      </h4>
-                      <p className="text-muted-foreground">
-                        Dit varieert sterk per project. Een eenvoudige website kan binnen 2-3 weken
-                        klaar zijn, terwijl complexe software projecten meerdere maanden kunnen
-                        duren.
-                      </p>
+                      <h4 className="text-foreground mb-2 font-semibold">{t("faq.q2.question")}</h4>
+                      <p className="text-muted-foreground">{t("faq.q2.answer")}</p>
                     </div>
                     <div>
-                      <h4 className="text-foreground mb-2 font-semibold">
-                        Biedt u ook onderhoud en support?
-                      </h4>
-                      <p className="text-muted-foreground">
-                        Ja, ik bied onderhoudscontracten aan voor alle projecten die ik ontwikkel.
-                        Dit zorgt ervoor dat uw software up-to-date en veilig blijft.
-                      </p>
+                      <h4 className="text-foreground mb-2 font-semibold">{t("faq.q3.question")}</h4>
+                      <p className="text-muted-foreground">{t("faq.q3.answer")}</p>
                     </div>
                   </div>
                 </div>

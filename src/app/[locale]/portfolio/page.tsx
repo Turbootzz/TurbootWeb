@@ -1,8 +1,9 @@
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { Container } from "@/components/layout/Container"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import { ArrowRight, Github, Star, GitFork, Shield, Gamepad, Globe, Zap, Box } from "lucide-react"
 import { ProjectImage } from "@/components/ui/ProjectImage"
+import { getTranslations } from "next-intl/server"
 
 // Define the type for a GitHub repository
 interface GithubRepo {
@@ -77,7 +78,9 @@ function getProjectIcon(name: string) {
   return Box
 }
 
-export default async function PortfolioPage() {
+export default async function PortfolioPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "Portfolio" })
   const repos = await getGithubRepos()
 
   return (
@@ -87,12 +90,12 @@ export default async function PortfolioPage() {
           <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <h1 className="text-foreground mb-6 text-4xl font-bold tracking-tight md:text-6xl">
-                Projects.
+                {t("hero.title")}
               </h1>
               <p className="text-muted-foreground text-xl leading-relaxed">
-                Een selectie van mijn open-source werk en persoonlijke projecten.
+                {t("hero.description")}
                 <br />
-                <span className="text-sm opacity-70">(Live data van GitHub: Turbootzz)</span>
+                <span className="text-sm opacity-70">{t("hero.github_note")}</span>
               </p>
             </div>
 
@@ -103,7 +106,7 @@ export default async function PortfolioPage() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5"
             >
               <Github className="h-5 w-5" />
-              GitHub Profiel
+              {t("hero.github_profile")}
             </Link>
           </div>
         </ScrollReveal>
@@ -147,7 +150,7 @@ export default async function PortfolioPage() {
                       </h3>
 
                       <p className="text-muted-foreground mb-6 line-clamp-3 text-sm leading-relaxed">
-                        {repo.description || "Geen beschrijving beschikbaar."}
+                        {repo.description || t("no_description")}
                       </p>
 
                       <div className="border-border mt-auto flex items-center justify-between border-t pt-4">
@@ -155,7 +158,7 @@ export default async function PortfolioPage() {
                           {repo.language}
                         </span>
                         <span className="text-primary flex items-center text-sm font-medium opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100">
-                          Bekijk Code <ArrowRight className="ml-1 h-4 w-4" />
+                          {t("view_code")} <ArrowRight className="ml-1 h-4 w-4" />
                         </span>
                       </div>
                     </div>
@@ -168,10 +171,8 @@ export default async function PortfolioPage() {
           <ScrollReveal>
             <div className="border-border bg-card/50 flex flex-col items-center justify-center rounded-2xl border border-dashed p-12 text-center backdrop-blur-sm">
               <Github className="text-muted-foreground/50 mb-4 h-12 w-12" />
-              <h3 className="text-foreground mb-2 text-xl font-bold">Geen projecten gevonden</h3>
-              <p className="text-muted-foreground">
-                Controleer of de repository namen overeenkomen met de filter.
-              </p>
+              <h3 className="text-foreground mb-2 text-xl font-bold">{t("no_projects.title")}</h3>
+              <p className="text-muted-foreground">{t("no_projects.description")}</p>
             </div>
           </ScrollReveal>
         )}

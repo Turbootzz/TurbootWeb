@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "../globals.css"
 import { Header } from "@/components/layout/Header"
@@ -19,13 +18,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
-export const metadata: Metadata = {
-  title: "Turboot - Webontwikkeling, Software & PC Builds",
-  description:
-    "Turboot biedt professionele webontwikkeling, software ontwikkeling en custom PC builds. Uw partner voor digitale oplossingen.",
-  keywords: "webontwikkeling, software ontwikkeling, pc builds, nederland, turboot",
-  authors: [{ name: "Thijs Herman" }],
-  creator: "Turboot",
+import { getTranslations } from "next-intl/server"
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "Metadata" })
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords"),
+    authors: [{ name: "Thijs Herman" }],
+    creator: "Turboot",
+  }
 }
 
 export default async function RootLayout({

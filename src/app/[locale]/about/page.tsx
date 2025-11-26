@@ -12,16 +12,21 @@ import {
   Server,
   Activity,
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import Image from "next/image"
-import type { Metadata } from "next"
 import { SOCIAL_LINKS } from "@/lib/constants"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
+import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "Over Turboot - Thijs Herman",
-  description:
-    "Leer meer over Turboot, een eenmanszaak gerund door Thijs Herman. Gespecialiseerd in webontwikkeling, software ontwikkeling en custom PC builds.",
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  const { locale } = params
+  const t = await getTranslations({ locale, namespace: "About.metadata" })
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  }
 }
 
 const skills = [
@@ -37,30 +42,25 @@ const skills = [
 const values = [
   {
     icon: Target,
-    title: "Resultaatgericht",
-    description:
-      "Ik focus op het leveren van werkende oplossingen die echte waarde toevoegen aan uw bedrijf.",
+    id: "result",
   },
   {
     icon: Lightbulb,
-    title: "Innovatief",
-    description:
-      "Altijd op zoek naar de beste en nieuwste technologieën om uw projecten mee te realiseren.",
+    id: "innovative",
   },
   {
     icon: Users,
-    title: "Klantgericht",
-    description: "Uw succes is mijn succes. Ik denk mee en adviseer waar nodig.",
+    id: "customer",
   },
   {
     icon: Heart,
-    title: "Passie",
-    description:
-      "Programmeren is niet alleen mijn werk, het is mijn passie. Dat ziet u terug in elk project.",
+    id: "passion",
   },
 ]
 
 export default function AboutPage() {
+  const t = useTranslations("About")
+
   return (
     <main className="bg-background min-h-screen pt-24 pb-20">
       {/* Hero Section */}
@@ -70,30 +70,27 @@ export default function AboutPage() {
             <ScrollReveal animation="slide-in-left">
               <div>
                 <h1 className="text-foreground text-4xl font-bold tracking-tight sm:text-5xl">
-                  Over Turboot
+                  {t("hero.title")}
                 </h1>
-                <p className="text-muted-foreground mt-6 text-lg leading-relaxed">
-                  Hallo, ik ben <strong className="text-foreground">Thijs Herman</strong>, de
-                  persoon achter Turboot. Als ervaren developer en tech enthusiast help ik bedrijven
-                  met het realiseren van hun digitale ambities.
-                </p>
+                <p
+                  className="text-muted-foreground mt-6 text-lg leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: t.raw("hero.intro") }}
+                />
                 <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
-                  Met ervaring in software ontwikkeling en een passie voor technologie, bied ik
-                  persoonlijke service en maatwerk oplossingen die perfect aansluiten bij uw
-                  behoeften.
+                  {t("hero.description")}
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link
                     href="/contact"
                     className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center rounded-full px-8 py-4 text-base font-medium shadow-lg shadow-purple-600/30 transition hover:-translate-y-0.5"
                   >
-                    Laten We Kennismaken
+                    {t("hero.cta_primary")}
                   </Link>
                   <Link
                     href="/portfolio"
                     className="border-border text-foreground hover:bg-accent/50 inline-flex items-center rounded-full border-2 bg-transparent px-8 py-4 text-base font-medium transition hover:-translate-y-0.5"
                   >
-                    Bekijk Mijn Werk
+                    {t("hero.cta_secondary")}
                   </Link>
                 </div>
               </div>
@@ -127,33 +124,19 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="mx-auto max-w-3xl">
               <h2 className="text-foreground mb-8 text-3xl font-bold tracking-tight">
-                Mijn Verhaal
+                {t("story.title")}
               </h2>
               <div className="text-muted-foreground space-y-6 text-lg leading-relaxed">
+                <p>{t("story.p1")}</p>
+                <p>{t("story.p2")}</p>
                 <p>
-                  Op vroege leeftijd was ik al zeer geïnteresseerd in computers. Het begon met
-                  gamen, wat al snel uitgroeide tot een passie voor techniek: van het zelf bouwen
-                  van PC&apos;s tot het opzetten en beheren van mijn eigen servers. Hier leerde ik
-                  werken met virtuele machines (VM&apos;s) en containers, wat de basis legde voor
-                  mijn technische kennis.
-                </p>
-                <p>
-                  Vanuit die infrastructuur-achtergrond verbreedde mijn interesse zich naar
-                  programmeren. Ik begon met het bouwen van mijn eigen applicaties en ontdekte de
-                  kracht van software ontwikkeling. Deze combinatie van systeemkennis en
-                  programmeervaardigheden stelt mij in staat om complete, robuuste oplossingen te
-                  bouwen.
-                </p>
-                <p>
-                  Inmiddels zet ik deze ervaring in om klanten te helpen met websites, software en
-                  technische vraagstukken. Voor een volledig overzicht van mijn professionele
-                  ervaring en vaardigheden kunt u ook terecht op mijn{" "}
+                  {t("story.p3")}{" "}
                   <Link
                     href={SOCIAL_LINKS.linkedin}
                     target="_blank"
                     className="text-primary hover:underline"
                   >
-                    LinkedIn-profiel
+                    {t("story.linkedin")}
                   </Link>
                   .
                 </p>
@@ -169,11 +152,9 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="mb-12 text-center">
               <h2 className="text-foreground text-3xl font-bold tracking-tight">
-                Expertise & Vaardigheden
+                {t("skills.title")}
               </h2>
-              <p className="text-muted-foreground mt-4 text-lg">
-                Een breed scala aan technologieën om uw project te realiseren
-              </p>
+              <p className="text-muted-foreground mt-4 text-lg">{t("skills.subtitle")}</p>
             </div>
           </ScrollReveal>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -201,24 +182,26 @@ export default function AboutPage() {
         <Container>
           <ScrollReveal>
             <div className="mb-12 text-center">
-              <h2 className="text-foreground text-3xl font-bold tracking-tight">Mijn Waarden</h2>
-              <p className="text-muted-foreground mt-4 text-lg">
-                De principes die mij drijven in elk project
-              </p>
+              <h2 className="text-foreground text-3xl font-bold tracking-tight">
+                {t("values.title")}
+              </h2>
+              <p className="text-muted-foreground mt-4 text-lg">{t("values.subtitle")}</p>
             </div>
           </ScrollReveal>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {values.map((value, idx) => {
               const Icon = value.icon
               return (
-                <ScrollReveal key={value.title} delay={idx * 100} animation="reveal">
+                <ScrollReveal key={value.id} delay={idx * 100} animation="reveal">
                   <div className="hover:border-primary/50 hover:bg-card rounded-2xl border border-transparent p-6 transition-colors">
                     <div className="bg-primary/10 text-primary mb-4 w-fit rounded-xl p-3">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="text-foreground mb-2 text-lg font-bold">{value.title}</h3>
+                    <h3 className="text-foreground mb-2 text-lg font-bold">
+                      {t(`values.items.${value.id}.title`)}
+                    </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      {value.description}
+                      {t(`values.items.${value.id}.description`)}
                     </p>
                   </div>
                 </ScrollReveal>
@@ -231,19 +214,15 @@ export default function AboutPage() {
       {/* Stats Section */}
       <StatsSection
         stats={[
-          { icon: Code, label: "Projecten Afgerond", value: "15+" },
-          { icon: Server, label: "Active Containers", value: "25+" },
-          { icon: Award, label: "Tech Stack", value: "Modern" },
-          { icon: Activity, label: "Uptime", value: "99.9%" },
+          { icon: Code, label: t("stats.projects"), value: "15+" },
+          { icon: Server, label: t("stats.containers"), value: "25+" },
+          { icon: Award, label: t("stats.stack"), value: "Modern" },
+          { icon: Activity, label: t("stats.uptime"), value: "99.9%" },
         ]}
         variant="dark"
       />
 
-      <CTASection
-        title="Laten we samen iets moois bouwen"
-        description="Bent u op zoek naar een betrouwbare partner voor uw digitale project? Ik help u graag verder."
-        variant="secondary"
-      />
+      <CTASection title={t("cta.title")} description={t("cta.description")} variant="secondary" />
     </main>
   )
 }

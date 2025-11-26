@@ -50,8 +50,8 @@ export const COMPANY_INFO = {
   owner: "Thijs Herman",
   email: "info@turboot.com",
   address: "Nederland",
-  kvk: "12345678",
-  btw: "NL123456789B01",
+  kvk: "(To be determined)",
+  btw: "(To be determined)",
 } as const
 
 export const SOCIAL_LINKS = {
