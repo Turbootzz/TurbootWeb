@@ -1,0 +1,59 @@
+{
+  "Home": {
+    "hero": {
+      "status": "可承接新项目",
+      "title": "构建 <br /> <span class=\"from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent\">现代网络。</span>",
+      "description": "我创建快速的网站、定制软件和可扩展的基础设施。数字时代的精密工程。",
+      "cta_primary": "让我们谈谈",
+      "cta_secondary": "查看作品"
+    },
+    "services": {
+      "web_dev": {
+        "title": "网站开发",
+        "description": "加载迅速且在谷歌排名良好的现代网站。关注每一个细节。",
+        "more_info": "更多信息"
+      },
+      "software": {
+        "title": "软件",
+        "description": "根据您的业务流程量身定制的应用程序。从自动化脚本到完整的SaaS平台。",
+        "more_info": "更多信息"
+      },
+      "infrastructure": {
+        "title": "基础设施",
+        "description": "专家硬件建议和定制PC构建。针对游戏、渲染或AI工作负载进行了优化。",
+        "more_info": "更多信息"
+      }
+    },
+    "value_prop": {
+      "title": "为什么选择 Turboot？",
+      "description": "我将深厚的技术知识与现代设计原则相结合。您可以直接与开发人员联系，确保速度和清晰的沟通。",
+      "features": {
+        "full_stack": "全栈专业知识（前端 + 后端）",
+        "performance": "性能优先方法",
+        "communication": "透明沟通",
+        "support": "长期支持与维护"
+      },
+      "project_status": "项目状态",
+      "online": "在线",
+      "performance_score": "性能",
+      "seo_score": "SEO评分"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "首页",
+      "services": "服务",
+      "portfolio": "作品集",
+      "about": "关于",
+      "contact": "联系"
+    },
+    "cta": "联系我们"
+  },
+  "Footer": {
+    "description": "专业的网站开发、定制软件和高端PC构建。由激情和精准驱动的独资企业。",
+    "services": "服务",
+    "applications": "应用",
+    "links": "链接",
+    "rights": "版权所有。"
+  }
+}

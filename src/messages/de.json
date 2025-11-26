@@ -1,0 +1,59 @@
+{
+  "Home": {
+    "hero": {
+      "status": "Verfügbar für neue Projekte",
+      "title": "Wir bauen das <br /> <span class=\"from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent\">Moderne Web.</span>",
+      "description": "Ich erstelle schnelle Websites, maßgeschneiderte Software und skalierbare Infrastruktur. Präzisionsarbeit für das digitale Zeitalter.",
+      "cta_primary": "Lass uns reden",
+      "cta_secondary": "Arbeit ansehen"
+    },
+    "services": {
+      "web_dev": {
+        "title": "Webentwicklung",
+        "description": "Moderne Websites, die blitzschnell laden und bei Google gut ranken. Mit Blick für jedes Detail.",
+        "more_info": "Mehr Info"
+      },
+      "software": {
+        "title": "Software",
+        "description": "Maßgeschneiderte Anwendungen, abgestimmt auf Ihre Geschäftsprozesse. Von Automatisierungsskripten bis zu vollständigen SaaS-Plattformen.",
+        "more_info": "Mehr Info"
+      },
+      "infrastructure": {
+        "title": "Infrastruktur",
+        "description": "Expertenberatung für Hardware und Custom-PC-Builds. Optimiert für Gaming, Rendering oder KI-Workloads.",
+        "more_info": "Mehr Info"
+      }
+    },
+    "value_prop": {
+      "title": "Warum Turboot?",
+      "description": "Ich kombiniere tiefes technisches Wissen mit modernen Designprinzipien. Sie haben direkten Kontakt zum Entwickler, was für Schnelligkeit und klare Kommunikation sorgt.",
+      "features": {
+        "full_stack": "Full-Stack-Expertise (Frontend + Backend)",
+        "performance": "Performance-First-Ansatz",
+        "communication": "Transparente Kommunikation",
+        "support": "Langfristiger Support & Wartung"
+      },
+      "project_status": "Projektstatus",
+      "online": "Online",
+      "performance_score": "Leistung",
+      "seo_score": "SEO-Score"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Startseite",
+      "services": "Dienstleistungen",
+      "portfolio": "Portfolio",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "cta": "Kontaktieren Sie uns"
+  },
+  "Footer": {
+    "description": "Professionelle Webentwicklung, maßgeschneiderte Software und High-End-PC-Builds. Einzelunternehmen, angetrieben von Leidenschaft und Präzision.",
+    "services": "Dienstleistungen",
+    "applications": "Anwendungen",
+    "links": "Links",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

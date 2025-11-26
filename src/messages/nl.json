@@ -1,0 +1,59 @@
+{
+  "Home": {
+    "hero": {
+      "status": "Beschikbaar voor nieuwe projecten",
+      "title": "Bouwen aan het <br /> <span class=\"from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent\">Moderne Web.</span>",
+      "description": "Ik creëer snelle websites, maatwerk software en schaalbare infrastructuur. Precisie-engineering voor het digitale tijdperk.",
+      "cta_primary": "Laten we praten",
+      "cta_secondary": "Bekijk Werk"
+    },
+    "services": {
+      "web_dev": {
+        "title": "Web Development",
+        "description": "Moderne websites die razendsnel laden en goed gevonden worden in Google. Met oog voor elk detail.",
+        "more_info": "Meer info"
+      },
+      "software": {
+        "title": "Software",
+        "description": "Maatwerk applicaties afgestemd op uw bedrijfsprocessen. Van automatiseringsscripts tot volledige SaaS-platformen.",
+        "more_info": "Meer info"
+      },
+      "infrastructure": {
+        "title": "Infrastructuur",
+        "description": "Expert hardware advies en custom PC builds. Geoptimaliseerd voor gaming, rendering of AI workloads.",
+        "more_info": "Meer info"
+      }
+    },
+    "value_prop": {
+      "title": "Waarom Turboot?",
+      "description": "Ik combineer diepgaande technische kennis met moderne ontwerpprincipes. U krijgt direct contact met de ontwikkelaar, wat zorgt voor snelheid en heldere communicatie.",
+      "features": {
+        "full_stack": "Full-Stack Expertise (Frontend + Backend)",
+        "performance": "Performance-First Aanpak",
+        "communication": "Transparante Communicatie",
+        "support": "Lange-termijn Support & Onderhoud"
+      },
+      "project_status": "Project Status",
+      "online": "Online",
+      "performance_score": "Performance",
+      "seo_score": "SEO Score"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "services": "Diensten",
+      "portfolio": "Portfolio",
+      "about": "Over",
+      "contact": "Contact"
+    },
+    "cta": "Neem Contact op"
+  },
+  "Footer": {
+    "description": "Professionele webontwikkeling, software op maat en high-end PC builds. Eenmanszaak gedreven door passie en precisie.",
+    "services": "Diensten",
+    "applications": "Applicaties",
+    "links": "Links",
+    "rights": "Alle rechten voorbehouden."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "Home": {
+    "hero": {
+      "status": "Disponible pour de nouveaux projets",
+      "title": "Construire le <br /> <span class=\"from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent\">Web Moderne.</span>",
+      "description": "Je crée des sites web rapides, des logiciels sur mesure et des infrastructures évolutives. Ingénierie de précision pour l'ère numérique.",
+      "cta_primary": "Parlons-en",
+      "cta_secondary": "Voir le travail"
+    },
+    "services": {
+      "web_dev": {
+        "title": "Développement Web",
+        "description": "Des sites web modernes qui chargent instantanément et se classent bien sur Google. Avec un souci du détail.",
+        "more_info": "Plus d'infos"
+      },
+      "software": {
+        "title": "Logiciel",
+        "description": "Applications sur mesure adaptées à vos processus métier. Des scripts d'automatisation aux plateformes SaaS complètes.",
+        "more_info": "Plus d'infos"
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Conseils experts en matériel et montages PC personnalisés. Optimisé pour le jeu, le rendu ou les charges de travail IA.",
+        "more_info": "Plus d'infos"
+      }
+    },
+    "value_prop": {
+      "title": "Pourquoi Turboot ?",
+      "description": "Je combine des connaissances techniques approfondies avec des principes de conception modernes. Vous avez un contact direct avec le développeur, assurant rapidité et communication claire.",
+      "features": {
+        "full_stack": "Expertise Full-Stack (Frontend + Backend)",
+        "performance": "Approche axée sur la performance",
+        "communication": "Communication transparente",
+        "support": "Support et maintenance à long terme"
+      },
+      "project_status": "Statut du projet",
+      "online": "En ligne",
+      "performance_score": "Performance",
+      "seo_score": "Score SEO"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Accueil",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+    "cta": "Contactez-nous"
+  },
+  "Footer": {
+    "description": "Développement web professionnel, logiciels sur mesure et montages PC haut de gamme. Entreprise individuelle animée par la passion et la précision.",
+    "services": "Services",
+    "applications": "Applications",
+    "links": "Liens",
+    "rights": "Tous droits réservés."
+  }
+}

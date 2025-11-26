@@ -1,0 +1,59 @@
+{
+  "Home": {
+    "hero": {
+      "status": "Available for new projects",
+      "title": "Building the <br /> <span class=\"from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent\">Modern Web.</span>",
+      "description": "I create fast websites, custom software, and scalable infrastructure. Precision engineering for the digital age.",
+      "cta_primary": "Let's talk",
+      "cta_secondary": "View Work"
+    },
+    "services": {
+      "web_dev": {
+        "title": "Web Development",
+        "description": "Modern websites that load instantly and rank well in Google. With an eye for every detail.",
+        "more_info": "More info"
+      },
+      "software": {
+        "title": "Software",
+        "description": "Custom applications tailored to your business processes. From automation scripts to full SaaS platforms.",
+        "more_info": "More info"
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Expert hardware advice and custom PC builds. Optimized for gaming, rendering, or AI workloads.",
+        "more_info": "More info"
+      }
+    },
+    "value_prop": {
+      "title": "Why Turboot?",
+      "description": "I combine deep technical knowledge with modern design principles. You get direct contact with the developer, ensuring speed and clear communication.",
+      "features": {
+        "full_stack": "Full-Stack Expertise (Frontend + Backend)",
+        "performance": "Performance-First Approach",
+        "communication": "Transparent Communication",
+        "support": "Long-term Support & Maintenance"
+      },
+      "project_status": "Project Status",
+      "online": "Online",
+      "performance_score": "Performance",
+      "seo_score": "SEO Score"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "cta": "Contact Us"
+  },
+  "Footer": {
+    "description": "Professional web development, custom software, and high-end PC builds. Sole proprietorship driven by passion and precision.",
+    "services": "Services",
+    "applications": "Applications",
+    "links": "Links",
+    "rights": "All rights reserved."
+  }
+}
