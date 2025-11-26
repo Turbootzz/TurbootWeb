@@ -54,6 +54,22 @@
     "services": "Diensten",
     "applications": "Applicaties",
     "links": "Links",
-    "rights": "Alle rechten voorbehouden."
+    "rights": "Alle rechten voorbehouden.",
+    "items": {
+      "services": {
+        "web-development": "Webontwikkeling",
+        "software-development": "Software Ontwikkeling",
+        "pc-builds": "PC Builds"
+      },
+      "applications": {
+        "Nimbus": "Nimbus",
+        "PokePortal": "PokePortal"
+      },
+      "links": {
+        "portfolio": "Portfolio",
+        "about": "Over",
+        "contact": "Contact"
+      }
+    }
   }
 }

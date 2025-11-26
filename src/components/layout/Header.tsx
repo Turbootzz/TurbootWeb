@@ -149,20 +149,20 @@ export function Header() {
             {t("nav.contact")}
           </Link>
 
-          <LanguageSwitcher />
-          <ThemeToggle />
           <Link
             href="/contact"
             className="rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95 dark:bg-white dark:text-black"
           >
             {t("cta")}
           </Link>
+          <ThemeToggle />
+          <LanguageSwitcher />
         </nav>
 
         {/* Mobile Toggle and Theme */}
         <div className="flex items-center gap-2 md:hidden">
-          <LanguageSwitcher />
           <ThemeToggle />
+          <LanguageSwitcher />
           <button
             ref={toggleRef}
             className="p-2 text-gray-600 dark:text-gray-400"

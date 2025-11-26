@@ -26,11 +26,11 @@ export default function LanguageSwitcher() {
         onChange={onSelectChange}
         disabled={isPending}
       >
-        <option value="nl">NL</option>
-        <option value="en">EN</option>
-        <option value="de">DE</option>
-        <option value="zh">ZH</option>
-        <option value="fr">FR</option>
+        <option value="nl">🇳🇱 NL</option>
+        <option value="en">🇬🇧 EN</option>
+        <option value="de">🇩🇪 DE</option>
+        <option value="fr">🇫🇷 FR</option>
+        <option value="zh">🇨🇳 ZH</option>
       </select>
     </label>
   )

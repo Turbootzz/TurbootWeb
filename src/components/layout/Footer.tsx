@@ -32,7 +32,7 @@ export function Footer() {
                     href={`/services#${service.id}`}
                     className="transition-colors hover:text-black dark:hover:text-white"
                   >
-                    {service.title}
+                    {t(`items.services.${service.id}`)}
                   </Link>
                 </li>
               ))}
@@ -51,7 +51,7 @@ export function Footer() {
                     target="_blank"
                     className="transition-colors hover:text-black dark:hover:text-white"
                   >
-                    {app.name}
+                    {t(`items.applications.${app.name}`)}
                   </Link>
                 </li>
               ))}
@@ -66,7 +66,7 @@ export function Footer() {
                   href="/portfolio"
                   className="transition-colors hover:text-black dark:hover:text-white"
                 >
-                  Portfolio
+                  {t("items.links.portfolio")}
                 </Link>
               </li>
               <li>
@@ -74,7 +74,7 @@ export function Footer() {
                   href="/about"
                   className="transition-colors hover:text-black dark:hover:text-white"
                 >
-                  About
+                  {t("items.links.about")}
                 </Link>
               </li>
               <li>
@@ -82,7 +82,7 @@ export function Footer() {
                   href="/contact"
                   className="transition-colors hover:text-black dark:hover:text-white"
                 >
-                  Contact
+                  {t("items.links.contact")}
                 </Link>
               </li>
             </ul>

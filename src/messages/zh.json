@@ -54,6 +54,22 @@
     "services": "服务",
     "applications": "应用",
     "links": "链接",
-    "rights": "版权所有。"
+    "rights": "版权所有。",
+    "items": {
+      "services": {
+        "web-development": "网站开发",
+        "software-development": "软件开发",
+        "pc-builds": "PC构建"
+      },
+      "applications": {
+        "Nimbus": "Nimbus",
+        "PokePortal": "PokePortal"
+      },
+      "links": {
+        "portfolio": "作品集",
+        "about": "关于",
+        "contact": "联系"
+      }
+    }
   }
 }
