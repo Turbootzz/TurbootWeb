@@ -48,21 +48,23 @@ describe("LanguageSwitcher", () => {
     expect(screen.getByRole("menu")).toBeInTheDocument()
   })
 
-  it("navigates through options with arrow keys", () => {
+  it("navigates through options with arrow keys", async () => {
     render(<LanguageSwitcher />)
     const button = screen.getByRole("button", { name: /change language/i })
 
     // Open menu
     fireEvent.click(button)
 
-    // Focus should be on first item or current item
-    // We can simulate arrow down
-    const menu = screen.getByRole("menu")
-    fireEvent.keyDown(menu, { key: "ArrowDown" })
+    const items = screen.getAllByRole("menuitem")
 
-    // Since we can't easily check focus in jsdom without more setup,
-    // we primarily ensure no errors are thrown and the event handler is called.
-    // Ideally we would check document.activeElement
+    // Initial focus should be on the current language (en -> index 1)
+    // We need to wait for the useEffect to fire
+    await screen.findByText("English")
+    expect(items[1]).toHaveFocus()
+
+    // Navigate to next item (en -> de)
+    fireEvent.keyDown(items[1], { key: "ArrowDown" })
+    expect(items[2]).toHaveFocus()
   })
 
   it("closes menu on Escape", () => {
