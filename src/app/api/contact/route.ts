@@ -2,22 +2,23 @@ import { NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
 
 // Validation schema
-const contactSchema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  subject: z.string().min(5),
-  message: z.string().min(20),
-})
+// const contactSchema = z.object({
+//   name: z.string().min(2),
+//   email: z.string().email(),
+//   subject: z.string().min(5),
+//   message: z.string().min(20),
+// })
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
+    // const body = await request.json()
 
     // Validate input
-    const validatedData = contactSchema.parse(body)
+    //const validatedData = contactSchema.parse(body)
 
     // TODO: When database is connected, save to database
-    // const submission = await prisma.contactSubmission.create({
+    // TODO: Implement database storage for contact submissions
+    // const submission = await ...
     //   data: validatedData,
     // })
 
@@ -28,12 +29,8 @@ export async function POST(request: NextRequest) {
     //   ...
     // })
 
-    console.log("Contact form submission:", validatedData)
-
-    return NextResponse.json(
-      { success: true, message: "Bericht succesvol verzonden" },
-      { status: 200 }
-    )
+    // Placeholder: Return 501 Not Implemented until email service is set up
+    return NextResponse.json({ success: false, error: "NOT_IMPLEMENTED" }, { status: 501 })
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json({ success: false, errors: error.issues }, { status: 400 })

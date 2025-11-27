@@ -175,7 +175,9 @@
         "name": "Naam moet minimaal 2 karakters zijn",
         "email": "Ongeldig e-mailadres",
         "subject": "Onderwerp moet minimaal 5 karakters zijn",
-        "message": "Bericht moet minimaal 20 karakters zijn"
+        "message": "Bericht moet minimaal 20 tekens bevatten",
+        "not_implemented": "Deze functie is nog niet geïmplementeerd. Stuur ons direct een e-mail.",
+        "generic": "Er is iets misgegaan. Probeer het later opnieuw."
       }
     },
     "faq": {

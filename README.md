@@ -7,7 +7,7 @@ Professional website for Turboot - Web Development, Software Development & PC Bu
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4
-- **Database:** PostgreSQL with Prisma ORM
+- **Database:** PostgreSQL (Planned)
 - **Forms:** React Hook Form + Zod validation
 - **Icons:** Lucide React
 - **UI Components:** Custom components with Radix UI primitives
@@ -42,20 +42,7 @@ cp .env.local.example .env.local
 
 Then edit `.env.local` with your database credentials.
 
-4. Set up the database:
-
-```bash
-# Push the schema to your database
-npm run db:push
-
-# Run migrations (for production)
-npm run db:migrate
-
-# Seed the database with example data
-npm run db:seed
-```
-
-5. Run the development server:
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -71,10 +58,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 - `npm run lint` - Run ESLint
 - `npm run format` - Format all files with Prettier
 - `npm run format:check` - Check formatting without modifying files
-- `npm run db:migrate` - Run database migrations
-- `npm run db:push` - Push schema to database (development)
-- `npm run db:seed` - Seed database with example data
-- `npm run db:studio` - Open Prisma Studio (database GUI)
 
 ## Project Structure
 
@@ -88,18 +71,10 @@ turboot-web/
 │   │   └── sections/    # Page sections
 │   ├── lib/             # Utilities and constants
 │   └── types/           # TypeScript types
-├── prisma/              # Database schema and migrations
+
 ├── public/              # Static assets
 └── Documentation/       # Additional documentation
 ```
-
-## Database Setup
-
-### Using PostgreSQL locally:
-
-1. Install PostgreSQL
-2. Create a database: `createdb turboot_db`
-3. Update `.env.local` with your connection string
 
 ## Features
 
@@ -111,21 +86,16 @@ turboot-web/
 - ✅ Service pages
 - ✅ SEO optimized
 - ✅ TypeScript for type safety
-- ✅ Database ready with Prisma
 - ✅ Code formatting with Prettier
 - ✅ Auto-format on commit (Husky + lint-staged)
 - ✅ CI/CD pipeline with GitHub Actions
+- ✅ Unit and integration tests
+- ✅ Language switcher
 
 ## Future Enhancements
 
-- [ ] Blog/News section
-- [ ] Homelab services dashboard
-- [ ] Admin panel for content management
-- [ ] Multi-language support (EN/NL)
-- [ ] Client testimonials
 - [ ] Email integration for contact form
 - [ ] Analytics integration
-- [ ] Unit and integration tests
 
 ## License
 
@@ -133,4 +103,4 @@ turboot-web/
 
 ## Contact
 
-For questions or support, contact: [thijs@turboot.com](mailto:thijs@turboot.com)
+For questions or support, contact: [info@turboot.com](mailto:info@turboot.com)

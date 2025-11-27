@@ -175,7 +175,9 @@
         "name": "Le nom doit comporter au moins 2 caractères",
         "email": "Adresse e-mail invalide",
         "subject": "Le sujet doit comporter au moins 5 caractères",
-        "message": "Le message doit comporter au moins 20 caractères"
+        "message": "Le message doit contenir au moins 20 caractères",
+        "not_implemented": "Cette fonctionnalité n'est pas encore implémentée. Veuillez nous envoyer un e-mail directement.",
+        "generic": "Une erreur s'est produite. Veuillez réessayer plus tard."
       }
     },
     "faq": {

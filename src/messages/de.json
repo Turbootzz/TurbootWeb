@@ -175,7 +175,9 @@
         "name": "Name muss mindestens 2 Zeichen lang sein",
         "email": "Ungültige E-Mail-Adresse",
         "subject": "Betreff muss mindestens 5 Zeichen lang sein",
-        "message": "Nachricht muss mindestens 20 Zeichen lang sein"
+        "message": "Nachricht muss mindestens 20 Zeichen lang sein",
+        "not_implemented": "Diese Funktion ist noch nicht implementiert. Bitte senden Sie uns direkt eine E-Mail.",
+        "generic": "Etwas ist schief gelaufen. Bitte versuchen Sie es später erneut."
       }
     },
     "faq": {

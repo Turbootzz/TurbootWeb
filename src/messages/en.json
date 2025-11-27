@@ -175,7 +175,9 @@
         "name": "Name must be at least 2 characters",
         "email": "Invalid email address",
         "subject": "Subject must be at least 5 characters",
-        "message": "Message must be at least 20 characters"
+        "message": "Message must be at least 20 characters",
+        "not_implemented": "This feature is not yet implemented. Please email us directly.",
+        "generic": "Something went wrong. Please try again later."
       }
     },
     "faq": {

@@ -30,6 +30,7 @@ export default function ContactPage() {
   const t = useTranslations("Contact")
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const contactSchema = createContactSchema(t)
 
@@ -56,18 +57,23 @@ export default function ContactPage() {
 
       const result = await response.json()
 
-      if (result.success) {
+      if (response.ok && result.success) {
         setIsSubmitted(true)
+        setErrorMessage(null)
         reset()
         // Reset success message after 5 seconds
         setTimeout(() => setIsSubmitted(false), 5000)
       } else {
         console.error("Form submission error:", result)
-        // You could set an error state here to show an error message
+        if (result.error === "NOT_IMPLEMENTED") {
+          setErrorMessage(t("form.errors.not_implemented"))
+        } else {
+          setErrorMessage(t("form.errors.generic"))
+        }
       }
     } catch (error) {
       console.error("Form submission error:", error)
-      // You could set an error state here to show an error message
+      setErrorMessage(t("form.errors.generic"))
     } finally {
       setIsSubmitting(false)
     }
@@ -158,6 +164,12 @@ export default function ContactPage() {
                       <div className="mb-6 flex items-center space-x-3 rounded-xl border border-green-500/20 bg-green-500/10 p-4 text-green-600 dark:text-green-400">
                         <CheckCircle className="h-5 w-5 shrink-0" />
                         <p className="font-medium">{t("form.success")}</p>
+                      </div>
+                    )}
+
+                    {errorMessage && (
+                      <div className="mb-6 flex items-center space-x-3 rounded-xl border border-red-500/20 bg-red-500/10 p-4 text-red-600 dark:text-red-400">
+                        <p className="font-medium">{errorMessage}</p>
                       </div>
                     )}
 
