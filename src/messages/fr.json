@@ -1,0 +1,253 @@
+{
+  "Metadata": {
+    "title": "Turboot - Développement Web, Logiciels & Montages PC",
+    "description": "Turboot propose des services professionnels de développement web, de développement logiciel et de montages PC personnalisés. Votre partenaire pour les solutions numériques.",
+    "keywords": "développement web, développement logiciel, montages pc, pays-bas, turboot"
+  },
+  "Home": {
+    "hero": {
+      "status": "Disponible pour de nouveaux projets",
+      "title": "Construire le <br></br> <gradient>Web Moderne.</gradient>",
+      "description": "Je crée des sites web rapides, des logiciels sur mesure et des infrastructures évolutives. Ingénierie de précision pour l'ère numérique.",
+      "cta_primary": "Parlons-en",
+      "cta_secondary": "Voir le travail"
+    },
+    "services": {
+      "web_dev": {
+        "title": "Développement Web",
+        "description": "Des sites web modernes qui chargent instantanément et se classent bien sur Google. Avec un souci du détail.",
+        "more_info": "Plus d'infos"
+      },
+      "software": {
+        "title": "Logiciel",
+        "description": "Applications sur mesure adaptées à vos processus métier. Des scripts d'automatisation aux plateformes SaaS complètes.",
+        "more_info": "Plus d'infos"
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Conseils experts en matériel et montages PC personnalisés. Optimisé pour le jeu, le rendu ou les charges de travail IA.",
+        "more_info": "Plus d'infos"
+      }
+    },
+    "value_prop": {
+      "title": "Pourquoi Turboot ?",
+      "description": "Je combine des connaissances techniques approfondies avec des principes de conception modernes. Vous avez un contact direct avec le développeur, assurant rapidité et communication claire.",
+      "features": {
+        "full_stack": "Expertise Full-Stack (Frontend + Backend)",
+        "performance": "Approche axée sur la performance",
+        "communication": "Communication transparente",
+        "support": "Support et maintenance à long terme"
+      },
+      "project_status": "Statut du projet",
+      "online": "En ligne",
+      "performance_score": "Performance",
+      "seo_score": "Score SEO"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Accueil",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+    "cta": "Contactez-nous"
+  },
+  "Footer": {
+    "description": "Développement web professionnel, logiciels sur mesure et montages PC haut de gamme. Entreprise individuelle animée par la passion et la précision.",
+    "services": "Services",
+    "applications": "Applications",
+    "links": "Liens",
+    "rights": "Tous droits réservés.",
+    "items": {
+      "services": {
+        "web-development": "Développement Web",
+        "software-development": "Développement Logiciel",
+        "pc-builds": "Montages PC"
+      },
+      "applications": {
+        "Nimbus": "Nimbus",
+        "PokePortal": "PokePortal"
+      },
+      "links": {
+        "portfolio": "Portfolio",
+        "about": "À propos",
+        "contact": "Contact"
+      }
+    }
+  },
+  "About": {
+    "metadata": {
+      "title": "À propos de Turboot - Thijs Herman",
+      "description": "En savoir plus sur Turboot, une entreprise individuelle dirigée par Thijs Herman. Spécialisée dans le développement web, le développement logiciel et les montages PC personnalisés."
+    },
+    "hero": {
+      "title": "À propos de Turboot",
+      "intro": "Bonjour, je suis <strong>Thijs Herman</strong>, la personne derrière Turboot. En tant que développeur expérimenté et passionné de technologie, j'aide les entreprises à réaliser leurs ambitions numériques.",
+      "description": "Avec une expérience en développement logiciel et une passion pour la technologie, j'offre un service personnel et des solutions sur mesure qui répondent parfaitement à vos besoins.",
+      "cta_primary": "Faisons connaissance",
+      "cta_secondary": "Voir mon travail"
+    },
+    "story": {
+      "title": "Mon Histoire",
+      "p1": "Dès mon plus jeune âge, j'étais déjà très intéressé par les ordinateurs. Cela a commencé par le jeu, qui s'est rapidement transformé en une passion pour la technique : de la construction de PC moi-même à la configuration et à la gestion de mes propres serveurs. C'est là que j'ai appris à travailler avec des machines virtuelles (VM) et des conteneurs, ce qui a jeté les bases de mes connaissances techniques.",
+      "p2": "De ce contexte d'infrastructure, mon intérêt s'est élargi à la programmation. J'ai commencé à créer mes propres applications et j'ai découvert la puissance du développement logiciel. Cette combinaison de connaissances système et de compétences en programmation me permet de construire des solutions complètes et robustes.",
+      "p3": "Aujourd'hui, j'utilise cette expérience pour aider les clients avec des sites web, des logiciels et des questions techniques. Pour un aperçu complet de mon expérience professionnelle et de mes compétences, vous pouvez également visiter mon",
+      "linkedin": "profil LinkedIn"
+    },
+    "skills": {
+      "title": "Expertise & Compétences",
+      "subtitle": "Un large éventail de technologies pour réaliser votre projet"
+    },
+    "values": {
+      "title": "Mes Valeurs",
+      "subtitle": "Les principes qui me guident dans chaque projet",
+      "items": {
+        "result": {
+          "title": "Axé sur les résultats",
+          "description": "Je me concentre sur la fourniture de solutions fonctionnelles qui ajoutent une réelle valeur à votre entreprise."
+        },
+        "innovative": {
+          "title": "Innovant",
+          "description": "Toujours à la recherche des meilleures et des dernières technologies pour réaliser vos projets."
+        },
+        "customer": {
+          "title": "Axé sur le client",
+          "description": "Votre succès est mon succès. Je réfléchis avec vous et vous conseille si nécessaire."
+        },
+        "passion": {
+          "title": "Passion",
+          "description": "La programmation n'est pas seulement mon travail, c'est ma passion. Cela se voit dans chaque projet."
+        }
+      }
+    },
+    "stats": {
+      "projects": "Projets terminés",
+      "containers": "Conteneurs actifs",
+      "stack": "Stack technique",
+      "uptime": "Disponibilité"
+    },
+    "cta": {
+      "title": "Construisons quelque chose de beau ensemble",
+      "description": "Vous cherchez un partenaire fiable pour votre projet numérique ? Je suis heureux de vous aider."
+    }
+  },
+  "Contact": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Vous avez un projet en tête ? Discutons-en ! Je suis heureux de vous aider à réaliser vos ambitions numériques."
+    },
+    "hero": {
+      "title": "Contact",
+      "description": "Vous avez un projet en tête ? Discutons-en ! Je suis heureux de vous aider à réaliser vos ambitions numériques."
+    },
+    "info": {
+      "title": "Prendre contact",
+      "description": "Je réponds généralement aux messages dans les 24 heures. Pour les questions urgentes, vous pouvez me joindre par téléphone.",
+      "email": "E-mail",
+      "location": "Emplacement",
+      "availability": "Disponibilité",
+      "weekdays": "Lun-Ven : 9:00 - 18:00",
+      "weekend": "Week-end : 9:00 - 20:00",
+      "business": {
+        "title": "Détails de l'entreprise",
+        "name": "Nom de l'entreprise :",
+        "kvk": "CdC :",
+        "btw": "TVA :"
+      }
+    },
+    "form": {
+      "title": "Envoyer un message",
+      "description": "Remplissez le formulaire et je vous contacterai dès que possible.",
+      "success": "Merci pour votre message ! Je vous contacterai dès que possible.",
+      "name": "Nom *",
+      "name_placeholder": "Jean Dupont",
+      "email": "E-mail *",
+      "email_placeholder": "jean@exemple.com",
+      "subject": "Sujet *",
+      "subject_placeholder": "Nouveau site web pour mon entreprise",
+      "message": "Message *",
+      "message_placeholder": "Dites-m'en plus sur votre projet...",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi...",
+      "errors": {
+        "name": "Le nom doit comporter au moins 2 caractères",
+        "email": "Adresse e-mail invalide",
+        "subject": "Le sujet doit comporter au moins 5 caractères",
+        "message": "Le message doit comporter au moins 20 caractères"
+      }
+    },
+    "faq": {
+      "title": "Foire aux questions",
+      "q1": {
+        "question": "Quels sont vos tarifs ?",
+        "answer": "Mes tarifs dépendent du type et de la complexité du projet. Après notre premier entretien, vous recevrez un devis transparent sans frais cachés."
+      },
+      "q2": {
+        "question": "Combien de temps dure un projet moyen ?",
+        "answer": "Cela varie considérablement selon le projet. Un site web simple peut être prêt en 2-3 semaines, tandis que des projets logiciels complexes peuvent prendre plusieurs mois."
+      },
+      "q3": {
+        "question": "Proposez-vous également de la maintenance et du support ?",
+        "answer": "Oui, je propose des contrats de maintenance pour tous les projets que je développe. Cela garantit que votre logiciel reste à jour et sécurisé."
+      }
+    }
+  },
+  "Portfolio": {
+    "hero": {
+      "title": "Projets.",
+      "description": "Une sélection de mes travaux open-source et de mes projets personnels.",
+      "github_note": "(Données en direct de GitHub : Turbootzz)",
+      "github_profile": "Profil GitHub"
+    },
+    "no_projects": {
+      "title": "Aucun projet trouvé",
+      "description": "Vérifiez si les noms de référentiel correspondent au filtre."
+    },
+    "view_code": "Voir le code",
+    "no_description": "Aucune description disponible."
+  },
+  "Services": {
+    "metadata": {
+      "title": "Services - Turboot",
+      "description": "Aperçu des services : Web, Logiciel, Matériel."
+    },
+    "hero": {
+      "title": "Expertise.",
+      "description": "J'aide les entreprises et les particuliers avec des questions techniques. Mon approche est pragmatique : de quoi avez-vous vraiment besoin ?"
+    },
+    "items": {
+      "web-development": {
+        "title": "Développement Web",
+        "description": "Des sites web modernes et rapides qui fonctionnent parfaitement sur tous les appareils",
+        "features": {
+          "0": "Design réactif",
+          "1": "Optimisé pour le SEO",
+          "2": "Temps de chargement rapides",
+          "3": "Fonctionnalité sur mesure"
+        }
+      },
+      "software-development": {
+        "title": "Développement Logiciel",
+        "description": "Solutions logicielles sur mesure pour votre entreprise",
+        "features": {
+          "0": "Applications Bureau/Mobile",
+          "1": "Développement API",
+          "2": "Conception de base de données",
+          "3": "Automatisation"
+        }
+      },
+      "pc-builds": {
+        "title": "Montages PC",
+        "description": "PC de jeu et stations de travail personnalisés construits selon vos souhaits",
+        "features": {
+          "0": "PC de jeu",
+          "1": "Stations de travail",
+          "2": "Conseils matériels",
+          "3": "Assemblage & installation"
+        }
+      }
+    }
+  }
+}

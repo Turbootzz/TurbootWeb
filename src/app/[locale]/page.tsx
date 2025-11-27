@@ -1,8 +1,11 @@
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
 import { ArrowRight, Cpu, Globe, Terminal, Zap } from "lucide-react"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
+import { useTranslations } from "next-intl"
 
 export default function Home() {
+  const t = useTranslations("Home")
+
   return (
     <main className="bg-background flex min-h-screen flex-col pt-24 pb-16">
       {/* Hero Section */}
@@ -16,27 +19,28 @@ export default function Home() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
             </span>
-            <span className="text-muted-foreground text-sm font-medium">
-              Beschikbaar voor nieuwe projecten
-            </span>
+            <span className="text-muted-foreground text-sm font-medium">{t("hero.status")}</span>
           </div>
 
           <h1
             className="text-foreground animate-reveal mb-8 text-6xl font-bold tracking-tight md:text-8xl"
             style={{ animationDelay: "0.1s" }}
           >
-            Bouwen aan het <br />
-            <span className="from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent">
-              Moderne Web.
-            </span>
+            {t.rich("hero.title", {
+              gradient: (chunks) => (
+                <span className="from-primary bg-linear-to-r to-purple-400 bg-clip-text text-transparent">
+                  {chunks}
+                </span>
+              ),
+              br: () => <br />,
+            })}
           </h1>
 
           <p
             className="text-muted-foreground animate-reveal mb-10 max-w-2xl text-xl leading-relaxed md:text-2xl"
             style={{ animationDelay: "0.2s" }}
           >
-            Ik creëer snelle websites, maatwerk software en schaalbare infrastructuur.
-            Precisie-engineering voor het digitale tijdperk.
+            {t("hero.description")}
           </p>
 
           <div className="animate-reveal flex flex-wrap gap-4" style={{ animationDelay: "0.3s" }}>
@@ -44,14 +48,14 @@ export default function Home() {
               href="/contact"
               className="group bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-primary/25 inline-flex items-center rounded-xl px-8 py-4 text-base font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
             >
-              Laten we praten
+              {t("hero.cta_primary")}
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               href="/portfolio"
               className="group border-border bg-card hover:bg-accent/50 text-foreground inline-flex items-center rounded-xl border px-8 py-4 text-base font-medium transition-all hover:-translate-y-0.5"
             >
-              Bekijk Werk
+              {t("hero.cta_secondary")}
             </Link>
           </div>
         </div>
@@ -69,16 +73,17 @@ export default function Home() {
                 <div className="bg-primary/10 text-primary mb-6 inline-flex rounded-xl p-3">
                   <Globe className="h-8 w-8" />
                 </div>
-                <h3 className="text-foreground mb-3 text-2xl font-bold">Web Development</h3>
+                <h3 className="text-foreground mb-3 text-2xl font-bold">
+                  {t("services.web_dev.title")}
+                </h3>
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                  Next-level websites gebouwd met Next.js en Tailwind. Razendsnel,
-                  SEO-geoptimaliseerd en pixel-perfect.
+                  {t("services.web_dev.description")}
                 </p>
                 <Link
                   href="/services"
                   className="text-primary inline-flex items-center text-sm font-semibold hover:underline"
                 >
-                  Meer info <ArrowRight className="ml-1 h-4 w-4" />
+                  {t("services.web_dev.more_info")} <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -91,16 +96,17 @@ export default function Home() {
                 <div className="mb-6 inline-flex rounded-xl bg-purple-500/10 p-3 text-purple-500">
                   <Terminal className="h-8 w-8" />
                 </div>
-                <h3 className="text-foreground mb-3 text-2xl font-bold">Software</h3>
+                <h3 className="text-foreground mb-3 text-2xl font-bold">
+                  {t("services.software.title")}
+                </h3>
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                  Maatwerk applicaties afgestemd op uw bedrijfsprocessen. Van automatiseringsscripts
-                  tot volledige SaaS-platformen.
+                  {t("services.software.description")}
                 </p>
                 <Link
                   href="/services"
                   className="inline-flex items-center text-sm font-semibold text-purple-500 hover:underline"
                 >
-                  Meer info <ArrowRight className="ml-1 h-4 w-4" />
+                  {t("services.software.more_info")} <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -113,16 +119,17 @@ export default function Home() {
                 <div className="mb-6 inline-flex rounded-xl bg-cyan-500/10 p-3 text-cyan-500">
                   <Cpu className="h-8 w-8" />
                 </div>
-                <h3 className="text-foreground mb-3 text-2xl font-bold">Infrastructuur</h3>
+                <h3 className="text-foreground mb-3 text-2xl font-bold">
+                  {t("services.infrastructure.title")}
+                </h3>
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                  Expert hardware advies en custom PC builds. Geoptimaliseerd voor gaming, rendering
-                  of AI workloads.
+                  {t("services.infrastructure.description")}
                 </p>
                 <Link
                   href="/services"
                   className="inline-flex items-center text-sm font-semibold text-cyan-500 hover:underline"
                 >
-                  Meer info <ArrowRight className="ml-1 h-4 w-4" />
+                  {t("services.infrastructure.more_info")} <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -139,19 +146,17 @@ export default function Home() {
             <div className="relative z-10 grid items-center gap-16 md:grid-cols-2">
               <div>
                 <h2 className="text-foreground mb-6 text-3xl font-bold tracking-tight md:text-4xl">
-                  Waarom Turboot?
+                  {t("value_prop.title")}
                 </h2>
                 <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                  Ik combineer diepgaande technische kennis met moderne ontwerpprincipes. U krijgt
-                  direct contact met de ontwikkelaar, wat zorgt voor snelheid en heldere
-                  communicatie.
+                  {t("value_prop.description")}
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Full-Stack Expertise (Frontend + Backend)",
-                    "Performance-First Aanpak",
-                    "Transparante Communicatie",
-                    "Lange-termijn Support & Onderhoud",
+                    t("value_prop.features.full_stack"),
+                    t("value_prop.features.performance"),
+                    t("value_prop.features.communication"),
+                    t("value_prop.features.support"),
                   ].map((item, i) => (
                     <li key={i} className="text-foreground/80 flex items-center gap-3">
                       <div className="bg-primary/10 text-primary flex h-6 w-6 items-center justify-center rounded-full">
@@ -168,18 +173,18 @@ export default function Home() {
                 <div className="border-border bg-background/80 relative rounded-2xl border p-6 shadow-2xl backdrop-blur-xl">
                   <div className="space-y-4">
                     <div className="border-border flex items-center justify-between border-b pb-4">
-                      <span className="font-semibold">Project Status</span>
+                      <span className="font-semibold">{t("value_prop.project_status")}</span>
                       <span className="flex items-center gap-2 text-sm text-green-500">
                         <span className="relative flex h-2 w-2">
                           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                           <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
                         </span>
-                        Online
+                        {t("value_prop.online")}
                       </span>
                     </div>
                     <div className="space-y-2">
                       <div className="text-muted-foreground flex justify-between text-sm">
-                        <span>Performance</span>
+                        <span>{t("value_prop.performance_score")}</span>
                         <span className="text-foreground font-mono">98/100</span>
                       </div>
                       <div className="bg-muted h-2 w-full overflow-hidden rounded-full">
@@ -188,7 +193,7 @@ export default function Home() {
                     </div>
                     <div className="space-y-2">
                       <div className="text-muted-foreground flex justify-between text-sm">
-                        <span>SEO Score</span>
+                        <span>{t("value_prop.seo_score")}</span>
                         <span className="text-foreground font-mono">100/100</span>
                       </div>
                       <div className="bg-muted h-2 w-full overflow-hidden rounded-full">

@@ -1,0 +1,253 @@
+{
+  "Metadata": {
+    "title": "Turboot - Webontwikkeling, Software & PC Builds",
+    "description": "Turboot biedt professionele webontwikkeling, software ontwikkeling en custom PC builds. Uw partner voor digitale oplossingen.",
+    "keywords": "webontwikkeling, software ontwikkeling, pc builds, nederland, turboot"
+  },
+  "Home": {
+    "hero": {
+      "status": "Beschikbaar voor nieuwe projecten",
+      "title": "Bouwen aan het <br></br> <gradient>Moderne Web.</gradient>",
+      "description": "Ik creëer snelle websites, maatwerk software en schaalbare infrastructuur. Precisie-engineering voor het digitale tijdperk.",
+      "cta_primary": "Laten we praten",
+      "cta_secondary": "Bekijk Werk"
+    },
+    "services": {
+      "web_dev": {
+        "title": "Web Development",
+        "description": "Moderne websites die razendsnel laden en goed gevonden worden in Google. Met oog voor elk detail.",
+        "more_info": "Meer info"
+      },
+      "software": {
+        "title": "Software",
+        "description": "Maatwerk applicaties afgestemd op uw bedrijfsprocessen. Van automatiseringsscripts tot volledige SaaS-platformen.",
+        "more_info": "Meer info"
+      },
+      "infrastructure": {
+        "title": "Infrastructuur",
+        "description": "Expert hardware advies en custom PC builds. Geoptimaliseerd voor gaming, rendering of AI workloads.",
+        "more_info": "Meer info"
+      }
+    },
+    "value_prop": {
+      "title": "Waarom Turboot?",
+      "description": "Ik combineer diepgaande technische kennis met moderne ontwerpprincipes. U krijgt direct contact met de ontwikkelaar, wat zorgt voor snelheid en heldere communicatie.",
+      "features": {
+        "full_stack": "Full-Stack Expertise (Frontend + Backend)",
+        "performance": "Performance-First Aanpak",
+        "communication": "Transparante Communicatie",
+        "support": "Lange-termijn Support & Onderhoud"
+      },
+      "project_status": "Project Status",
+      "online": "Online",
+      "performance_score": "Performance",
+      "seo_score": "SEO Score"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "services": "Diensten",
+      "portfolio": "Portfolio",
+      "about": "Over",
+      "contact": "Contact"
+    },
+    "cta": "Neem Contact op"
+  },
+  "Footer": {
+    "description": "Professionele webontwikkeling, software op maat en high-end PC builds. Eenmanszaak gedreven door passie en precisie.",
+    "services": "Diensten",
+    "applications": "Applicaties",
+    "links": "Links",
+    "rights": "Alle rechten voorbehouden.",
+    "items": {
+      "services": {
+        "web-development": "Webontwikkeling",
+        "software-development": "Software Ontwikkeling",
+        "pc-builds": "PC Builds"
+      },
+      "applications": {
+        "Nimbus": "Nimbus",
+        "PokePortal": "PokePortal"
+      },
+      "links": {
+        "portfolio": "Portfolio",
+        "about": "Over",
+        "contact": "Contact"
+      }
+    }
+  },
+  "About": {
+    "metadata": {
+      "title": "Over Turboot - Thijs Herman",
+      "description": "Leer meer over Turboot, een eenmanszaak gerund door Thijs Herman. Gespecialiseerd in webontwikkeling, software ontwikkeling en custom PC builds."
+    },
+    "hero": {
+      "title": "Over Turboot",
+      "intro": "Hallo, ik ben <strong>Thijs Herman</strong>, de persoon achter Turboot. Als ervaren developer en tech enthusiast help ik bedrijven met het realiseren van hun digitale ambities.",
+      "description": "Met ervaring in software ontwikkeling en een passie voor technologie, bied ik persoonlijke service en maatwerk oplossingen die perfect aansluiten bij uw behoeften.",
+      "cta_primary": "Laten We Kennismaken",
+      "cta_secondary": "Bekijk Mijn Werk"
+    },
+    "story": {
+      "title": "Mijn Verhaal",
+      "p1": "Op vroege leeftijd was ik al zeer geïnteresseerd in computers. Het begon met gamen, wat al snel uitgroeide tot een passie voor techniek: van het zelf bouwen van PC's tot het opzetten en beheren van mijn eigen servers. Hier leerde ik werken met virtuele machines (VM's) en containers, wat de basis legde voor mijn technische kennis.",
+      "p2": "Vanuit die infrastructuur-achtergrond verbreedde mijn interesse zich naar programmeren. Ik begon met het bouwen van mijn eigen applicaties en ontdekte de kracht van software ontwikkeling. Deze combinatie van systeemkennis en programmeervaardigheden stelt mij in staat om complete, robuuste oplossingen te bouwen.",
+      "p3": "Inmiddels zet ik deze ervaring in om klanten te helpen met websites, software en technische vraagstukken. Voor een volledig overzicht van mijn professionele ervaring en vaardigheden kunt u ook terecht op mijn",
+      "linkedin": "LinkedIn-profiel"
+    },
+    "skills": {
+      "title": "Expertise & Vaardigheden",
+      "subtitle": "Een breed scala aan technologieën om uw project te realiseren"
+    },
+    "values": {
+      "title": "Mijn Waarden",
+      "subtitle": "De principes die mij drijven in elk project",
+      "items": {
+        "result": {
+          "title": "Resultaatgericht",
+          "description": "Ik focus op het leveren van werkende oplossingen die echte waarde toevoegen aan uw bedrijf."
+        },
+        "innovative": {
+          "title": "Innovatief",
+          "description": "Altijd op zoek naar de beste en nieuwste technologieën om uw projecten mee te realiseren."
+        },
+        "customer": {
+          "title": "Klantgericht",
+          "description": "Uw succes is mijn succes. Ik denk mee en adviseer waar nodig."
+        },
+        "passion": {
+          "title": "Passie",
+          "description": "Programmeren is niet alleen mijn werk, het is mijn passie. Dat ziet u terug in elk project."
+        }
+      }
+    },
+    "stats": {
+      "projects": "Projecten Afgerond",
+      "containers": "Active Containers",
+      "stack": "Tech Stack",
+      "uptime": "Uptime"
+    },
+    "cta": {
+      "title": "Laten we samen iets moois bouwen",
+      "description": "Bent u op zoek naar een betrouwbare partner voor uw digitale project? Ik help u graag verder."
+    }
+  },
+  "Contact": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Heeft u een project in gedachten? Laten we het bespreken! Ik help u graag met het realiseren van uw digitale ambities."
+    },
+    "hero": {
+      "title": "Contact",
+      "description": "Heeft u een project in gedachten? Laten we het bespreken! Ik help u graag met het realiseren van uw digitale ambities."
+    },
+    "info": {
+      "title": "Neem Contact Op",
+      "description": "Ik reageer meestal binnen 24 uur op berichten. Voor dringende zaken kunt u mij telefonisch bereiken.",
+      "email": "E-mail",
+      "location": "Locatie",
+      "availability": "Bereikbaar",
+      "weekdays": "Ma-Vr: 9:00 - 18:00",
+      "weekend": "Weekend: 9:00 - 20:00",
+      "business": {
+        "title": "Bedrijfsgegevens",
+        "name": "Bedrijfsnaam:",
+        "kvk": "KvK:",
+        "btw": "BTW:"
+      }
+    },
+    "form": {
+      "title": "Stuur een Bericht",
+      "description": "Vul het formulier in en ik neem zo snel mogelijk contact met u op.",
+      "success": "Bedankt voor uw bericht! Ik neem zo snel mogelijk contact met u op.",
+      "name": "Naam *",
+      "name_placeholder": "Jan Jansen",
+      "email": "E-mail *",
+      "email_placeholder": "jan@example.com",
+      "subject": "Onderwerp *",
+      "subject_placeholder": "Nieuwe website voor mijn bedrijf",
+      "message": "Bericht *",
+      "message_placeholder": "Vertel me meer over uw project...",
+      "submit": "Verstuur Bericht",
+      "submitting": "Verzenden...",
+      "errors": {
+        "name": "Naam moet minimaal 2 karakters zijn",
+        "email": "Ongeldig e-mailadres",
+        "subject": "Onderwerp moet minimaal 5 karakters zijn",
+        "message": "Bericht moet minimaal 20 karakters zijn"
+      }
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "q1": {
+        "question": "Wat zijn uw tarieven?",
+        "answer": "Mijn tarieven zijn afhankelijk van het type en de complexiteit van het project. Na ons eerste gesprek ontvangt u een transparante offerte zonder verborgen kosten."
+      },
+      "q2": {
+        "question": "Hoe lang duurt een gemiddeld project?",
+        "answer": "Dit varieert sterk per project. Een eenvoudige website kan binnen 2-3 weken klaar zijn, terwijl complexe software projecten meerdere maanden kunnen duren."
+      },
+      "q3": {
+        "question": "Biedt u ook onderhoud en support?",
+        "answer": "Ja, ik bied onderhoudscontracten aan voor alle projecten die ik ontwikkel. Dit zorgt ervoor dat uw software up-to-date en veilig blijft."
+      }
+    }
+  },
+  "Portfolio": {
+    "hero": {
+      "title": "Projects.",
+      "description": "Een selectie van mijn open-source werk en persoonlijke projecten.",
+      "github_note": "(Live data van GitHub: Turbootzz)",
+      "github_profile": "GitHub Profiel"
+    },
+    "no_projects": {
+      "title": "Geen projecten gevonden",
+      "description": "Controleer of de repository namen overeenkomen met de filter."
+    },
+    "view_code": "Bekijk Code",
+    "no_description": "Geen beschrijving beschikbaar."
+  },
+  "Services": {
+    "metadata": {
+      "title": "Diensten - Turboot",
+      "description": "Overzicht van diensten: Web, Software, Hardware."
+    },
+    "hero": {
+      "title": "Expertise.",
+      "description": "Ik help bedrijven en particulieren met technische vraagstukken. Mijn aanpak is pragmatisch: wat heb je écht nodig?"
+    },
+    "items": {
+      "web-development": {
+        "title": "Webontwikkeling",
+        "description": "Moderne, snelle websites die perfect werken op alle apparaten",
+        "features": {
+          "0": "Responsive design",
+          "1": "SEO geoptimaliseerd",
+          "2": "Snelle laadtijden",
+          "3": "Maatwerk functionaliteit"
+        }
+      },
+      "software-development": {
+        "title": "Software Ontwikkeling",
+        "description": "Op maat gemaakte software oplossingen voor uw bedrijf",
+        "features": {
+          "0": "Desktop/Mobile applicaties",
+          "1": "API ontwikkeling",
+          "2": "Database ontwerp",
+          "3": "Automatisering"
+        }
+      },
+      "pc-builds": {
+        "title": "PC Builds",
+        "description": "Custom gaming en werkstations gebouwd volgens uw wensen",
+        "features": {
+          "0": "Gaming PCs",
+          "1": "Werkstations",
+          "2": "Hardware advies",
+          "3": "Assemblage & installatie"
+        }
+      }
+    }
+  }
+}

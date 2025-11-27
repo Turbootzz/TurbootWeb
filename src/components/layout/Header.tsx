@@ -1,17 +1,15 @@
 "use client"
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { Link, usePathname } from "@/i18n/routing"
 import { useState, useEffect, useRef } from "react"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ThemeToggle } from "@/components/ThemeToggle"
-
-import { NAV_ITEMS } from "@/lib/constants"
-
-const LINKS = NAV_ITEMS
+import LanguageSwitcher from "@/components/LanguageSwitcher"
+import { useTranslations } from "next-intl"
 
 export function Header() {
+  const t = useTranslations("Header")
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -97,32 +95,74 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-6 md:flex">
-          {LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
-                pathname === link.href
-                  ? "text-black dark:text-white"
-                  : "text-gray-500 dark:text-gray-400"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <ThemeToggle />
+          <Link
+            href="/"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
+              pathname === "/" ? "text-black dark:text-white" : "text-gray-500 dark:text-gray-400"
+            )}
+          >
+            {t("nav.home")}
+          </Link>
+          <Link
+            href="/services"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
+              pathname === "/services"
+                ? "text-black dark:text-white"
+                : "text-gray-500 dark:text-gray-400"
+            )}
+          >
+            {t("nav.services")}
+          </Link>
+          <Link
+            href="/portfolio"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
+              pathname === "/portfolio"
+                ? "text-black dark:text-white"
+                : "text-gray-500 dark:text-gray-400"
+            )}
+          >
+            {t("nav.portfolio")}
+          </Link>
+          <Link
+            href="/about"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
+              pathname === "/about"
+                ? "text-black dark:text-white"
+                : "text-gray-500 dark:text-gray-400"
+            )}
+          >
+            {t("nav.about")}
+          </Link>
+          <Link
+            href="/contact"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
+              pathname === "/contact"
+                ? "text-black dark:text-white"
+                : "text-gray-500 dark:text-gray-400"
+            )}
+          >
+            {t("nav.contact")}
+          </Link>
+
           <Link
             href="/contact"
             className="rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95 dark:bg-white dark:text-black"
           >
-            Neem Contact op
+            {t("cta")}
           </Link>
+          <ThemeToggle />
+          <LanguageSwitcher />
         </nav>
 
         {/* Mobile Toggle and Theme */}
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
+          <LanguageSwitcher />
           <button
             ref={toggleRef}
             className="p-2 text-gray-600 dark:text-gray-400"
@@ -142,19 +182,56 @@ export function Header() {
           className="absolute top-16 left-0 w-full border-b border-gray-200 bg-white p-6 shadow-lg md:hidden dark:border-gray-800 dark:bg-gray-950"
         >
           <nav className="flex flex-col gap-4">
-            {LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => {
-                  setOpen(false)
-                  toggleRef.current?.focus()
-                }}
-                className="text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
+            <Link
+              href="/"
+              onClick={() => {
+                setOpen(false)
+                toggleRef.current?.focus()
+              }}
+              className="text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+            >
+              {t("nav.home")}
+            </Link>
+            <Link
+              href="/services"
+              onClick={() => {
+                setOpen(false)
+                toggleRef.current?.focus()
+              }}
+              className="text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+            >
+              {t("nav.services")}
+            </Link>
+            <Link
+              href="/portfolio"
+              onClick={() => {
+                setOpen(false)
+                toggleRef.current?.focus()
+              }}
+              className="text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+            >
+              {t("nav.portfolio")}
+            </Link>
+            <Link
+              href="/about"
+              onClick={() => {
+                setOpen(false)
+                toggleRef.current?.focus()
+              }}
+              className="text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+            >
+              {t("nav.about")}
+            </Link>
+            <Link
+              href="/contact"
+              onClick={() => {
+                setOpen(false)
+                toggleRef.current?.focus()
+              }}
+              className="text-lg font-medium text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+            >
+              {t("nav.contact")}
+            </Link>
           </nav>
         </div>
       )}

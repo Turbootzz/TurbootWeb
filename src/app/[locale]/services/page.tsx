@@ -2,6 +2,8 @@ import { Container } from "@/components/layout/Container"
 import { SERVICES } from "@/lib/constants"
 import { Code, Cpu, Globe } from "lucide-react"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
+import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
 const iconMap = {
   Globe,
@@ -9,24 +11,28 @@ const iconMap = {
   Cpu,
 }
 
-export const metadata = {
-  title: "Diensten - Turboot",
-  description: "Overzicht van diensten: Web, Software, Hardware.",
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "Services.metadata" })
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  }
 }
 
 export default function ServicesPage() {
+  const t = useTranslations("Services")
+
   return (
     <main className="bg-background min-h-screen pt-24 pb-20">
       <Container>
         <ScrollReveal>
           <div className="mb-24 max-w-3xl">
             <h1 className="text-foreground mb-6 text-4xl font-bold tracking-tight md:text-6xl">
-              Expertise.
+              {t("hero.title")}
             </h1>
-            <p className="text-muted-foreground text-xl leading-relaxed">
-              Ik help bedrijven en particulieren met technische vraagstukken. Mijn aanpak is
-              pragmatisch: wat heb je écht nodig?
-            </p>
+            <p className="text-muted-foreground text-xl leading-relaxed">{t("hero.description")}</p>
           </div>
         </ScrollReveal>
 
@@ -47,7 +53,7 @@ export default function ServicesPage() {
                         0{idx + 1}
                       </span>
                       <h2 className="text-foreground group-hover:text-primary mb-4 text-3xl font-bold transition-colors">
-                        {service.title}
+                        {t(`items.${service.id}.title`)}
                       </h2>
                       <div className="bg-primary/10 text-primary w-fit rounded-xl p-3">
                         <Icon className="h-8 w-8 transition-transform group-hover:scale-110" />
@@ -55,16 +61,18 @@ export default function ServicesPage() {
                     </div>
                     <div className="md:col-span-2">
                       <p className="text-muted-foreground mb-8 text-xl leading-relaxed">
-                        {service.description}
+                        {t(`items.${service.id}.description`)}
                       </p>
                       <div className="grid gap-4 sm:grid-cols-2">
-                        {service.features.map((feature) => (
+                        {service.features.map((feature, featureIdx) => (
                           <div
                             key={feature}
                             className="bg-background/50 border-border flex items-center gap-3 rounded-lg border p-3"
                           >
                             <div className="bg-primary h-2 w-2 rounded-full" />
-                            <span className="text-foreground font-medium">{feature}</span>
+                            <span className="text-foreground font-medium">
+                              {t(`items.${service.id}.features.${featureIdx}`)}
+                            </span>
                           </div>
                         ))}
                       </div>

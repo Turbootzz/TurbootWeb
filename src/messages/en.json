@@ -1,0 +1,253 @@
+{
+  "Metadata": {
+    "title": "Turboot - Web Development, Software & PC Builds",
+    "description": "Turboot offers professional web development, software development, and custom PC builds. Your partner for digital solutions.",
+    "keywords": "web development, software development, pc builds, netherlands, turboot"
+  },
+  "Home": {
+    "hero": {
+      "status": "Available for new projects",
+      "title": "Building the <br></br> <gradient>Modern Web.</gradient>",
+      "description": "I create fast websites, custom software, and scalable infrastructure. Precision engineering for the digital age.",
+      "cta_primary": "Let's talk",
+      "cta_secondary": "View Work"
+    },
+    "services": {
+      "web_dev": {
+        "title": "Web Development",
+        "description": "Modern websites that load instantly and rank well in Google. With an eye for every detail.",
+        "more_info": "More info"
+      },
+      "software": {
+        "title": "Software",
+        "description": "Custom applications tailored to your business processes. From automation scripts to full SaaS platforms.",
+        "more_info": "More info"
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Expert hardware advice and custom PC builds. Optimized for gaming, rendering, or AI workloads.",
+        "more_info": "More info"
+      }
+    },
+    "value_prop": {
+      "title": "Why Turboot?",
+      "description": "I combine deep technical knowledge with modern design principles. You get direct contact with the developer, ensuring speed and clear communication.",
+      "features": {
+        "full_stack": "Full-Stack Expertise (Frontend + Backend)",
+        "performance": "Performance-First Approach",
+        "communication": "Transparent Communication",
+        "support": "Long-term Support & Maintenance"
+      },
+      "project_status": "Project Status",
+      "online": "Online",
+      "performance_score": "Performance",
+      "seo_score": "SEO Score"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "cta": "Contact Us"
+  },
+  "Footer": {
+    "description": "Professional web development, custom software, and high-end PC builds. Sole proprietorship driven by passion and precision.",
+    "services": "Services",
+    "applications": "Applications",
+    "links": "Links",
+    "rights": "All rights reserved.",
+    "items": {
+      "services": {
+        "web-development": "Web Development",
+        "software-development": "Software Development",
+        "pc-builds": "PC Builds"
+      },
+      "applications": {
+        "Nimbus": "Nimbus",
+        "PokePortal": "PokePortal"
+      },
+      "links": {
+        "portfolio": "Portfolio",
+        "about": "About",
+        "contact": "Contact"
+      }
+    }
+  },
+  "About": {
+    "metadata": {
+      "title": "About Turboot - Thijs Herman",
+      "description": "Learn more about Turboot, a sole proprietorship run by Thijs Herman. Specialized in web development, software development, and custom PC builds."
+    },
+    "hero": {
+      "title": "About Turboot",
+      "intro": "Hello, I am <strong>Thijs Herman</strong>, the person behind Turboot. As an experienced developer and tech enthusiast, I help businesses realize their digital ambitions.",
+      "description": "With experience in software development and a passion for technology, I offer personal service and custom solutions that perfectly match your needs.",
+      "cta_primary": "Let's Meet",
+      "cta_secondary": "View My Work"
+    },
+    "story": {
+      "title": "My Story",
+      "p1": "At an early age, I was already very interested in computers. It started with gaming, which quickly grew into a passion for technology: from building PCs myself to setting up and managing my own servers. Here I learned to work with virtual machines (VMs) and containers, which laid the foundation for my technical knowledge.",
+      "p2": "From that infrastructure background, my interest broadened to programming. I started building my own applications and discovered the power of software development. This combination of system knowledge and programming skills enables me to build complete, robust solutions.",
+      "p3": "Nowadays, I use this experience to help clients with websites, software, and technical issues. For a complete overview of my professional experience and skills, you can also visit my",
+      "linkedin": "LinkedIn profile"
+    },
+    "skills": {
+      "title": "Expertise & Skills",
+      "subtitle": "A wide range of technologies to realize your project"
+    },
+    "values": {
+      "title": "My Values",
+      "subtitle": "The principles that drive me in every project",
+      "items": {
+        "result": {
+          "title": "Result-oriented",
+          "description": "I focus on delivering working solutions that add real value to your business."
+        },
+        "innovative": {
+          "title": "Innovative",
+          "description": "Always looking for the best and latest technologies to realize your projects."
+        },
+        "customer": {
+          "title": "Customer-oriented",
+          "description": "Your success is my success. I think along and advise where necessary."
+        },
+        "passion": {
+          "title": "Passion",
+          "description": "Programming is not just my job, it is my passion. You can see that in every project."
+        }
+      }
+    },
+    "stats": {
+      "projects": "Projects Completed",
+      "containers": "Active Containers",
+      "stack": "Tech Stack",
+      "uptime": "Uptime"
+    },
+    "cta": {
+      "title": "Let's build something beautiful together",
+      "description": "Are you looking for a reliable partner for your digital project? I am happy to help you."
+    }
+  },
+  "Contact": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Do you have a project in mind? Let's discuss it! I am happy to help you realize your digital ambitions."
+    },
+    "hero": {
+      "title": "Contact",
+      "description": "Do you have a project in mind? Let's discuss it! I am happy to help you realize your digital ambitions."
+    },
+    "info": {
+      "title": "Get in Touch",
+      "description": "I usually respond to messages within 24 hours. For urgent matters, you can reach me by phone.",
+      "email": "Email",
+      "location": "Location",
+      "availability": "Availability",
+      "weekdays": "Mon-Fri: 9:00 - 18:00",
+      "weekend": "Weekend: 9:00 - 20:00",
+      "business": {
+        "title": "Business Details",
+        "name": "Company Name:",
+        "kvk": "CoC:",
+        "btw": "VAT:"
+      }
+    },
+    "form": {
+      "title": "Send a Message",
+      "description": "Fill out the form and I will contact you as soon as possible.",
+      "success": "Thank you for your message! I will contact you as soon as possible.",
+      "name": "Name *",
+      "name_placeholder": "John Doe",
+      "email": "Email *",
+      "email_placeholder": "john@example.com",
+      "subject": "Subject *",
+      "subject_placeholder": "New website for my company",
+      "message": "Message *",
+      "message_placeholder": "Tell me more about your project...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "errors": {
+        "name": "Name must be at least 2 characters",
+        "email": "Invalid email address",
+        "subject": "Subject must be at least 5 characters",
+        "message": "Message must be at least 20 characters"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What are your rates?",
+        "answer": "My rates depend on the type and complexity of the project. After our initial conversation, you will receive a transparent quote without hidden costs."
+      },
+      "q2": {
+        "question": "How long does an average project take?",
+        "answer": "This varies greatly per project. A simple website can be ready within 2-3 weeks, while complex software projects can take several months."
+      },
+      "q3": {
+        "question": "Do you also offer maintenance and support?",
+        "answer": "Yes, I offer maintenance contracts for all projects I develop. This ensures that your software remains up-to-date and secure."
+      }
+    }
+  },
+  "Portfolio": {
+    "hero": {
+      "title": "Projects.",
+      "description": "A selection of my open-source work and personal projects.",
+      "github_note": "(Live data from GitHub: Turbootzz)",
+      "github_profile": "GitHub Profile"
+    },
+    "no_projects": {
+      "title": "No projects found",
+      "description": "Check if the repository names match the filter."
+    },
+    "view_code": "View Code",
+    "no_description": "No description available."
+  },
+  "Services": {
+    "metadata": {
+      "title": "Services - Turboot",
+      "description": "Overview of services: Web, Software, Hardware."
+    },
+    "hero": {
+      "title": "Expertise.",
+      "description": "I help companies and individuals with technical issues. My approach is pragmatic: what do you really need?"
+    },
+    "items": {
+      "web-development": {
+        "title": "Web Development",
+        "description": "Modern, fast websites that work perfectly on all devices",
+        "features": {
+          "0": "Responsive design",
+          "1": "SEO optimized",
+          "2": "Fast loading times",
+          "3": "Custom functionality"
+        }
+      },
+      "software-development": {
+        "title": "Software Development",
+        "description": "Custom software solutions for your business",
+        "features": {
+          "0": "Desktop/Mobile applications",
+          "1": "API development",
+          "2": "Database design",
+          "3": "Automation"
+        }
+      },
+      "pc-builds": {
+        "title": "PC Builds",
+        "description": "Custom gaming and workstations built to your wishes",
+        "features": {
+          "0": "Gaming PCs",
+          "1": "Workstations",
+          "2": "Hardware advice",
+          "3": "Assembly & installation"
+        }
+      }
+    }
+  }
+}

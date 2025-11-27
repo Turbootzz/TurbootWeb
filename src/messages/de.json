@@ -1,0 +1,253 @@
+{
+  "Metadata": {
+    "title": "Turboot - Webentwicklung, Software & PC-Builds",
+    "description": "Turboot bietet professionelle Webentwicklung, Softwareentwicklung und Custom-PC-Builds. Ihr Partner für digitale Lösungen.",
+    "keywords": "webentwicklung, softwareentwicklung, pc-builds, niederlande, turboot"
+  },
+  "Home": {
+    "hero": {
+      "status": "Verfügbar für neue Projekte",
+      "title": "Wir bauen das <br></br> <gradient>Moderne Web.</gradient>",
+      "description": "Ich erstelle schnelle Websites, maßgeschneiderte Software und skalierbare Infrastruktur. Präzisionsarbeit für das digitale Zeitalter.",
+      "cta_primary": "Lass uns reden",
+      "cta_secondary": "Arbeit ansehen"
+    },
+    "services": {
+      "web_dev": {
+        "title": "Webentwicklung",
+        "description": "Moderne Websites, die blitzschnell laden und bei Google gut ranken. Mit Blick für jedes Detail.",
+        "more_info": "Mehr Info"
+      },
+      "software": {
+        "title": "Software",
+        "description": "Maßgeschneiderte Anwendungen, abgestimmt auf Ihre Geschäftsprozesse. Von Automatisierungsskripten bis zu vollständigen SaaS-Plattformen.",
+        "more_info": "Mehr Info"
+      },
+      "infrastructure": {
+        "title": "Infrastruktur",
+        "description": "Expertenberatung für Hardware und Custom-PC-Builds. Optimiert für Gaming, Rendering oder KI-Workloads.",
+        "more_info": "Mehr Info"
+      }
+    },
+    "value_prop": {
+      "title": "Warum Turboot?",
+      "description": "Ich kombiniere tiefes technisches Wissen mit modernen Designprinzipien. Sie haben direkten Kontakt zum Entwickler, was für Schnelligkeit und klare Kommunikation sorgt.",
+      "features": {
+        "full_stack": "Full-Stack-Expertise (Frontend + Backend)",
+        "performance": "Performance-First-Ansatz",
+        "communication": "Transparente Kommunikation",
+        "support": "Langfristiger Support & Wartung"
+      },
+      "project_status": "Projektstatus",
+      "online": "Online",
+      "performance_score": "Leistung",
+      "seo_score": "SEO-Score"
+    }
+  },
+  "Header": {
+    "nav": {
+      "home": "Startseite",
+      "services": "Dienstleistungen",
+      "portfolio": "Portfolio",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "cta": "Kontaktieren Sie uns"
+  },
+  "Footer": {
+    "description": "Professionelle Webentwicklung, maßgeschneiderte Software und High-End-PC-Builds. Einzelunternehmen, angetrieben von Leidenschaft und Präzision.",
+    "services": "Dienstleistungen",
+    "applications": "Anwendungen",
+    "links": "Links",
+    "rights": "Alle Rechte vorbehalten.",
+    "items": {
+      "services": {
+        "web-development": "Webentwicklung",
+        "software-development": "Softwareentwicklung",
+        "pc-builds": "PC-Builds"
+      },
+      "applications": {
+        "Nimbus": "Nimbus",
+        "PokePortal": "PokePortal"
+      },
+      "links": {
+        "portfolio": "Portfolio",
+        "about": "Über uns",
+        "contact": "Kontakt"
+      }
+    }
+  },
+  "About": {
+    "metadata": {
+      "title": "Über Turboot - Thijs Herman",
+      "description": "Erfahren Sie mehr über Turboot, ein Einzelunternehmen geführt von Thijs Herman. Spezialisiert auf Webentwicklung, Softwareentwicklung und Custom-PC-Builds."
+    },
+    "hero": {
+      "title": "Über Turboot",
+      "intro": "Hallo, ich bin <strong>Thijs Herman</strong>, die Person hinter Turboot. Als erfahrener Entwickler und Tech-Enthusiast helfe ich Unternehmen, ihre digitalen Ambitionen zu verwirklichen.",
+      "description": "Mit Erfahrung in der Softwareentwicklung und einer Leidenschaft für Technologie biete ich persönlichen Service und maßgeschneiderte Lösungen, die perfekt auf Ihre Bedürfnisse abgestimmt sind.",
+      "cta_primary": "Lass uns kennenlernen",
+      "cta_secondary": "Meine Arbeit ansehen"
+    },
+    "story": {
+      "title": "Meine Geschichte",
+      "p1": "Schon in jungen Jahren interessierte ich mich sehr für Computer. Es begann mit Gaming, was schnell zu einer Leidenschaft für Technik wurde: vom eigenen PC-Bau bis zum Aufsetzen und Verwalten eigener Server. Hier lernte ich den Umgang mit virtuellen Maschinen (VMs) und Containern, was den Grundstein für mein technisches Wissen legte.",
+      "p2": "Von diesem Infrastruktur-Hintergrund aus erweiterte sich mein Interesse auf das Programmieren. Ich begann, meine eigenen Anwendungen zu bauen und entdeckte die Kraft der Softwareentwicklung. Diese Kombination aus Systemwissen und Programmierkenntnissen ermöglicht es mir, komplette, robuste Lösungen zu bauen.",
+      "p3": "Inzwischen setze ich diese Erfahrung ein, um Kunden bei Websites, Software und technischen Fragen zu helfen. Für einen vollständigen Überblick über meine berufliche Erfahrung und Fähigkeiten können Sie auch mein",
+      "linkedin": "LinkedIn-Profil besuchen"
+    },
+    "skills": {
+      "title": "Expertise & Fähigkeiten",
+      "subtitle": "Eine breite Palette an Technologien, um Ihr Projekt zu realisieren"
+    },
+    "values": {
+      "title": "Meine Werte",
+      "subtitle": "Die Prinzipien, die mich in jedem Projekt antreiben",
+      "items": {
+        "result": {
+          "title": "Ergebnisorientiert",
+          "description": "Ich konzentriere mich darauf, funktionierende Lösungen zu liefern, die Ihrem Unternehmen echten Mehrwert bieten."
+        },
+        "innovative": {
+          "title": "Innovativ",
+          "description": "Immer auf der Suche nach den besten und neuesten Technologien, um Ihre Projekte zu realisieren."
+        },
+        "customer": {
+          "title": "Kundenorientiert",
+          "description": "Ihr Erfolg ist mein Erfolg. Ich denke mit und berate, wo nötig."
+        },
+        "passion": {
+          "title": "Leidenschaft",
+          "description": "Programmieren ist nicht nur mein Job, es ist meine Leidenschaft. Das sieht man in jedem Projekt."
+        }
+      }
+    },
+    "stats": {
+      "projects": "Projekte abgeschlossen",
+      "containers": "Aktive Container",
+      "stack": "Tech Stack",
+      "uptime": "Uptime"
+    },
+    "cta": {
+      "title": "Lassen Sie uns gemeinsam etwas Schönes bauen",
+      "description": "Suchen Sie einen zuverlässigen Partner für Ihr digitales Projekt? Ich helfe Ihnen gerne weiter."
+    }
+  },
+  "Contact": {
+    "metadata": {
+      "title": "Kontakt",
+      "description": "Haben Sie ein Projekt im Sinn? Lassen Sie uns darüber sprechen! Ich helfe Ihnen gerne, Ihre digitalen Ambitionen zu verwirklichen."
+    },
+    "hero": {
+      "title": "Kontakt",
+      "description": "Haben Sie ein Projekt im Sinn? Lassen Sie uns darüber sprechen! Ich helfe Ihnen gerne, Ihre digitalen Ambitionen zu verwirklichen."
+    },
+    "info": {
+      "title": "Kontakt aufnehmen",
+      "description": "Ich antworte normalerweise innerhalb von 24 Stunden auf Nachrichten. Für dringende Angelegenheiten können Sie mich telefonisch erreichen.",
+      "email": "E-Mail",
+      "location": "Standort",
+      "availability": "Erreichbarkeit",
+      "weekdays": "Mo-Fr: 9:00 - 18:00",
+      "weekend": "Wochenende: 9:00 - 20:00",
+      "business": {
+        "title": "Unternehmensdaten",
+        "name": "Firmenname:",
+        "kvk": "Handelskammer:",
+        "btw": "USt-IdNr.:"
+      }
+    },
+    "form": {
+      "title": "Nachricht senden",
+      "description": "Füllen Sie das Formular aus und ich werde mich so schnell wie möglich bei Ihnen melden.",
+      "success": "Vielen Dank für Ihre Nachricht! Ich werde mich so schnell wie möglich bei Ihnen melden.",
+      "name": "Name *",
+      "name_placeholder": "Max Mustermann",
+      "email": "E-Mail *",
+      "email_placeholder": "max@beispiel.de",
+      "subject": "Betreff *",
+      "subject_placeholder": "Neue Website für mein Unternehmen",
+      "message": "Nachricht *",
+      "message_placeholder": "Erzählen Sie mir mehr über Ihr Projekt...",
+      "submit": "Nachricht senden",
+      "submitting": "Senden...",
+      "errors": {
+        "name": "Name muss mindestens 2 Zeichen lang sein",
+        "email": "Ungültige E-Mail-Adresse",
+        "subject": "Betreff muss mindestens 5 Zeichen lang sein",
+        "message": "Nachricht muss mindestens 20 Zeichen lang sein"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": {
+        "question": "Was sind Ihre Preise?",
+        "answer": "Meine Preise hängen von der Art und Komplexität des Projekts ab. Nach unserem ersten Gespräch erhalten Sie ein transparentes Angebot ohne versteckte Kosten."
+      },
+      "q2": {
+        "question": "Wie lange dauert ein durchschnittliches Projekt?",
+        "answer": "Das variiert stark je nach Projekt. Eine einfache Website kann innerhalb von 2-3 Wochen fertig sein, während komplexe Softwareprojekte mehrere Monate dauern können."
+      },
+      "q3": {
+        "question": "Bieten Sie auch Wartung und Support an?",
+        "answer": "Ja, ich biete Wartungsverträge für alle von mir entwickelten Projekte an. Dies stellt sicher, dass Ihre Software aktuell und sicher bleibt."
+      }
+    }
+  },
+  "Portfolio": {
+    "hero": {
+      "title": "Projekte.",
+      "description": "Eine Auswahl meiner Open-Source-Arbeiten und persönlichen Projekte.",
+      "github_note": "(Live-Daten von GitHub: Turbootzz)",
+      "github_profile": "GitHub-Profil"
+    },
+    "no_projects": {
+      "title": "Keine Projekte gefunden",
+      "description": "Überprüfen Sie, ob die Repository-Namen mit dem Filter übereinstimmen."
+    },
+    "view_code": "Code ansehen",
+    "no_description": "Keine Beschreibung verfügbar."
+  },
+  "Services": {
+    "metadata": {
+      "title": "Dienstleistungen - Turboot",
+      "description": "Übersicht der Dienstleistungen: Web, Software, Hardware."
+    },
+    "hero": {
+      "title": "Expertise.",
+      "description": "Ich helfe Unternehmen und Privatpersonen bei technischen Fragen. Mein Ansatz ist pragmatisch: Was brauchen Sie wirklich?"
+    },
+    "items": {
+      "web-development": {
+        "title": "Webentwicklung",
+        "description": "Moderne, schnelle Websites, die auf allen Geräten perfekt funktionieren",
+        "features": {
+          "0": "Responsive Design",
+          "1": "SEO-optimiert",
+          "2": "Schnelle Ladezeiten",
+          "3": "Maßgeschneiderte Funktionalität"
+        }
+      },
+      "software-development": {
+        "title": "Softwareentwicklung",
+        "description": "Maßgeschneiderte Softwarelösungen für Ihr Unternehmen",
+        "features": {
+          "0": "Desktop/Mobile Anwendungen",
+          "1": "API-Entwicklung",
+          "2": "Datenbankdesign",
+          "3": "Automatisierung"
+        }
+      },
+      "pc-builds": {
+        "title": "PC-Builds",
+        "description": "Custom Gaming- und Workstations nach Ihren Wünschen gebaut",
+        "features": {
+          "0": "Gaming-PCs",
+          "1": "Workstations",
+          "2": "Hardware-Beratung",
+          "3": "Montage & Installation"
+        }
+      }
+    }
+  }
+}
