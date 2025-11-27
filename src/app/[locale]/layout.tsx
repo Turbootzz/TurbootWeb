@@ -30,6 +30,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     keywords: t("keywords"),
     authors: [{ name: "Thijs Herman" }],
     creator: "Turboot",
+    icons: {
+      icon: [
+        { url: "/images/favicon/favicon.ico" },
+        { url: "/images/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/images/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      ],
+      apple: [{ url: "/images/favicon/apple-touch-icon.png" }],
+      other: [
+        {
+          rel: "manifest",
+          url: "/images/favicon/site.webmanifest",
+        },
+      ],
+    },
   }
 }
 
