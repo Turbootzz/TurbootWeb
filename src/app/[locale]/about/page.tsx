@@ -19,8 +19,8 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
-  const { locale } = params
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const t = await getTranslations({ locale, namespace: "About.metadata" })
 
   return {
