@@ -7,7 +7,7 @@ export default function Home() {
   const t = useTranslations("Home")
 
   return (
-    <main className="bg-background flex min-h-screen flex-col pt-24 pb-16">
+    <main className="bg-background flex min-h-screen flex-col overflow-x-hidden pt-24 pb-16">
       {/* Hero Section */}
       <section className="relative mx-auto w-full max-w-7xl px-6 py-20 md:py-32 lg:px-8">
         {/* Background Glow */}
