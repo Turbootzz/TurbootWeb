@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <div className="relative h-64 w-64 md:h-80 md:w-80">
                   <div className="border-background ring-border relative h-full w-full overflow-hidden rounded-full border-4 shadow-2xl ring-1">
                     <Image
-                      src="/images/thijs.png"
+                      src="/images/thijs2.jpeg"
                       alt="Thijs Herman - Eigenaar Turboot"
                       fill
                       className="object-cover"

@@ -1,7 +1,7 @@
 "use client"
 
 import { useTheme } from "./ThemeProvider"
-import { Moon, Sun, Monitor } from "lucide-react"
+import { Moon, Sun } from "lucide-react"
 import { useState, useEffect, useRef, useSyncExternalStore, useMemo } from "react"
 
 // Subscribe to a dummy store that just tracks if we're on the client
@@ -17,6 +17,26 @@ function useHydrated() {
   )
 }
 
+// Subscribe to system color scheme preference
+function subscribeToSystemTheme(callback: () => void) {
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+  mediaQuery.addEventListener("change", callback)
+  return () => mediaQuery.removeEventListener("change", callback)
+}
+
+function getSystemTheme() {
+  if (typeof window === "undefined") return "light"
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+}
+
+function useSystemTheme() {
+  return useSyncExternalStore(
+    subscribeToSystemTheme,
+    getSystemTheme,
+    () => "light" // Server fallback
+  )
+}
+
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
@@ -25,14 +45,18 @@ export function ThemeToggle() {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const optionRefs = useRef<(HTMLButtonElement | null)[]>([])
   const hydrated = useHydrated()
+  const systemPreference = useSystemTheme()
+
+  // Dynamically determine system icon based on actual OS preference
+  const systemIcon = systemPreference === "dark" ? Moon : Sun
 
   const themes = useMemo(
     () => [
       { value: "light" as const, label: "Licht", icon: Sun },
       { value: "dark" as const, label: "Donker", icon: Moon },
-      { value: "system" as const, label: "Systeem", icon: Monitor },
+      { value: "system" as const, label: "Systeem", icon: systemIcon },
     ],
-    []
+    [systemIcon]
   )
 
   // Handle click outside

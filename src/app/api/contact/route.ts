@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 import { z } from "zod"
 
 // Validation schema
@@ -9,7 +9,7 @@ import { z } from "zod"
 //   message: z.string().min(20),
 // })
 
-export async function POST(request: NextRequest) {
+export async function POST() {
   try {
     // const body = await request.json()
 
