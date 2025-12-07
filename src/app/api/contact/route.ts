@@ -9,13 +9,21 @@ const contactSchema = z.object({
   email: z.email(),
   phone: z.string().optional(),
   subject: z.string().min(1).max(200),
-  message: z.string().min(10),
+  message: z.string().min(10).max(5000),
 })
 
 export async function POST(request: Request) {
+  let body: unknown
   try {
-    const body = await request.json()
+    body = await request.json()
+  } catch {
+    return NextResponse.json(
+      { success: false, message: "Invalid JSON in request body" },
+      { status: 400 }
+    )
+  }
 
+  try {
     // Validate input
     const validatedData = contactSchema.parse(body)
 
@@ -47,8 +55,18 @@ export async function POST(request: Request) {
       }
     }
 
-    const data = responseText ? JSON.parse(responseText) : {}
-    return NextResponse.json({ success: true, id: data.id })
+    let data: Record<string, unknown> = {}
+    if (responseText) {
+      try {
+        data = JSON.parse(responseText)
+      } catch {
+        // Backend returned non-JSON success response, continue with empty data
+      }
+    }
+
+    const id = typeof data.id === "string" || typeof data.id === "number" ? data.id : undefined
+
+    return NextResponse.json({ success: true, ...(id !== undefined && { id }) })
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json({ success: false, errors: error.issues }, { status: 400 })
