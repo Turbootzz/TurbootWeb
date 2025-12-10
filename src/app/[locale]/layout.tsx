@@ -3,6 +3,7 @@ import "../globals.css"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { ThemeProvider } from "@/components/ThemeProvider"
+import { GoogleAnalytics } from "@/components/GoogleAnalytics"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from "next-intl/server"
 import { notFound } from "next/navigation"
@@ -67,6 +68,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <GoogleAnalytics />
       <head>
         <script
           dangerouslySetInnerHTML={{
