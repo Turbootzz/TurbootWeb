@@ -19,7 +19,7 @@ export const SERVICES = [
     icon: "Globe",
     features: [
       "Responsive design",
-      "SEO geoptimaliseerd",
+      "Moderne technologieën",
       "Snelle laadtijden",
       "Maatwerk functionaliteit",
     ],
@@ -37,11 +37,12 @@ export const SERVICES = [
     ],
   },
   {
-    id: "pc-builds",
-    title: "PC Builds",
-    description: "Custom gaming en werkstations gebouwd volgens uw wensen",
-    icon: "Cpu",
-    features: ["Gaming PCs", "Werkstations", "Hardware advies", "Assemblage & installatie"],
+    id: "hosting",
+    title: "Hosting & Domeinen",
+    description:
+      "Professionele hosting, domeinbeheer en serverbeheer voor uw digitale aanwezigheid",
+    icon: "Server",
+    features: ["Webhosting", "Domeinbeheer", "Serverconfiguratie", "SSL & beveiliging"],
   },
 ] as const
 

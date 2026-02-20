@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Turboot - Développement Web, Logiciels & Montages PC",
-    "description": "Turboot propose des services professionnels de développement web, de développement logiciel et de montages PC personnalisés. Votre partenaire pour les solutions numériques.",
-    "keywords": "développement web, développement logiciel, montages pc, pays-bas, turboot"
+    "title": "Turboot - Développement Web, Logiciels & Hébergement",
+    "description": "Turboot propose des services professionnels de développement web, de développement logiciel et d'hébergement & gestion de domaines. Votre partenaire pour les solutions numériques.",
+    "keywords": "développement web, développement logiciel, hébergement, gestion de domaines, pays-bas, turboot"
   },
   "Home": {
     "hero": {
@@ -23,9 +23,9 @@
         "description": "Applications sur mesure adaptées à vos processus métier. Des scripts d'automatisation aux plateformes SaaS complètes.",
         "more_info": "Plus d'infos"
       },
-      "infrastructure": {
-        "title": "Infrastructure",
-        "description": "Conseils experts en matériel et montages PC personnalisés. Optimisé pour le jeu, le rendu ou les charges de travail IA.",
+      "hosting": {
+        "title": "Hébergement & Domaines",
+        "description": "Hébergement web professionnel et gestion de domaines. Votre présence numérique entre de bonnes mains.",
         "more_info": "Plus d'infos"
       }
     },
@@ -55,7 +55,7 @@
     "cta": "Contactez-nous"
   },
   "Footer": {
-    "description": "Développement web professionnel, logiciels sur mesure et montages PC haut de gamme. Entreprise individuelle animée par la passion et la précision.",
+    "description": "Développement web professionnel, logiciels sur mesure et hébergement & gestion de domaines. Entreprise individuelle animée par la passion et la précision.",
     "services": "Services",
     "applications": "Applications",
     "links": "Liens",
@@ -64,7 +64,7 @@
       "services": {
         "web-development": "Développement Web",
         "software-development": "Développement Logiciel",
-        "pc-builds": "Montages PC"
+        "hosting": "Hébergement & Domaines"
       },
       "applications": {
         "Nimbus": "Nimbus",
@@ -80,7 +80,7 @@
   "About": {
     "metadata": {
       "title": "À propos de Turboot - Thijs Herman",
-      "description": "En savoir plus sur Turboot, une entreprise individuelle dirigée par Thijs Herman. Spécialisée dans le développement web, le développement logiciel et les montages PC personnalisés."
+      "description": "En savoir plus sur Turboot, une entreprise individuelle dirigée par Thijs Herman. Spécialisée dans le développement web, le développement logiciel et l'hébergement & gestion de domaines."
     },
     "hero": {
       "title": "À propos de Turboot",
@@ -213,7 +213,7 @@
   "Services": {
     "metadata": {
       "title": "Services - Turboot",
-      "description": "Aperçu des services : Web, Logiciel, Matériel."
+      "description": "Aperçu des services : Web, Logiciel, Hébergement."
     },
     "hero": {
       "title": "Expertise.",
@@ -240,14 +240,14 @@
           "3": "Automatisation"
         }
       },
-      "pc-builds": {
-        "title": "Montages PC",
-        "description": "PC de jeu et stations de travail personnalisés construits selon vos souhaits",
+      "hosting": {
+        "title": "Hébergement & Domaines",
+        "description": "Hébergement professionnel, gestion de domaines et administration serveur pour votre présence numérique",
         "features": {
-          "0": "PC de jeu",
-          "1": "Stations de travail",
-          "2": "Conseils matériels",
-          "3": "Assemblage & installation"
+          "0": "Hébergement web",
+          "1": "Gestion de domaines",
+          "2": "Configuration serveur",
+          "3": "SSL & Sécurité"
         }
       }
     }
