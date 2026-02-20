@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Turboot - Webontwikkeling, Software & PC Builds",
-    "description": "Turboot biedt professionele webontwikkeling, software ontwikkeling en custom PC builds. Uw partner voor digitale oplossingen.",
-    "keywords": "webontwikkeling, software ontwikkeling, pc builds, nederland, turboot"
+    "title": "Turboot - Webontwikkeling, Software & Hosting",
+    "description": "Turboot biedt professionele webontwikkeling, software ontwikkeling en hosting & domeinbeheer. Uw partner voor digitale oplossingen.",
+    "keywords": "webontwikkeling, software ontwikkeling, hosting, domeinbeheer, nederland, turboot"
   },
   "Home": {
     "hero": {
@@ -23,9 +23,9 @@
         "description": "Maatwerk applicaties afgestemd op uw bedrijfsprocessen. Van automatiseringsscripts tot volledige SaaS-platformen.",
         "more_info": "Meer info"
       },
-      "infrastructure": {
-        "title": "Infrastructuur",
-        "description": "Expert hardware advies en custom PC builds. Geoptimaliseerd voor gaming, rendering of AI workloads.",
+      "hosting": {
+        "title": "Hosting & Domeinen",
+        "description": "Professionele webhosting en domeinbeheer. Uw digitale aanwezigheid in goede handen.",
         "more_info": "Meer info"
       }
     },
@@ -55,7 +55,7 @@
     "cta": "Neem Contact op"
   },
   "Footer": {
-    "description": "Professionele webontwikkeling, software op maat en high-end PC builds. Eenmanszaak gedreven door passie en precisie.",
+    "description": "Professionele webontwikkeling, software op maat en hosting & domeinbeheer. Eenmanszaak gedreven door passie en precisie.",
     "services": "Diensten",
     "applications": "Applicaties",
     "links": "Links",
@@ -64,7 +64,7 @@
       "services": {
         "web-development": "Webontwikkeling",
         "software-development": "Software Ontwikkeling",
-        "pc-builds": "PC Builds"
+        "hosting": "Hosting & Domeinen"
       },
       "applications": {
         "Nimbus": "Nimbus",
@@ -80,7 +80,7 @@
   "About": {
     "metadata": {
       "title": "Over Turboot - Thijs Herman",
-      "description": "Leer meer over Turboot, een eenmanszaak gerund door Thijs Herman. Gespecialiseerd in webontwikkeling, software ontwikkeling en custom PC builds."
+      "description": "Leer meer over Turboot, een eenmanszaak gerund door Thijs Herman. Gespecialiseerd in webontwikkeling, software ontwikkeling en hosting & domeinbeheer."
     },
     "hero": {
       "title": "Over Turboot",
@@ -213,7 +213,7 @@
   "Services": {
     "metadata": {
       "title": "Diensten - Turboot",
-      "description": "Overzicht van diensten: Web, Software, Hardware."
+      "description": "Overzicht van diensten: Web, Software, Hosting."
     },
     "hero": {
       "title": "Expertise.",
@@ -225,7 +225,7 @@
         "description": "Moderne, snelle websites die perfect werken op alle apparaten",
         "features": {
           "0": "Responsive design",
-          "1": "SEO geoptimaliseerd",
+          "1": "Moderne technologieën",
           "2": "Snelle laadtijden",
           "3": "Maatwerk functionaliteit"
         }
@@ -240,14 +240,14 @@
           "3": "Automatisering"
         }
       },
-      "pc-builds": {
-        "title": "PC Builds",
-        "description": "Custom gaming en werkstations gebouwd volgens uw wensen",
+      "hosting": {
+        "title": "Hosting & Domeinen",
+        "description": "Professionele hosting, domeinbeheer en serverbeheer voor uw digitale aanwezigheid",
         "features": {
-          "0": "Gaming PCs",
-          "1": "Werkstations",
-          "2": "Hardware advies",
-          "3": "Assemblage & installatie"
+          "0": "Webhosting",
+          "1": "Domeinbeheer",
+          "2": "Serverconfiguratie",
+          "3": "SSL & beveiliging"
         }
       }
     }

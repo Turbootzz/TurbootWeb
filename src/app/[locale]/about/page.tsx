@@ -34,8 +34,8 @@ const skills = [
   { category: "Backend", items: ["Node.js", "Java", "PostgreSQL", "Go", "REST APIs"] },
   { category: "Tools", items: ["Git", "Docker", "CI/CD"] },
   {
-    category: "Hardware",
-    items: ["PC Assembly", "Troubleshooting", "Overclocking"],
+    category: "Hosting",
+    items: ["Web Hosting", "Domain Management", "Linux/Server Admin"],
   },
 ]
 

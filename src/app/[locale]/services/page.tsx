@@ -1,6 +1,6 @@
 import { Container } from "@/components/layout/Container"
 import { SERVICES } from "@/lib/constants"
-import { Code, Cpu, Globe } from "lucide-react"
+import { Code, Globe, Server } from "lucide-react"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
@@ -8,7 +8,7 @@ import { getTranslations } from "next-intl/server"
 const iconMap = {
   Globe,
   Code,
-  Cpu,
+  Server,
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

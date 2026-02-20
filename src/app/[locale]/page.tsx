@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/routing"
-import { ArrowRight, Cpu, Globe, Terminal, Zap } from "lucide-react"
+import { ArrowRight, Globe, Server, Terminal, Zap } from "lucide-react"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { useTranslations } from "next-intl"
 
@@ -111,25 +111,25 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hardware */}
+            {/* Hosting */}
             <div className="group border-border bg-card/50 relative overflow-hidden rounded-3xl border p-8 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/5">
               <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
 
               <div className="relative z-10">
                 <div className="mb-6 inline-flex rounded-xl bg-cyan-500/10 p-3 text-cyan-500">
-                  <Cpu className="h-8 w-8" />
+                  <Server className="h-8 w-8" />
                 </div>
                 <h3 className="text-foreground mb-3 text-2xl font-bold">
-                  {t("services.infrastructure.title")}
+                  {t("services.hosting.title")}
                 </h3>
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                  {t("services.infrastructure.description")}
+                  {t("services.hosting.description")}
                 </p>
                 <Link
                   href="/services"
                   className="inline-flex items-center text-sm font-semibold text-cyan-500 hover:underline"
                 >
-                  {t("services.infrastructure.more_info")} <ArrowRight className="ml-1 h-4 w-4" />
+                  {t("services.hosting.more_info")} <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
             </div>

@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Turboot - 网站开发、软件与 PC 构建",
-    "description": "Turboot 提供专业的网站开发、软件开发和定制 PC 构建服务。您的数字解决方案合作伙伴。",
-    "keywords": "网站开发, 软件开发, pc 构建, 荷兰, turboot"
+    "title": "Turboot - 网站开发、软件与托管",
+    "description": "Turboot 提供专业的网站开发、软件开发和托管与域名管理服务。您的数字解决方案合作伙伴。",
+    "keywords": "网站开发, 软件开发, 托管, 域名管理, 荷兰, turboot"
   },
   "Home": {
     "hero": {
@@ -23,9 +23,9 @@
         "description": "根据您的业务流程量身定制的应用程序。从自动化脚本到完整的SaaS平台。",
         "more_info": "更多信息"
       },
-      "infrastructure": {
-        "title": "基础设施",
-        "description": "专家硬件建议和定制PC构建。针对游戏、渲染或AI工作负载进行了优化。",
+      "hosting": {
+        "title": "托管与域名",
+        "description": "专业的网络托管和域名管理。您的数字形象安心托付。",
         "more_info": "更多信息"
       }
     },
@@ -55,7 +55,7 @@
     "cta": "联系我们"
   },
   "Footer": {
-    "description": "专业的网站开发、定制软件和高端PC构建。由激情和精准驱动的独资企业。",
+    "description": "专业的网站开发、定制软件和托管与域名管理。由激情和精准驱动的独资企业。",
     "services": "服务",
     "applications": "应用",
     "links": "链接",
@@ -64,7 +64,7 @@
       "services": {
         "web-development": "网站开发",
         "software-development": "软件开发",
-        "pc-builds": "PC构建"
+        "hosting": "托管与域名"
       },
       "applications": {
         "Nimbus": "Nimbus",
@@ -80,7 +80,7 @@
   "About": {
     "metadata": {
       "title": "关于 Turboot - Thijs Herman",
-      "description": "了解更多关于 Turboot 的信息，这是一家由 Thijs Herman 经营的独资企业。专注于网站开发、软件开发和定制 PC 构建。"
+      "description": "了解更多关于 Turboot 的信息，这是一家由 Thijs Herman 经营的独资企业。专注于网站开发、软件开发和托管与域名管理。"
     },
     "hero": {
       "title": "关于 Turboot",
@@ -213,7 +213,7 @@
   "Services": {
     "metadata": {
       "title": "服务 - Turboot",
-      "description": "服务概览：网络、软件、硬件。"
+      "description": "服务概览：网络、软件、托管。"
     },
     "hero": {
       "title": "专业知识。",
@@ -225,7 +225,7 @@
         "description": "在所有设备上完美运行的现代、快速网站",
         "features": {
           "0": "响应式设计",
-          "1": "SEO 优化",
+          "1": "现代技术",
           "2": "快速加载时间",
           "3": "定制功能"
         }
@@ -240,14 +240,14 @@
           "3": "自动化"
         }
       },
-      "pc-builds": {
-        "title": "PC 构建",
-        "description": "根据您的意愿构建的定制游戏和工作站",
+      "hosting": {
+        "title": "托管与域名",
+        "description": "为您的数字形象提供专业的托管、域名管理和服务器管理服务",
         "features": {
-          "0": "游戏 PC",
-          "1": "工作站",
-          "2": "硬件建议",
-          "3": "组装与安装"
+          "0": "网页托管",
+          "1": "域名管理",
+          "2": "服务器配置",
+          "3": "SSL & 安全"
         }
       }
     }
