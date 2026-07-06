@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "Metadata" })
 
   return {
+    metadataBase: new URL("https://turboot.com"),
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
