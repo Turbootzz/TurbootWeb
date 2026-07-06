@@ -11,12 +11,22 @@ export async function generateMetadata() {
   }
 }
 
-function Chip({ children }: { children: React.ReactNode }) {
-  return (
-    <code className="bg-muted text-foreground rounded-md px-1.5 py-0.5 font-mono text-[0.85em] break-words">
-      {children}
-    </code>
-  )
+function Chip({ children, href }: { children: React.ReactNode; href?: string }) {
+  const className =
+    "bg-muted text-foreground rounded-md px-1.5 py-0.5 font-mono text-[0.85em] break-words"
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${className} hover:text-primary underline decoration-dotted underline-offset-2 transition-colors`}
+      >
+        {children}
+      </a>
+    )
+  }
+  return <code className={className}>{children}</code>
 }
 
 // This onboarding page is written for Dutch business clients (their office users),
@@ -26,7 +36,8 @@ const steps = [
     title: "Ga naar de aanmeldpagina",
     body: (
       <>
-        Open <Chip>microsoft365.com</Chip> in je browser en klik op <strong>Aanmelden</strong>.
+        Open <Chip href="https://www.microsoft365.com">microsoft365.com</Chip> in je browser en klik
+        op <strong>Aanmelden</strong>.
       </>
     ),
   },
@@ -70,8 +81,8 @@ const devices = [
     title: "Elke computer, via de browser",
     body: (
       <>
-        Ga naar <Chip>microsoft365.com</Chip>, meld je aan en werk direct in de browser. Geen
-        installatie nodig.
+        Ga naar <Chip href="https://www.microsoft365.com">microsoft365.com</Chip>, meld je aan en
+        werk direct in de browser. Geen installatie nodig.
       </>
     ),
   },
@@ -80,7 +91,8 @@ const devices = [
     title: "Direct naar je mail",
     body: (
       <>
-        <Chip>outlook.office.com</Chip> opent Outlook meteen, zonder omwegen.
+        <Chip href="https://outlook.office.com">outlook.office.com</Chip> opent Outlook meteen,
+        zonder omwegen.
       </>
     ),
   },
@@ -89,7 +101,8 @@ const devices = [
     title: "Je eigen PC of Mac",
     body: (
       <>
-        Installeer de volledige Office-apps via <Chip>microsoft365.com</Chip> met de knop{" "}
+        Installeer de volledige Office-apps via{" "}
+        <Chip href="https://www.microsoft365.com">microsoft365.com</Chip> met de knop{" "}
         <strong>Apps installeren</strong>. Dit mag op meerdere eigen apparaten.
       </>
     ),
