@@ -251,5 +251,17 @@
         }
       }
     }
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "description": "La page que vous recherchez n'existe pas (ou plus) ou a été déplacée.",
+    "home": "Retour à l'accueil",
+    "contact": "Contactez-nous"
+  },
+  "Error": {
+    "title": "Une erreur s'est produite",
+    "description": "Une erreur inattendue s'est produite. Veuillez réessayer ou revenir plus tard.",
+    "retry": "Réessayer",
+    "home": "Retour à l'accueil"
   }
 }

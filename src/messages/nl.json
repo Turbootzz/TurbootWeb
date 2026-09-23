@@ -251,5 +251,17 @@
         }
       }
     }
+  },
+  "NotFound": {
+    "title": "Pagina niet gevonden",
+    "description": "De pagina die je zoekt bestaat niet (meer) of is verplaatst.",
+    "home": "Terug naar home",
+    "contact": "Neem contact op"
+  },
+  "Error": {
+    "title": "Er ging iets mis",
+    "description": "Er is een onverwachte fout opgetreden. Probeer het opnieuw of kom later terug.",
+    "retry": "Opnieuw proberen",
+    "home": "Terug naar home"
   }
 }

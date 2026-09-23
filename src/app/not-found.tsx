@@ -1,32 +1,18 @@
-"use client"
-
 import "./globals.css"
-import * as Sentry from "@sentry/nextjs"
 import Link from "next/link"
 import { StatusPage } from "@/components/sections/StatusPage"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { Button } from "@/components/ui/button"
 import { geistMono, geistSans } from "@/lib/fonts"
 import { THEME_SCRIPT } from "@/lib/theme-script"
-import { useEffect } from "react"
 
-// Replaces the root layout when it crashes, so it renders its own <html> and has no
-// access to next-intl; the copy is in the default language (Dutch).
-export default function GlobalError({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string }
-  reset: () => void
-}) {
-  useEffect(() => {
-    Sentry.captureException(error)
-  }, [error])
-
+// Fallback for URLs outside a valid locale, such as paths with a file extension
+// (/wp-login.php) that the proxy skips. The locale is unknown here, so the copy is
+// in the default language (Dutch).
+export default function NotFound() {
   return (
     <html lang="nl" suppressHydrationWarning>
       <head>
-        <title>Er ging iets mis | Turboot</title>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
       <body
@@ -34,14 +20,11 @@ export default function GlobalError({
       >
         <ThemeProvider>
           <StatusPage
-            code={500}
-            title="Er ging iets mis"
-            description="Er is een onverwachte fout opgetreden. Probeer het opnieuw of kom later terug."
+            code={404}
+            title="Pagina niet gevonden"
+            description="De pagina die je zoekt bestaat niet (meer) of is verplaatst."
           >
-            <Button size="lg" onClick={reset}>
-              Opnieuw proberen
-            </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" asChild>
               <Link href="/">Naar de homepage</Link>
             </Button>
           </StatusPage>
