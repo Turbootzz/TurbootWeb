@@ -1,4 +1,3 @@
-import { Geist, Geist_Mono } from "next/font/google"
 import "../globals.css"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
@@ -8,16 +7,9 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
+import { SITE_URL } from "@/lib/constants"
+import { geistMono, geistSans } from "@/lib/fonts"
+import { THEME_SCRIPT } from "@/lib/theme-script"
 
 import { getTranslations } from "next-intl/server"
 
@@ -26,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "Metadata" })
 
   return {
-    metadataBase: new URL("https://turboot.com"),
+    metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
@@ -71,25 +63,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <GoogleAnalytics />
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme') || 'system';
-                  const root = document.documentElement;
-
-                  if (theme === 'system') {
-                    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                    root.classList.add(systemTheme);
-                  } else {
-                    root.classList.add(theme);
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}

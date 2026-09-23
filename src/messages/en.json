@@ -251,5 +251,17 @@
         }
       }
     }
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist (anymore) or has been moved.",
+    "home": "Back to home",
+    "contact": "Contact us"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again or come back later.",
+    "retry": "Try again",
+    "home": "Back to home"
   }
 }

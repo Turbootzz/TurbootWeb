@@ -1,3 +1,5 @@
+export const SITE_URL = "https://turboot.com"
+
 export const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
